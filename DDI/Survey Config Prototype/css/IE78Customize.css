@@ -1,0 +1,19 @@
+.btn-small 
+{
+    width:85px;
+}
+
+
+.nav-tabs > li, .nav-pills > li {
+  float: left;
+  width:160px;
+}
+
+.title {
+	left:400px;
+}
+
+
+.input-large {
+	width:160px;	
+}

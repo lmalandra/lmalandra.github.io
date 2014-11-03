@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="UTF-8">
+    <title>Leadership Mirror</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 0px;
+		height: 100%;
+      }
+		/* set the height so $(window).height() is accurate
+		html, body {
+		height: 100%;
+		}
+		 
+		/* prevent scrolling while during modal */
+		body.modal-open {
+		overflow: hidden;
+		}
+		 
+		/* optional: override bootstrap image gallery */
+		.modal-gallery {
+		margin-top: 0 !important;
+		}
+		@media (max-width: 767px) {
+		.modal-gallery {
+		margin-left: 0 !important;
+		}
+		.modal-fullscreen {
+		left: 0 !important;
+		right: 0 !important;
+		}
+		}    
+    </style>
+    <link href="css/bootstrap-modified.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/customize.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" type="text/css" href="css/IE78Customize.css" />
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+  <div class="navbar navbar-fixed-top banner">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          
+          <a class="brand" href="#">Leadership Mirror</a>
+                    
+          <ul class="nav nav-collapse collapse pull-right">
+            <li>Welcome, Administrator</li>
+             <li><a href="#"> Exit</a></li>
+         </ul><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+ 
+ 
+     
+<div class="container main-wrapper">
+    <div id="demo" class="row collapse in">
+              <div class="span12 masthead">
+              <img src="img/logo.png"  />
+              <span class="title"><p>Leadership Mirror</p></span>
+              </div>
+    </div>
+   <div class="row">
+      <div class="span12">
+                   <img src="img/up.gif" class="banner-control" data-toggle="collapse" data-target="#demo" />
+                   
+                      
+        <ul class="nav nav-pills pull-right">
+            <li>
+            <a href="#"><img src="img/returntoTPA24.png" /><span class="return-tpa">Return to TPA</span></a>
+            </li>
+        </ul> 
+            </div>
+        </div>
+    <div class="row" >
+        <div class="span3">
+        <!--Sidebar content-->
+            <div class="accordion" id="accordion2">
+            	<div class="accordion-group">
+                <div class="accordion-heading">
+                <div class="accordion-toggle selected"><a href="#">Active Link</a></div>
+                </div>
+                </div>
+                <div class="accordion-group">
+                <div class="accordion-heading">
+                <div class="accordion-toggle"><a href="#">Link #2</a></div>
+                </div>
+                </div>
+                <div class="accordion-group">
+                <div class="accordion-heading">
+                <div class="accordion-toggle"><a href="#">Link #3</a></div>
+                </div>
+                </div>
+                <div class="accordion-group">
+                <div class="accordion-heading">
+                <div class="accordion-toggle"><a href="#">Link #4</a></div>
+                </div>
+                </div>
+            </div> <!--end of accordion -->
+        </div> <!--end of span3 -->
+
+        <div class="span9">
+        	<!-- beg of main content -->
+            <div class="maincontent">
+                <h1>Page Title</h1>
+                <p>Base Table with Links for Modals go here...</p>
+
+
+
+
+
+            </div> 
+            <!-- end of main content -->
+ 
+ 			<br>
+                  
+          
+        </div>
+          <!-- end of column span -->  
+         </div>
+         <!-- end of row -->  
+        </div>
+        <!--end of main wrapper -->
+      
+
+    <div class="navbar navbar-fixed-bottom">
+        <div class="navbar-inner-bottom">
+        <a href="http://www.ddiworld.com/privacy?id=en" tabindex="10000" target="_privacyStatement">DDI Privacy Statement</a> | &copy; Development Dimensions International, Inc., 1970-2012. <a href="http://www.ddiworld.com/copyright?lang=en" tabindex="10000" target="_copyright">All Rights Reserved</a>.
+        </div>
+    <!--/.nav-collapse -->
+    </div>
+        <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>	
+    <!-- Modal Responsive Fix -->
+	<script src="js/touchscroll.js"></script>     
+    <!-- the magic -->
+	<script>
+    $(function() {
+    $('.modal').modalResponsiveFix({ debug: true })
+    $('.modal').touchScroll();
+    })
+    </script>
+    </body>
+</html>
