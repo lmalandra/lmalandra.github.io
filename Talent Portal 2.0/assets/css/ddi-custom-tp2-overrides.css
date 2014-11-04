@@ -1,0 +1,153 @@
+﻿.ddi-logo {
+    margin-top: 3px;
+    background-image: url(../i/ddi_logo.png);
+    background-image: url(../i/DDILOGO.svg), none;
+    width: 57px;
+    height: 20px;
+    background-position: 0% 0%;
+    background-size: 57px 20px;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-attachment: scroll;
+    /*background-image: none;*/
+}
+
+.ddi-logo img {
+    /*content:url(../i/ddi_logo.png);*/
+    /*background-image:none!important;*/
+    /*width:auto;*/
+    /*height:auto;*/
+    /*border-width:0;*/
+}
+
+ul.nav.ace-nav ul {
+    padding-top: 0px;
+}
+/*this formats the in-menu "hello name" message*/
+.in-menu-info {
+    width: 100%;
+    background-color: rgb(183, 208, 237);
+    padding-left: 11px;
+    padding-top: 0px;
+}
+
+@media only screen and (min-width: 766px) {
+    .shown-xs {
+        display: none!important;
+    }
+    .btn-sm {
+    /*this puts a little extra padding in the small buttons for the larger interface widths*/
+    padding-left:20px;
+    padding-right:20px;
+    }
+
+}
+@media only screen and (max-width: 766px) {
+    #footer {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+  /*ace nav overrides*/
+  .navbar:not(.navbar-collapse) .ace-nav {
+    background-color: transparent;
+    border: none;
+  }
+  .navbar:not(.navbar-collapse) .navbar-header {
+    float: left !important;
+  }
+  .navbar:not(.navbar-collapse) .navbar-header.pull-right {
+    float: right !important;
+  }
+  .navbar:not(.navbar-collapse) .ace-nav>li:first-child,
+  .navbar:not(.navbar-collapse) .ace-nav>li:last-child {
+    border: none;
+  }
+}
+#wrap > .container {
+    padding-bottom:60px;
+}
+
+#TRUSTe_logo {
+position:absolute;
+/*padding-top:50px;*/
+
+bottom:20px;
+right:0;
+height:60px;
+}
+
+@media only screen and (max-width: 590px) {
+    .ace-nav > li {
+        /*this keeps the menu icon floating to the right hand side*/
+        float: right !important;
+    }
+    #footer {
+        font-size: .6em;
+    }
+}
+
+.powered-by {
+    display: inline;
+    position: relative;
+    text-align: left;
+    text-overflow: ellipsis;
+    top: 6px;
+    vertical-align: top;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0.8;
+    visibility: visible;
+}
+@media only screen and (max-width:766px) {
+    .powered-by {
+        /*drops the powered by logo to a hanging tab below the menu line*/
+        display: block;
+        position: fixed;
+        top: 31px;
+        left: 0px;
+        padding: 0px 7px 2px 16px;
+        border-radius: 0px 0px 12px 0px;
+        width: auto;
+        /*    this color will need to be overridden in the themeable.css for customer styles.
+        it will probably be something like:
+        @media only screen and (max-width:766px) {
+            span.powered-by {background-color:
+  */
+        background-color: #b7d0ed;
+        text-align: left;
+        text-overflow: clip;
+        vertical-align: top;
+        white-space: nowrap;
+        font-size: 12px;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+    }
+    .page-content {
+      padding-top: 24px; /*stops powered-by from overlapping page content*/
+    }
+}/* Global Menu */
+.ace-nav > li {
+    float: right !important;
+}
+
+    .ace-nav > li > a {
+        text-align: right;
+    }
+        /*this increases the menu icon to 18pt to combat the line misalignment
+    it also has an extra chain to accomodate the way the server pages are constructed
+    */
+        .ace-nav > li > [class*="icon"], .ace-nav > li > a > [class*="icon"] {
+            font-size: 18px;
+            padding-top: 5px;
+        }
+
+.user-info {
+    top:7px;
+    padding-right:3px;
+
+}
+

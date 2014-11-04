@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+.navbar {
+  background: none repeat scroll 0 0 #1f3aa5;
+  border-bottom: 3px solid #fde384;
+  color: #fff;
+}
+
+.navbar a {
+  color: #fde384;
+}
+
+.navbar a:hover, a:focus {
+  color: #fde384;
+}
+
+/* Global Menu */
+.ace-nav > li > a {
+  background-color: transparent;
+
+}
+.ace-nav > li > a > [class*="icon-"] {
+    color: #FFFFFF;
+}
+
+.ace-nav > li > a:hover, .ace-nav > li > a:focus {
+    background-color: #fde384;
+    color: #1f3aa5;
+}
+.ace-nav > li.open > a {
+    background-color: #fde384 !important;
+}
+.ace-nav > li.open > a {
+    color: #1f3aa5 !important;
+}
+
+
+.powered-by {
+	display: inline;
+	font-size: 12px;
+}
+
+#footer {
+  background: none repeat scroll 0 0 #1f3aa5;
+  border-top: 1px solid #fde384;
+  color: #b7b7b7;
+}
+
+#footer a {
+  color: #fde384;
+}
+
+#footer a:hover, a:focus {
+  color: #fde384;
+}
+
+

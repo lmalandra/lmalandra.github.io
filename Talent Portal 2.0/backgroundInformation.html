@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>DDI Talent Portal 2.0</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+        
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!-- ddi styles -->
+		<link rel="stylesheet" href="assets/css/ddi-custom.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+        
+        </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-container container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="navbar-header pull-left">
+                    <span class="navbar-brand">
+                    <small>
+                        <img src="assets/img/DDILOGO.svg" alt="DDI" width="57" height="20">
+                    </small>
+                    </span><!-- /.brand -->
+                    <span class="powered-by">Powered by DDI</span>                    
+                    </div><!-- /.navbar-header -->
+                </div>
+                <div class="col-xs-4 center"><span class="app-title">Talent Portal</span></div>
+                <div class="col-xs-4"><div class="navbar-header" role="navigation">
+                        <ul class="nav ace-nav pull-right">
+                            <li>
+                                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                    <span class="hidden-xs">Welcome, Jason Williams</span>
+                
+                                    <i class="normal-icon icon-reorder white bigger-130"></i>
+                                </a>
+                
+                                <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-group menu-icon-color"></i>
+                                            Change Role
+                                        </a>
+                                    </li>
+                
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-unlock menu-icon-color"></i>
+                                            Change Your Password
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-comment menu-icon-color"></i>
+                                            Change On-Screen Text Language
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="divider"></li>
+                
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-home menu-icon-color"></i>
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-off menu-icon-color"></i>
+                                            Exit
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!-- /.ace-nav -->
+                    </div><!--/.nav-collapse -->
+                    </div>
+                
+
+            </div><!--/.row -->
+        </div><!--/.nav-container -->
+      </div><!--/.navb,ar -->
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="page-header">
+          <h1>Tell Us About Yourself
+          
+          </h1>
+        </div>
+            <p>Please complete the demographic items below.</p>
+
+                <!-- PAGE CONTENT BEGINS -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="widget-box" style="opacity: 1;">
+                            <div class="widget-header widget-header-flat">
+                                <h4 class="inline"><i class="fa fa-smile-o"></i>&nbsp;Background Information</h4>
+                                <!--<div class="widget-toolbar">
+                                    <button class="btn btn-xs btn-info">
+                                    	<i class="fa fa-print"></i>&nbsp;<a href="javascript:window.print()">Print</a>
+                                    </button>
+                                </div>-->
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="widget-main">
+                                    <form>
+                                        <fieldset>
+                                        	<div class="row">
+                                                <div class="col-xs-12 col-sm-4 widget-container-span ui-sortable">
+													<div class="form-group">
+
+                                                        <label for="form-field-select-1">Race/Ethnicity</label>
+
+                                                        <select id="form-field-select-1" class="form-control">
+                                                            <option selected="selected" value="">Select one</option>
+                                                            <option value="0">Hispanic or Latino</option>
+                                                            <option value="1">American Indian or Alaskan Native (not Hispanic or Latino)</option>
+                                                            <option value="2">Asian (not Hispanic or Latino)</option>
+                                                            <option value="3">Black or African American (not Hispanic or Latino)</option>
+                                                            <option value="4">Native Hawaiian or Other Pacific Islander (not Hispanic or Latino)</option>
+                                                            <option value="5">White (not Hispanic or Latino)</option>
+                                                            <option value="6">Two or more races (not Hispanic or Latino)</option>
+                                                            <option value="7">Other</option>
+                                                        </select>
+													</div>                                                        
+                                                        
+													<div class="form-group">
+                                                        <label for="form-field-select-1">Gender</label>
+
+                                                        <select id="form-field-select-1" class="form-control">
+                                                            <option selected="selected" value="">Select one</option>
+                                                            <option value="0">Female</option>
+                                                            <option value="1">Male</option>
+                                                        </select>
+													</div> 
+                                                    
+													<div class="form-group">
+                                                        <label for="form-field-select-1">Age Range</label>
+
+                                                        <select id="form-field-select-1" class="form-control">
+                                                            <option selected="selected" value="">Select one</option>
+                                                            <option value="0">&lt; 20</option>
+                                                            <option value="1">20 - 29</option>
+                                                            <option value="2">30 - 39</option>
+                                                            <option value="3">40 - 49</option>
+                                                            <option value="4">50 - 59</option>
+                                                            <option value="5">60+</option>
+                                                        </select>
+													</div> 
+
+                                                    <div class="form-group">
+                                                        <label for="form-field-select-1">Country of Nationality</label>
+
+                                                        <select id="form-field-select-1" class="form-control">
+                                                            <option selected="selected" value="">Select one</option>
+                                                            <option value="4">Afghanistan</option>
+                                                            <option value="248">Aland Islands</option>
+                                                            <option value="8">Albania</option>
+                                                            <option value="12">Algeria</option>
+                                                            <option value="16">American Samoa</option>
+                                                            <option value="20">Andorra</option>
+                                                            <option value="24">Angola</option>
+                                                            <option value="660">Anguilla</option>
+                                                            <option value="28">Antigua and Barbuda</option>
+                                                            <option value="32">Argentina</option>
+                                                            <option value="51">Armenia</option>
+                                                            <option value="533">Aruba</option>
+                                                            <option value="36">Australia</option>
+                                                            <option value="40">Austria</option>
+                                                            <option value="31">Azerbaijan</option>
+                                                            <option value="44">Bahamas</option>
+                                                            <option value="48">Bahrain</option>
+                                                            <option value="50">Bangladesh</option>
+                                                            <option value="52">Barbados</option>
+                                                            <option value="112">Belarus</option>
+                                                            <option value="56">Belgium</option>
+                                                            <option value="84">Belize</option>
+                                                            <option value="204">Benin</option>
+                                                            <option value="60">Bermuda</option>
+                                                            <option value="64">Bhutan</option>
+                                                            <option value="68">Bolivia</option>
+                                                            <option value="70">Bosnia and Herzegovina</option>
+                                                            <option value="72">Botswana</option>
+                                                            <option value="76">Brazil</option>
+                                                            <option value="92">British Virgin Islands</option>
+                                                            <option value="96">Brunei Darussalam</option>
+                                                            <option value="100">Bulgaria</option>
+                                                            <option value="854">Burkina Faso</option>
+                                                            <option value="108">Burundi</option>
+                                                            <option value="116">Cambodia</option>
+                                                            <option value="120">Cameroon</option>
+                                                            <option value="124">Canada</option>
+                                                            <option value="132">Cape Verde</option>
+                                                            <option value="136">Cayman Islands</option>
+                                                            <option value="140">Central African Republic</option>
+                                                            <option value="148">Chad</option>
+                                                            <option value="152">Chile</option>
+                                                            <option value="156">China</option>
+                                                            <option value="170">Colombia</option>
+                                                            <option value="174">Comoros</option>
+                                                            <option value="178">Congo</option>
+                                                            <option value="184">Cook Islands</option>
+                                                            <option value="188">Costa Rica</option>
+                                                            <option value="384">Cote dIvoire</option>
+                                                            <option value="191">Croatia</option>
+                                                            <option value="192">Cuba</option>
+                                                            <option value="196">Cyprus</option>
+                                                            <option value="203">Czech Republic</option>
+                                                            <option value="408">Democratic Peoples Republic of Korea</option>
+                                                            <option value="180">Democratic Republic of the Congo</option>
+                                                            <option value="208">Denmark</option>
+                                                            <option value="262">Djibouti</option>
+                                                            <option value="212">Dominica</option>
+                                                            <option value="214">Dominican Republic</option>
+                                                            <option value="218">Ecuador</option>
+                                                            <option value="818">Egypt</option>
+                                                            <option value="222">El Salvador</option>
+                                                            <option value="226">Equatorial Guinea</option>
+                                                            <option value="232">Eritrea</option>
+                                                            <option value="233">Estonia</option>
+                                                            <option value="231">Ethiopia</option>
+                                                            <option value="234">Faeroe Islands</option>
+                                                            <option value="238">Falkland Islands(Malvinas)</option>
+                                                            <option value="242">Figi</option>
+                                                            <option value="246">Finland</option>
+                                                            <option value="250">France</option>
+                                                            <option value="254">French Guiana</option>
+                                                            <option value="258">French Polynesia</option>
+                                                            <option value="266">Gabon</option>
+                                                            <option value="270">Gambia</option>
+                                                            <option value="268">Georgia</option>
+                                                            <option value="276">Germany</option>
+                                                            <option value="288">Ghana</option>
+                                                            <option value="292">Gibraltar</option>
+                                                            <option value="300">Greece</option>
+                                                            <option value="304">Greenland</option>
+                                                            <option value="308">Grenada</option>
+                                                            <option value="312">Guadeloupe</option>
+                                                            <option value="316">Guam</option>
+                                                            <option value="320">Guatemala</option>
+                                                            <option value="831">Guernsey</option>
+                                                            <option value="324">Guinea</option>
+                                                            <option value="624">Guinea-Bissau</option>
+                                                            <option value="328">Guyana</option>
+                                                            <option value="332">Haiti</option>
+                                                            <option value="336">Holy See</option>
+                                                            <option value="340">Honduras</option>
+                                                            <option value="344">Hong Kong</option>
+                                                            <option value="348">Hungary</option>
+                                                            <option value="352">Iceland</option>
+                                                            <option value="356">India</option>
+                                                            <option value="360">Indonesia</option>
+                                                            <option value="364">Iran</option>
+                                                            <option value="368">Iraq</option>
+                                                            <option value="372">Ireland</option>
+                                                            <option value="833">Isle of Man</option>
+                                                            <option value="376">Israel</option>
+                                                            <option value="380">Italy</option>
+                                                            <option value="388">Jamaica</option>
+                                                            <option value="392">Japan</option>
+                                                            <option value="832">Jersey</option>
+                                                            <option value="400">Jordan</option>
+                                                            <option value="398">Kazakhstan</option>
+                                                            <option value="404">Kenya</option>
+                                                            <option value="296">Kiribati</option>
+                                                            <option value="414">Kuwait</option>
+                                                            <option value="417">Kyrgyzstan</option>
+                                                            <option value="418">Lao Peoples Democratic Republic</option>
+                                                            <option value="428">Latvia</option>
+                                                            <option value="422">Lebanon</option>
+                                                            <option value="426">Lesotho</option>
+                                                            <option value="430">Liberia</option>
+                                                            <option value="434">Libyan Arab Jamahiriya</option>
+                                                            <option value="438">Liechtenstein</option>
+                                                            <option value="440">Lithuania</option>
+                                                            <option value="442">Luxembourg</option>
+                                                            <option value="446">Macao Special Administrative Region of China</option>
+                                                            <option value="450">Madagascar</option>
+                                                            <option value="454">Malawi</option>
+                                                            <option value="458">Malaysia</option>
+                                                            <option value="462">Maldives</option>
+                                                            <option value="466">Mali</option>
+                                                            <option value="470">Malta</option>
+                                                            <option value="584">Marshall Islands</option>
+                                                            <option value="474">Martinique</option>
+                                                            <option value="478">Mauritania</option>
+                                                            <option value="480">Mauritius</option>
+                                                            <option value="175">Mayotte</option>
+                                                            <option value="484">Mexico</option>
+                                                            <option value="583">Micronesia</option>
+                                                            <option value="492">Monaco</option>
+                                                            <option value="496">Mongolia</option>
+                                                            <option value="499">Montenegro</option>
+                                                            <option value="500">Montserrat</option>
+                                                            <option value="504">Morocco</option>
+                                                            <option value="508">Mozambique</option>
+                                                            <option value="104">Myanmar</option>
+                                                            <option value="516">Namibia</option>
+                                                            <option value="520">Nauru</option>
+                                                            <option value="524">Nepal</option>
+                                                            <option value="528">Netherlands</option>
+                                                            <option value="540">New Caledonia</option>
+                                                            <option value="554">New Zealand</option>
+                                                            <option value="558">Nicaragua</option>
+                                                            <option value="562">Niger</option>
+                                                            <option value="566">Nigeria</option>
+                                                            <option value="570">Niue</option>
+                                                            <option value="574">Norfolk Island</option>
+                                                            <option value="580">Norhtern Mariana Islands</option>
+                                                            <option value="578">Norway</option>
+                                                            <option value="275">Occupied Palestinian Territory</option>
+                                                            <option value="512">Oman</option>
+                                                            <option value="586">Pakistan</option>
+                                                            <option value="585">Palau</option>
+                                                            <option value="591">Panama</option>
+                                                            <option value="598">Papua New Guinea</option>
+                                                            <option value="600">Paraguay</option>
+                                                            <option value="604">Peru</option>
+                                                            <option value="608">Philippines</option>
+                                                            <option value="612">Pitcairn</option>
+                                                            <option value="616">Poland</option>
+                                                            <option value="620">Portugal</option>
+                                                            <option value="630">Puerto Rico</option>
+                                                            <option value="634">Qatar</option>
+                                                            <option value="410">Republic of Korea</option>
+                                                            <option value="498">Republic of Moldova</option>
+                                                            <option value="638">Reunion</option>
+                                                            <option value="642">Romania</option>
+                                                            <option value="643">Russia</option>
+                                                            <option value="646">Rwanda</option>
+                                                            <option value="654">Saint Helena</option>
+                                                            <option value="659">Saint Kitts and Nevis</option>
+                                                            <option value="662">Saint Lucia</option>
+                                                            <option value="666">Saint Pierre and Miquelon</option>
+                                                            <option value="670">Saint Vincent and the Grenadines</option>
+                                                            <option value="882">Samoa</option>
+                                                            <option value="674">San Marino</option>
+                                                            <option value="678">Sao Tome and Principe</option>
+                                                            <option value="682">Saudi Arabia</option>
+                                                            <option value="686">Senegal</option>
+                                                            <option value="688">Serbia</option>
+                                                            <option value="690">Seychelles</option>
+                                                            <option value="694">Sierra Leone</option>
+                                                            <option value="702">Singapore</option>
+                                                            <option value="703">Slovakia</option>
+                                                            <option value="705">Slovenia</option>
+                                                            <option value="90">Solomon Islands</option>
+                                                            <option value="706">Somalia</option>
+                                                            <option value="710">South Africa</option>
+                                                            <option value="724">Spain</option>
+                                                            <option value="144">Sri Lanka</option>
+                                                            <option value="729">Sudan</option>
+                                                            <option value="740">Suriname</option>
+                                                            <option value="744">Svalbard and Jan Mayen Islands</option>
+                                                            <option value="748">Swaziland</option>
+                                                            <option value="752">Sweden</option>
+                                                            <option value="756">Switzerland</option>
+                                                            <option value="760">Syrian Arab Republic</option>
+                                                            <option value="158">Taiwan</option>
+                                                            <option value="762">Tajikistan</option>
+                                                            <option value="764">Thailand</option>
+                                                            <option value="807">The former Yugoslav Republic of Macedonia</option>
+                                                            <option value="626">Timor-Leste</option>
+                                                            <option value="768">Togo</option>
+                                                            <option value="772">Tokelau</option>
+                                                            <option value="776">Tonga</option>
+                                                            <option value="780">Trinidad and Tobago</option>
+                                                            <option value="788">Tunisia</option>
+                                                            <option value="792">Turkey</option>
+                                                            <option value="795">Turkmenistan</option>
+                                                            <option value="796">Turks and Caicos Islands</option>
+                                                            <option value="798">Tuvalu</option>
+                                                            <option value="800">Uganda</option>
+                                                            <option value="804">Ukraine</option>
+                                                            <option value="784">United Arab Emirates</option>
+                                                            <option value="826">United Kingdom</option>
+                                                            <option value="834">United Republic of Tanzania</option>
+                                                            <option value="840">United States of America</option>
+                                                            <option value="850">United States Virgin Islands</option>
+                                                            <option value="858">Uruguay</option>
+                                                            <option value="860">Uzbekistan</option>
+                                                            <option value="548">Vanuatu</option>
+                                                            <option value="862">Venezuela</option>
+                                                            <option value="704">Viet Nam</option>
+                                                            <option value="876">Wallis and Futuna Islands</option>
+                                                            <option value="732">Western Sahara</option>
+                                                            <option value="887">Yemen</option>
+                                                            <option value="894">Zambia</option>
+                                                            <option value="716">Zimbabwe</option>
+                                                        </select>
+													</div>
+                                                </div>
+                                            </div>
+                                        
+                                        </fieldset>
+                                    </form>
+                                </div><!-- /widget-main -->
+                                <div class="widget-toolbox padding-8 clearfix">
+                                    <!-- <button class="btn btn-xs btn-danger pull-left">
+                                        <i class="fa fa-home"></i>
+                                        <span class="bigger-110">Return Home</span>
+                                    </button>
+ -->
+                                    <button class="btn btn-xs btn-success pull-right">
+                                        <span class="bigger-110">Next</span>&nbsp;
+
+                                        <i class="fa fa-arrow-right"></i>
+                                    </button>
+								</div><!-- /widget-toolbox -->
+                            </div><!-- /widget-body -->
+						</div><!-- /widget-box -->
+                                        
+                    </div><!-- /span -->
+
+                </div><!-- /row -->
+
+                <div class="space-24"></div>
+
+                <script type="text/javascript">
+                    var $path_assets = "assets";//this will be used in gritter alerts containing images
+                </script>
+
+                <!-- PAGE CONTENT ENDS -->
+						</div>      
+      
+         </div><!--/.container -->
+   
+    </div><!--/ .wrap -->
+
+    <div id="footer">
+      <div class="container">
+<a target="_privacyStatement" tabindex="10000" href="http://www.ddiworld.com/privacy?id=en">DDI Privacy Statement</a> | &copy; Development Dimensions International, Inc., 1970-2012. <a target="_copyright" tabindex="10000" href="http://www.ddiworld.com/copyright?lang=en">All Rights Reserved</a>.
+      </div>
+    </div>				
+    
+    	<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+        <script type="text/javascript">
+         window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+        </script>
+        <![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        
+		<!-- page specific plugin scripts -->
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/chosen.jquery.min.js"></script>
+		<script src="assets/js/fuelux/fuelux.spinner.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+		<script src="assets/js/bootstrap-colorpicker.min.js"></script>
+		<script src="assets/js/jquery.knob.min.js"></script>
+		<script src="assets/js/jquery.autosize.min.js"></script>
+		<script src="assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
+		<script src="assets/js/jquery.maskedinput.min.js"></script>
+		<script src="assets/js/bootstrap-tag.min.js"></script>
+		
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+        
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			function show_box(id) {
+			 jQuery('.widget-box.visible').removeClass('visible');
+			 jQuery('#'+id).addClass('visible');
+			}
+		</script>
+        
+        <script type="text/javascript">
+			jQuery(function($) {
+				$('#id-disable-check').on('click', function() {
+					var inp = $('#form-input-readonly').get(0);
+					if(inp.hasAttribute('disabled')) {
+						inp.setAttribute('readonly' , 'true');
+						inp.removeAttribute('disabled');
+						inp.value="This text field is readonly!";
+					}
+					else {
+						inp.setAttribute('disabled' , 'disabled');
+						inp.removeAttribute('readonly');
+						inp.value="This text field is disabled!";
+					}
+				});
+			
+			
+				$(".chosen-select").chosen(); 
+				$('#chosen-multiple-style').on('click', function(e){
+					var target = $(e.target).find('input[type=radio]');
+					var which = parseInt(target.val());
+					if(which == 2) $('#form-field-select-4').addClass('tag-input-style');
+					 else $('#form-field-select-4').removeClass('tag-input-style');
+				});
+			
+			
+				$('[data-rel=tooltip]').tooltip({container:'body'});
+				$('[data-rel=popover]').popover({container:'body'});
+				
+				$('textarea[class*=autosize]').autosize({append: "\n"});
+				$('textarea.limited').inputlimiter({
+					remText: '%n character%s remaining...',
+					limitText: 'max allowed : %n.'
+				});
+			
+				$.mask.definitions['~']='[+-]';
+				$('.input-mask-date').mask('99/99/9999');
+				$('.input-mask-phone').mask('(999) 999-9999');
+				$('.input-mask-eyescript').mask('~9.99 ~9.99 999');
+				$(".input-mask-product").mask("a*-999-a999",{placeholder:" ",completed:function(){alert("You typed the following: "+this.val());}});
+			
+			
+			
+				$( "#input-size-slider" ).css('width','200px').slider({
+					value:1,
+					range: "min",
+					min: 1,
+					max: 8,
+					step: 1,
+					slide: function( event, ui ) {
+						var sizing = ['', 'input-sm', 'input-lg', 'input-mini', 'input-small', 'input-medium', 'input-large', 'input-xlarge', 'input-xxlarge'];
+						var val = parseInt(ui.value);
+						$('#form-field-4').attr('class', sizing[val]).val('.'+sizing[val]);
+					}
+				});
+			
+				$( "#input-span-slider" ).slider({
+					value:1,
+					range: "min",
+					min: 1,
+					max: 12,
+					step: 1,
+					slide: function( event, ui ) {
+						var val = parseInt(ui.value);
+						$('#form-field-5').attr('class', 'col-xs-'+val).val('.col-xs-'+val);
+					}
+				});
+				
+				
+				$( "#slider-range" ).css('height','200px').slider({
+					orientation: "vertical",
+					range: true,
+					min: 0,
+					max: 100,
+					values: [ 17, 67 ],
+					slide: function( event, ui ) {
+						var val = ui.values[$(ui.handle).index()-1]+"";
+			
+						if(! ui.handle.firstChild ) {
+							$(ui.handle).append("<div class='tooltip right in' style='display:none;left:16px;top:-6px;'><div class='tooltip-arrow'></div><div class='tooltip-inner'></div></div>");
+						}
+						$(ui.handle.firstChild).show().children().eq(1).text(val);
+					}
+				}).find('a').on('blur', function(){
+					$(this.firstChild).hide();
+				});
+				
+				$( "#slider-range-max" ).slider({
+					range: "max",
+					min: 1,
+					max: 10,
+					value: 2
+				});
+				
+				$( "#eq > span" ).css({width:'90%', 'float':'left', margin:'15px'}).each(function() {
+					// read initial values from markup and remove that
+					var value = parseInt( $( this ).text(), 10 );
+					$( this ).empty().slider({
+						value: value,
+						range: "min",
+						animate: true
+						
+					});
+				});
+			
+				
+				$('#id-input-file-1 , #id-input-file-2').ace_file_input({
+					no_file:'No File ...',
+					btn_choose:'Choose',
+					btn_change:'Change',
+					droppable:false,
+					onchange:null,
+					thumbnail:false //| true | large
+					//whitelist:'gif|png|jpg|jpeg'
+					//blacklist:'exe|php'
+					//onchange:''
+					//
+				});
+				
+				$('#id-input-file-3').ace_file_input({
+					style:'well',
+					btn_choose:'Drop files here or click to choose',
+					btn_change:null,
+					no_icon:'icon-cloud-upload',
+					droppable:true,
+					thumbnail:'small'//large | fit
+					//,icon_remove:null//set null, to hide remove/reset button
+					/**,before_change:function(files, dropped) {
+						//Check an example below
+						//or examples/file-upload.html
+						return true;
+					}*/
+					/**,before_remove : function() {
+						return true;
+					}*/
+					,
+					preview_error : function(filename, error_code) {
+						//name of the file that failed
+						//error_code values
+						//1 = 'FILE_LOAD_FAILED',
+						//2 = 'IMAGE_LOAD_FAILED',
+						//3 = 'THUMBNAIL_FAILED'
+						//alert(error_code);
+					}
+			
+				}).on('change', function(){
+					//console.log($(this).data('ace_input_files'));
+					//console.log($(this).data('ace_input_method'));
+				});
+				
+			
+				//dynamically change allowed formats by changing before_change callback function
+				$('#id-file-format').removeAttr('checked').on('change', function() {
+					var before_change
+					var btn_choose
+					var no_icon
+					if(this.checked) {
+						btn_choose = "Drop images here or click to choose";
+						no_icon = "icon-picture";
+						before_change = function(files, dropped) {
+							var allowed_files = [];
+							for(var i = 0 ; i < files.length; i++) {
+								var file = files[i];
+								if(typeof file === "string") {
+									//IE8 and browsers that don't support File Object
+									if(! (/\.(jpe?g|png|gif|bmp)$/i).test(file) ) return false;
+								}
+								else {
+									var type = $.trim(file.type);
+									if( ( type.length > 0 && ! (/^image\/(jpe?g|png|gif|bmp)$/i).test(type) )
+											|| ( type.length == 0 && ! (/\.(jpe?g|png|gif|bmp)$/i).test(file.name) )//for android's default browser which gives an empty string for file.type
+										) continue;//not an image so don't keep this file
+								}
+								
+								allowed_files.push(file);
+							}
+							if(allowed_files.length == 0) return false;
+			
+							return allowed_files;
+						}
+					}
+					else {
+						btn_choose = "Drop files here or click to choose";
+						no_icon = "icon-cloud-upload";
+						before_change = function(files, dropped) {
+							return files;
+						}
+					}
+					var file_input = $('#id-input-file-3');
+					file_input.ace_file_input('update_settings', {'before_change':before_change, 'btn_choose': btn_choose, 'no_icon':no_icon})
+					file_input.ace_file_input('reset_input');
+				});
+			
+			
+			
+			
+				$('#spinner1').ace_spinner({value:0,min:0,max:200,step:10, btn_up_class:'btn-info' , btn_down_class:'btn-info'})
+				.on('change', function(){
+					//alert(this.value)
+				});
+				$('#spinner2').ace_spinner({value:0,min:0,max:10000,step:100, touch_spinner: true, icon_up:'icon-caret-up', icon_down:'icon-caret-down'});
+				$('#spinner3').ace_spinner({value:0,min:-100,max:100,step:10, on_sides: true, icon_up:'icon-plus smaller-75', icon_down:'icon-minus smaller-75', btn_up_class:'btn-success' , btn_down_class:'btn-danger'});
+			
+			
+				
+				$('.date-picker').datepicker({autoclose:true}).next().on(ace.click_event, function(){
+					$(this).prev().focus();
+				});
+				$('input[name=date-range-picker]').daterangepicker().prev().on(ace.click_event, function(){
+					$(this).next().focus();
+				});
+				
+				$('#timepicker1').timepicker({
+					minuteStep: 1,
+					showSeconds: true,
+					showMeridian: false
+				}).next().on(ace.click_event, function(){
+					$(this).prev().focus();
+				});
+				
+				$('#colorpicker1').colorpicker();
+				$('#simple-colorpicker-1').ace_colorpicker();
+			
+				
+				$(".knob").knob();
+				
+				
+				//we could just set the data-provide="tag" of the element inside HTML, but IE8 fails!
+				var tag_input = $('#form-field-tags');
+				if(! ( /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase())) ) 
+				{
+					tag_input.tag(
+					  {
+						placeholder:tag_input.attr('placeholder'),
+						//enable typeahead by specifying the source array
+						source: ace.variable_US_STATES,//defined in ace.js >> ace.enable_search_ahead
+					  }
+					);
+				}
+				else {
+					//display a textarea for old IE, because it doesn't support this plugin or another one I tried!
+					tag_input.after('<textarea id="'+tag_input.attr('id')+'" name="'+tag_input.attr('name')+'" rows="3">'+tag_input.val()+'</textarea>').remove();
+					//$('#form-field-tags').autosize({append: "\n"});
+				}
+				
+				
+				
+			
+				/////////
+				$('#modal-form input[type=file]').ace_file_input({
+					style:'well',
+					btn_choose:'Drop files here or click to choose',
+					btn_change:null,
+					no_icon:'icon-cloud-upload',
+					droppable:true,
+					thumbnail:'large'
+				})
+				
+				//chosen plugin inside a modal will have a zero width because the select element is originally hidden
+				//and its width cannot be determined.
+				//so we set the width after modal is show
+				$('#modal-form').on('shown.bs.modal', function () {
+					$(this).find('.chosen-container').each(function(){
+						$(this).find('a:first-child').css('width' , '210px');
+						$(this).find('.chosen-drop').css('width' , '210px');
+						$(this).find('.chosen-search input').css('width' , '200px');
+					});
+				})
+				/**
+				//or you can activate the chosen plugin after modal is shown
+				//this way select element becomes visible with dimensions and chosen works as expected
+				$('#modal-form').on('shown', function () {
+					$(this).find('.modal-chosen').chosen();
+				})
+				*/
+			
+			});
+		</script>
+
+
+	</body>
+</html>

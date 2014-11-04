@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>DDI Talent Portal 2.0</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+        
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!-- ddi styles -->
+		<link rel="stylesheet" href="assets/css/ddi-custom.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+        
+        </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-container container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="navbar-header pull-left">
+                    <span class="navbar-brand">
+                    <small>
+                        <img src="assets/img/DDILOGO.svg" alt="DDI" width="57" height="20">
+                    </small>
+                    </span><!-- /.brand -->
+                    <span class="powered-by">Powered by DDI</span>                    
+                    </div><!-- /.navbar-header -->
+                </div>
+                <div class="col-xs-4 center"><span class="app-title">Talent Portal</span></div>
+                <div class="col-xs-4"><div class="navbar-header" role="navigation">
+                        <ul class="nav ace-nav pull-right">
+                            <li>
+                                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                    <span class="hidden-xs">Welcome, Jason Williams</span>
+                
+                                    <i class="normal-icon icon-reorder white bigger-130"></i>
+                                </a>
+                
+                                <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-group menu-icon-color"></i>
+                                            Change Role
+                                        </a>
+                                    </li>
+                
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-unlock menu-icon-color"></i>
+                                            Change Your Password
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-comment menu-icon-color"></i>
+                                            Change On-Screen Text Language
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="divider"></li>
+                
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-home menu-icon-color"></i>
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-off menu-icon-color"></i>
+                                            Exit
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!-- /.ace-nav -->
+                    </div><!--/.nav-collapse -->
+                    </div>
+                
+
+            </div><!--/.row -->
+        </div><!--/.nav-container -->
+      </div><!--/.navb,ar -->
+
+      <!-- Begin page content -->
+      <div class="container">
+
+        <!-- Modal -->
+        <div class="modal fade" id="setLangModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <p>OK to exit?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-sm btn-primary">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-header">
+              <h1><i class="fa fa-home"></i>&nbsp;Welcome Back!</h1>
+            </div>
+                    <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Items that must be completed are shown below. Once these items are complete, additional items might display as part of your process. It is important that you complete all items.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <ul class="list-inline">
+                        <li>
+                            <i class="fa fa-power-off fa-2x light-grey"></i>
+                            Not Started
+                        </li>
+                        <li>
+                            <i class="fa fa-clock-o fa-2x green"></i>
+                            Started
+                        </li>
+                        <li>
+                            <i class="fa fa-check-circle fa-2x green"></i>
+                            Completed
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-xs-12">
+                    <div class="widget-box" style="opacity: 1;">
+                        <div class="widget-header widget-header-flat">
+                            <i class="fa fa-check-circle fa-2x green"></i>
+                            <h4 class="inline">Process A</h4>
+                            <div class="widget-toolbar">
+                                <a data-action="collapse" href="#">
+                                    <i class="icon-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main padding-16">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                        <ol style="list-style-type:none">
+                                            <li>
+                                                <i class="fa fa-check-circle green"></i>
+                                                <a href="#">Accomodation Request</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-check-circle green"></i>
+                                                            Tell Us About Yourself
+                                                    <ol style="list-style-type:none">
+                                                            <li>
+                                                                <i class="fa fa-check-circle green"></i>
+                                                                <a href="#">Contact Information</a>
+                                                            </li>
+                                                            <li>
+                                                                <i class="fa fa-check-circle green"></i>
+                                                                <a href="#">Career Information</a>
+                                                            </li>
+                                                    </ol>
+                                                
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-check-circle green"></i>
+                                                <a href="#">Background</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-check-circle green"></i>
+                                                <a href="#">Professional Career Battery</a>
+                                            </li>
+                                            <li>
+                                            Your online process is complete.
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div class="col-sm-6 col-md-8">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <i class="fa fa-bar-chart-o fa-2x orange"></i>
+                                                <h5 class="inline">Reports</h5> 
+                                                <ul class="list-unstyled">
+                                                    <li>
+                                                        <a href="#">Leadership Insight Inventory Report</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">LM 360 Report</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <i class="fa fa-folder-open-o fa-2x green"></i>
+                                                <h5 class="inline">Resources</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="devResources.html">Development Resource Center</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">                                                    
+                                                <i class="fa fa-pencil-square-o fa-2x purple"></i>
+                                                <h5 class="inline">Surveys</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#" data-toggle="modal" data-target="#surveyModal" data-backdrop="static">Feedback Survey</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                                    
+                    <div class="widget-box" style="opacity: 1;">
+                        <div class="widget-header widget-header-flat">
+                            <i class="fa fa-power-off fa-2x light-grey"></i>
+                            <h4 class="inline">Process B</h4>
+                            <div class="widget-toolbar">
+                                <a data-action="collapse" href="#">
+                                    <i class="icon-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main padding-16">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                        <ol style="list-style-type:none">
+                                            <li>
+                                                <i class="fa fa-power-off grey "></i>
+                                                <a href="#">Accomodation Request</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-power-off grey"></i>
+                                                    Tell Us About Yourself
+                                                <ol style="list-style-type:none">
+                                                    <li>
+                                                        <i class="fa fa-power-off grey"></i>
+                                                        <a href="#">Contact Information</a>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-power-off grey"></i>
+                                                        <a href="#">Career Information</a>
+                                                    </li>
+                                                </ol>
+                                                
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-power-off grey"></i>
+                                                <a href="#">Background</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-power-off grey"></i>
+                                                <a href="#">Leadership Insight Inventory</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-power-off grey"></i>
+                                                <a href="#">LM 360</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div class="col-sm-6 col-md-8">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <i class="fa fa-bar-chart-o fa-2x orange"></i>
+                                                <h5 class="inline">Reports</h5> 
+                                                <ul class="list-unstyled">
+                                                    <li>
+                                                        <a href="#">Leadership Insight Inventory Report</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">LM 360 Report</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <i class="fa fa-folder-open-o fa-2x green"></i>
+                                                <h5 class="inline">Resources</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="devResources.html">Development Resource Center</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                    
+                </div><!-- /span -->
+            </div><!-- /row --> 
+
+                
+
+                <script type="text/javascript">
+                    var $path_assets = "assets";//this will be used in gritter alerts containing images
+                </script>
+
+                <!-- PAGE CONTENT ENDS -->
+						</div>      
+      
+         </div><!--/.container -->
+   
+    </div><!--/ .wrap -->
+
+    <div id="footer">
+      <div class="container">
+<a target="_privacyStatement" tabindex="10000" href="http://www.ddiworld.com/privacy?id=en">DDI Privacy Statement</a> | &copy; Development Dimensions International, Inc., 1970-2012. <a target="_copyright" tabindex="10000" href="http://www.ddiworld.com/copyright?lang=en">All Rights Reserved</a>.
+      </div>
+    </div>				
+    
+    	<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+        <script type="text/javascript">
+         window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+        </script>
+        <![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			function show_box(id) {
+			 jQuery('.widget-box.visible').removeClass('visible');
+			 jQuery('#'+id).addClass('visible');
+			}
+		</script>
+        
+		<!-- page specific plugin scripts -->
+
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+        
+        
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            $('#setLangModal').modal({
+                backdrop: 'static'
+            });
+        </script>
+
+	</body>
+</html>

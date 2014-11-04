@@ -1,0 +1,478 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. 
+  font-size: 14px;
+  position:relative;
+}*/
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 25px;
+  background:none;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#footer {
+  background: none repeat scroll 0 0 #F7F7F7;
+  border-top: 1px solid #254F79;
+  min-height: 24px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here 
+  height: 60px;
+  background-color: #f5f5f5;*/
+}
+
+/* Set the fixed height of the footer here */
+/*#footer {
+	background-color: #FFFFFF;
+    height: 19px;
+	border-top:1px solid #ccc;
+}*/
+
+#wrap {
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -20px;
+	padding: 0 0 20px;
+}
+
+#wrap > .container {
+	min-height:100%;
+    padding: 60px 15px 0;
+	background:#fff;
+	height:auto;
+	
+}
+
+.navbar {
+  background: none repeat scroll 0 0 #254F79;
+  border-bottom: 3px solid #B7D0ED;
+  min-height: 32px;
+  color: #FFFFFF;
+}
+
+.navbar .navbar-header {
+    width: 100%;
+}
+
+.navbar .navbar-brand {
+  padding-bottom: 0;
+  padding-top: 0;
+  text-shadow: none;
+  height: inherit;
+}
+
+/*Application Title Styles*/
+.app-title {
+	font-family:"Times New Roman", Times, serif;
+	font-variant:small-caps;
+	display: inline-block;
+	line-height: 15px;
+	position: relative;
+	text-align: left;
+	text-overflow: ellipsis;
+	top: 6px;
+	vertical-align: top;
+	white-space: nowrap;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 590px) {
+.app-title {
+	font-size: 24px;
+}
+
+/*#wrap > .container {
+    padding: 100px 15px 0;
+
+}*/
+
+
+}
+
+@media only screen and (max-width: 540px) {
+.app-title {
+	font-size: 16px;
+}
+}
+
+@media only screen and (max-width: 380px) {
+.app-title {
+	font-size: 12px;
+}
+
+}
+
+.powered-by {
+    display: none;
+}
+
+
+/* Global Menu */
+.ace-nav > li {
+  float: left !important;
+  height: 29px;
+  line-height: 29px;
+  padding: 0;
+  position: relative;
+  font-size:12px;
+}
+
+.ace-nav > li > a {
+  background-color: transparent;
+}
+
+.ace-nav > li > a > [class*="icon-"] {
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    width: 20px;
+}
+.ace-nav > li > a > .badge {
+    left: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    top: -4px;
+}
+.ace-nav > li > a:hover, .ace-nav > li > a:focus {
+    background-color: #b7d0ed;
+}
+.ace-nav > li.open > a {
+    background-color: #b7d0ed !important;
+}
+.ace-nav > li.open > a {
+    color: #FFFFFF !important;
+}
+
+/* move the icons to the line below */
+@media only screen and (max-width: 460px) {
+  .navbar .navbar-header.pull-right {
+    display: block;
+    float: right;
+  }
+  .ace-nav {
+    display: block;
+    text-align: center;
+    background-color:none;
+    border:none;
+    border-width: 1px 0;
+    letter-spacing: -3px;
+  	background-color: transparent;
+  	float: right !important;
+  }
+  .ace-nav > li:first-child {
+    border-left:none;
+  }
+  .ace-nav > li:last-child {
+    border-right: none;
+  }
+}
+
+.user-info {
+  max-width:250px;
+}
+@media (max-width: 480px) and (min-width: 461px), (max-width: 360px) {
+  .user-menu {
+    padding-top: 5px !important;
+  }
+}
+
+
+
+
+/* Login Page Styles*/
+.login-layout {
+background-color: #fff;
+}
+
+.login-layout .main-container:after {
+  display: none;
+}
+.login-layout .main-content {
+  margin-left: 0;
+  min-height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.login-layout label {
+  margin-bottom: 11px;
+}
+.login-layout .widget-box {
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  width: 98%;
+  background-color: #fff;
+  -moz-transform: scale(0,1) translate(-150px);
+  -webkit-transform: scale(0,1) translate(-150px);
+  -o-transform: scale(0,1) translate(-150px);
+  -ms-transform: scale(0,1) translate(-150px);
+  transform: scale(0,1) translate(-150px);
+  /*border-bottom: 1px solid #CCCCCC;*/
+  box-shadow: none;
+  margin: 3px 0;
+  padding: 0 1%;
+
+}
+.login-layout .widget-box.visible {
+  visibility: visible;
+  -moz-transform: scale(1,1) translate(0);
+  -webkit-transform: scale(1,1) translate(0);
+  -o-transform: scale(1,1) translate(0);
+  -ms-transform: scale(1,1) translate(0);
+  transform: scale(1,1) translate(0);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -o-transition: none;
+  /* too slow */
+
+  -webkit-transition: none;
+  /* works in chrome but not in safari, never scales back to 1! */
+
+}
+.login-layout .widget-box .widget-main {
+  padding: 12px;
+  background: #fff;
+}
+.login-layout .widget-box .widget-main form {
+  margin: 0;
+}
+.login-layout .widget-box .widget-body .toolbar > div > a {
+  font-size: 13px;
+  font-weight: normal;
+  text-shadow: none;;
+}
+.login-box .forgot-password-link {
+  color: #FE9;
+}
+.login-box .user-signup-link {
+  color: #CF7;
+}
+.login-box .toolbar {
+  background: #5090C1;
+  border-top: 2px solid #597597;
+}
+.login-box .toolbar > div {
+  width: 50%;
+  display: inline-block;
+  padding: 9px 0 11px;
+}
+.login-box .toolbar > div:first-child {
+  float: left;
+  text-align: left;
+}
+.login-box .toolbar > div:first-child > a {
+  margin-left: 11px;
+}
+.login-box .toolbar > div:first-child + div {
+  float: right;
+  text-align: right;
+}
+.login-box .toolbar > div:first-child + div > a {
+  margin-right: 11px;
+}
+.forgot-box .toolbar {
+  background: none;
+  border-top: none;
+}
+.forgot-box .back-to-login-link,
+.signup-box .back-to-login-link {
+  color: #FE9;
+  font-size: 13px;
+  font-weight: normal;
+  text-shadow: none;
+  }
+
+/* Padding for TrustE Logo */
+.truste {
+	padding-bottom:40px;
+	
+}
+
+label.form-field-select  {
+  margin-bottom: 5px;
+}
+
+/*Ace Admin theme styles for FontAwesome 4*/
+.input-icon > [class*="fa-"] {
+  padding: 0 3px;
+  z-index: 2;
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 3px;
+  line-height: 28px;
+  display: inline-block;
+  color: #909090;
+}
+.input-icon.input-icon-right > [class*="fa-"] {
+  left: auto;
+  right: 3px;
+}
+.input-icon > input:focus + [class*="fa-"] {
+  color: #579;
+}
+
+/*Required fields icon styles*/
+.fa-required {
+  padding-top: 5px;
+  vertical-align: top;
+  font-size:9px;
+}
+
+.widget-box1 {
+  visibility:hidden;
+  position: absolute;
+  overflow: hidden;
+  -moz-transform: scale(0,1) translate(-150px);
+  -webkit-transform: scale(0,1) translate(-150px);
+  -o-transform: scale(0,1) translate(-150px);
+  -ms-transform: scale(0,1) translate(-150px);
+  transform: scale(0,1) translate(-150px);
+}
+.widget-box.visible1 {
+  visibility: visible;
+  -moz-transform: scale(1,1) translate(0);
+  -webkit-transform: scale(1,1) translate(0);
+  -o-transform: scale(1,1) translate(0);
+  -ms-transform: scale(1,1) translate(0);
+  transform: scale(1,1) translate(0);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -o-transition: none;
+  /* too slow */
+
+  -webkit-transition: none;
+  /* works in chrome but not in safari, never scales back to 1! */
+
+}
+
+
+/* DDI Brand Colors - Overwrites Ace Admin color classes */
+.dark {
+  color: #000000 !important;
+}
+.red {
+  color: #991426 !important;
+}
+.blue {
+  color: #003049 !important;
+}
+.light-blue {
+  color: #00a6d6 !important;
+}
+.green {
+  color: #5e7803 !important;
+}
+.orange {
+  color: #de3b21 !important;
+}
+.orange2 {
+  color: #e0ad12 !important;
+}
+.purple {
+  color: #6b173b !important;
+}
+.grey {
+  color: #6b5c4f !important;
+}
+
+.ddi-radio {
+  margin-top: 0px;
+}
+
+.btn-success, .btn-success:focus, .widget-toolbox .btn + .btn {
+  margin-left: 5px;
+}
+
+/*System Check Page Styles*/
+@media only screen and (max-width: 380px) {
+  .syscheck-widget-box .widget-toolbox .btn {
+    float: none !important;
+  }
+  .syscheck-widget-box .widget-toolbox .btn.pull-right {
+    margin: 8px auto 0;
+  }
+}
+
+/*Form styles*/
+legend {
+  font-size: 17px;
+  margin-bottom: 15px;
+  color:#669FC7;
+}
+.form-group.has-error [class*="fa"] {
+  color: #d68273;
+}
+.help-block {
+  margin-top: 3px;
+}
+
+/*Custom accordion styles for Development Resource Center*/
+.accordion-style-custom.panel-group .panel-heading .accordion-toggle {
+  color: #5e7803;
+  background-color: #dff0d8;
+}
+.accordion-style-custom.panel-group .panel-heading .accordion-toggle:hover, 
+.accordion-style-custom.panel-group .panel-heading .accordion-toggle.collapsed:hover {
+  color: #5e7803;
+  background-color: #F2FFF2;
+}
+.accordion-style-custom.panel-group .panel-heading .accordion-toggle.collapsed {
+  color: #5e7803;
+  background-color: #F2F9F2;
+}
+.accordion-style-custom .list-group-item {
+  border-left: none;
+  border-right: none;
+}
+.accordion-style-custom .list-group-item:first-child {
+  border-top: none;
+}
+.accordion-style-custom .list-group-item:last-child {
+  border-bottom: none;
+}
+.accordion-style-custom a.list-group-item h4 {
+  color: #428bca;
+}
+
+/*Reaction/Feedback Surveys*/
+.width-16 {
+  width: 16.66666666666%;
+}
+@media only screen and (max-width: 991px) {
+  .sm-block {
+    width: 100% !important;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .md-block {
+    display: block;
+  }
+}
+
+.menu-icon-color {
+	color:#669FC7;
+}
+
+.widget-toolbox {
+  background-color: #F7F7F7;
+}

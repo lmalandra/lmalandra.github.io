@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>DDI Talent Portal 2.0</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />		<!-- basic styles -->
+        
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+
+		<!-- ddi styles -->
+		<link rel="stylesheet" href="assets/css/ddi-custom.css" />
+        
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+   
+    
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+	</head>
+
+	<body class="login-layout">
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-container container">
+        	<div class="row">
+                <div class="col-xs-4">
+                    <div class="navbar-header pull-left">
+                    <a href="#" class="navbar-brand">
+                    <small>
+                        <img src="assets/img/DDILOGO.svg" alt="DDI" width="57" height="20">
+                    </small>
+                    </a><!-- /.brand -->
+					<span class="powered-by">Powered by DDI</span>                    
+                    </div><!-- /.navbar-header -->
+                </div>
+				<div class="col-xs-4 center"><span class="app-title">Talent Portal</span></div>
+				<div class="col-xs-4"><div class="navbar-header pull-right" role="navigation">
+                        <ul class="nav ace-nav">
+                            <li>
+                                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                    <i class="icon-bar white"></i>
+                                    <span class="user-info">
+                                        <span class="hidden-xs">Welcome, Jason Williams</span>
+                                    </span>
+                
+                                    <i class="normal-icon icon-reorder white bigger-130"></i>
+                                </a>
+                
+                                <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-group green"></i>
+                                            Change Role
+                                        </a>
+                                    </li>
+                
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-unlock orange"></i>
+                                            Change Your Password
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-comment light-orange"></i>
+                                            Change On-Screen Text Language
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="divider"></li>
+                
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-off orange2"></i>
+                                            Exit
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!-- /.ace-nav -->
+                    </div><!--/.nav-collapse -->
+                    </div>
+                
+
+			</div><!--/.row -->
+        </div><!--/.nav-container -->
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+                <!-- PAGE CONTENT BEGINS -->
+                <div class="row">
+                		<div class="col-xs-11 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+        			<!--<div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">-->
+						<div id="login-box" class="visible widget-box" style="opacity: 1;">
+                            <div class="widget-header widget-header-flat">
+                                <h4 class="inline"><i class="icon-lock green"></i> Log On</h4>
+                            </div>
+
+                            <div class="widget-body">
+										<div class="widget-main">
+											<form>
+												<fieldset>
+                                                <div>
+                                                    <label for="form-field-select-1" class="form-field-select block clearfix">Language</label>
+
+                                                    <select class="form-control" id="form-field-select-1">
+                                                        <option value="en" selected>English</option>
+                                                        <option value="es-Mx">Espa&#241;ol (Am&#233;rica Latina)</option>
+                                                        <option value="fr">Fran&#231;ais</option>
+                                                        <option value="ja">日本語</option>
+                                                        <option value="zh-Hans">简体中文</option>
+                                                        <option value="zh-Hant">繁體中文</option>
+                                                    </select>
+                                                </div>
+                                                <div class="space"></div>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" class="form-control" placeholder="User Name / Email Address" />
+															<i class="icon-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="Password" />
+															<i class="icon-lock"></i>
+														</span>
+													</label>
+
+													<div class="clearfix">
+
+														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+															<i class="icon-key"></i>
+															Log On
+														</button>
+													</div>
+
+													<div class="space-4"></div>
+												</fieldset>
+											</form>
+										
+										</div><!-- /widget-main -->
+                                      <div class="widget-toolbox padding-8 clearfix">
+                                		<div class="toolbar clearfix">
+											<div>
+												<a href="#" onclick="show_box('forgot-box'); return false;">
+													<i class="icon-arrow-left"></i>
+													Forget Your Password?
+												</a>
+											</div>
+										</div>
+									</div>
+
+									</div><!-- /widget-body -->
+						</div>
+                        
+								<div id="forgot-box" class="forgot-box widget-box">
+                                	<div class="widget-header widget-header-flat">
+                                <h4 class="inline">
+												<i class="icon-key"></i>
+												Forget Your Password?
+											</h4>
+                            </div>
+									<div class="widget-body">
+										<div class="widget-main">
+											
+
+											<div class="space-8"></div>
+											<!--<p>
+												Enter your email and to receive instructions
+											</p>-->
+
+											<form>
+												<fieldset>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email" class="form-control" placeholder="User Name / Email Address" />
+															<i class="icon-envelope"></i>
+														</span>
+													</label>
+
+													<div class="clearfix">
+														<button type="button" class="width-70 pull-right btn btn-sm btn-danger">
+															<i class="icon-lightbulb"></i>
+															E-mail me a new password
+														</button>
+													</div>
+												</fieldset>
+											</form>
+										</div><!-- /widget-main -->
+										<div class="widget-toolbox clearfix">
+                                		<div class="toolbar clearfix">
+											<div>
+												<a href="#" onclick="show_box('login-box'); return false;">
+												Return to Log On
+												<i class="icon-arrow-right"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+										
+									</div><!-- /widget-body -->
+								</div><!-- /forgot-box -->                        
+					</div><!-- /.col -->
+				</div>        
+
+
+
+      </div>
+    </div>
+ 	
+    
+    
+ 
+ 	<div class="navbar-fixed-bottom truste">
+        <div class="container">
+        	<div class="row">
+                <div class="col-xs-12">
+                    <div class="pull-right">
+                        <a tabindex="10000" href="http://www.ddiworld.com/privacy?id=en">
+						<img src="assets/img/truste_seal_en.jpg" alt="Trust E Logo" width="140" height="40">
+					</a>                    
+                    </div><!--/.nav-collapse -->
+                </div>
+			</div><!--/.row -->
+        </div><!--/.nav-container -->
+      </div>
+      
+      
+    <div id="footer">
+      <div class="container">
+<a target="_privacyStatement" tabindex="10000" href="http://www.ddiworld.com/privacy?id=en">DDI Privacy Statement</a> | &copy; Development Dimensions International, Inc., 1970-2012. <a target="_copyright" tabindex="10000" href="http://www.ddiworld.com/copyright?lang=en">All Rights Reserved</a>.
+      </div>
+    </div>		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+        <script type="text/javascript">
+         window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+        </script>
+        <![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			function show_box(id) {
+			 jQuery('.widget-box.visible').removeClass('visible');
+			 jQuery('#'+id).addClass('visible');
+			}
+		</script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        
+
+	</body>
+</html>

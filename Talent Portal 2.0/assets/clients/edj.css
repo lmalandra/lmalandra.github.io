@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+.navbar {
+  background: none repeat scroll 0 0 #213D30;
+  border-bottom: 3px solid #FEE177;
+  color: #FFFFFF;
+}
+
+.navbar a {
+  color: #FFFFFF;
+}
+
+.navbar a:hover, a:focus {
+  color: #C0C0C0;
+}
+
+/* Global Menu */
+.ace-nav > li > a {
+  background-color: transparent;
+
+}
+.ace-nav > li > a > [class*="icon-"] {
+    color: #FFFFFF;
+}
+
+.ace-nav > li > a:hover, .ace-nav > li > a:focus {
+    background-color: #FEE177;
+    color: #213D30;
+}
+.ace-nav > li.open > a {
+    background-color: #FEE177 !important;
+}
+.ace-nav > li.open > a {
+    color: #213D30 !important;
+}
+
+
+.powered-by {
+	display: inline;
+	font-size: 12px;
+}
+
+
+#footer {
+  background: none repeat scroll 0 0 #213D30;
+  border-top: 1px solid #FEE177;
+  color: #FFFFFF;
+}
+
+#footer a {
+  color: #FFFFFF;
+}
+
+#footer a:hover, a:focus {
+  color: #C0C0C0;
+}
+
+

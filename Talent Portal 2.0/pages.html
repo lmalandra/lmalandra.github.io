@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>DDI Talent Portal 2.0</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+        
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!-- ddi styles -->
+		<link rel="stylesheet" href="assets/css/ddi-custom.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+        
+        </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+      <!-- Fixed navbar -->
+      <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-container container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="navbar-header pull-left">
+                    <span class="navbar-brand">
+                    <small>
+                        <img src="assets/img/DDILOGO.svg" alt="DDI" width="57" height="20">
+                    </small>
+                    </span><!-- /.brand -->
+                    <span class="powered-by">Powered by DDI</span>                    
+                    </div><!-- /.navbar-header -->
+                </div>
+                <div class="col-xs-4 center"><span class="app-title">Talent Portal</span></div>
+                <div class="col-xs-4"><div class="navbar-header" role="navigation">
+                        <ul class="nav ace-nav pull-right">
+                            <li>
+                                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                    <span class="hidden-xs">Welcome, Jason Williams</span>
+                
+                                    <i class="normal-icon icon-reorder white bigger-130"></i>
+                                </a>
+                
+                                <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-group menu-icon-color"></i>
+                                            Change Role
+                                        </a>
+                                    </li>
+                
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-unlock menu-icon-color"></i>
+                                            Change Your Password
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-comment menu-icon-color"></i>
+                                            Change On-Screen Text Language
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="divider"></li>
+                
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-home menu-icon-color"></i>
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-off menu-icon-color"></i>
+                                            Exit
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!-- /.ace-nav -->
+                    </div><!--/.nav-collapse -->
+                    </div>
+                
+
+            </div><!--/.row -->
+        </div><!--/.nav-container -->
+      </div><!--/.navbar -->
+
+      <!-- Begin page content -->
+      <div class="container">
+<!-- Modal -->
+        <div class="modal fade" id="techSupport" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Contact Technical Support</h4>
+              </div>
+              <div class="modal-body">
+                <p>Introductory text here?</p>
+                <!--<p class="alert alert-danger"><i class="icon-warning-sign"></i> Once you set the language, it CANNOT be changed.</p>-->
+                <form>
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="first-name-eng"><i class="fa fa-asterisk red fa-required"></i>&nbsp;First Name</label>
+                            <span class="block input-icon input-icon-right">     
+                                <input type="text" id="first-name-eng" class="form-control" />
+                            </span>
+                        </div> 
+                        <div class="form-group">
+                            <label for="last-name-eng"><i class="fa fa-asterisk red fa-required"></i>&nbsp;Last Name</label>
+                            <span class="block input-icon input-icon-right">
+                                <input id="last-name-eng" type="text" class="form-control" />
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="username-email"><i class="fa fa-asterisk red fa-required"></i>&nbsp;User Name / Email Address</label>
+                            <span class="block input-icon input-icon-right">
+                                <input id="username-email" type="text" class="form-control" />
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label"><i class="fa fa-asterisk red fa-required"></i>&nbsp;Problem Description</label>
+                            <textarea rows="3" class="form-control"></textarea>
+                        </div>
+                    </fieldset>                                              
+                </form>
+              </div>
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>-->
+                    <button type="button" class="btn btn-sm btn-primary">Submit</button>
+                  </div>
+            </div>
+          </div>
+        </div>    
+        <div class="page-header">
+          <h1>Talent Portal 2.0 Pages</h1>
+        </div>
+        <ul>
+        	<li><a href="mainFramework.html">Main Framework</a></li>
+        	<li><a href="loginDDI.html">Log On / Forget Password</a>
+                <ul>
+                    <li><a href="loginDDIErrors.html">Error state</a></li>
+                    <li><a href="sessionTimeout.html">Session Timeout</a></li>
+                    <li><a href="loginLoggedOut.html">Logged Out</a></li>
+                </ul>
+            </li>
+        	<li><a href="changeRole.html">Change Role</a>
+        	<li><a href="changePassword.html">Change Password</a>
+           
+                <ul>
+                    <li><a href="changePasswordErrors.html">Error state</a></li>
+                </ul>
+            </li>
+        	<li><a href="dataPrivacyAgreement.html">Data Privacy Policy Agreement</a>
+                <ul>
+                    <li><a href="dataPrivacyAgreementErrors.html">Error State</a></li>
+                </ul>
+            </li>
+        	<li><a href="changeLanguage.html">Change On-Screen Text Language</a></li>
+            <li>
+                <a href="home4.html">Home Page</a>
+            </li>
+            <li><a href="devResources.html">Development Resource Center</a></li>
+            <li><a href="systemCheck.html">System Check</a></li>
+            <li><a href="accomodationRequest.html">Accomodation Request</a></li>
+        	<li><a href="contactInformation.html">Contact Information</a>
+                <ul>
+                    <li><a href="contactInformationErrors.html">Error State</a></li>
+                </ul>
+            </li>
+        	<li><a href="careerInformation.html">Career Information</a>
+                <ul>
+                    <li><a href="careerInformationErrors.html">Error State</a></li>
+                </ul>
+            </li>
+        	<li><a href="backgroundInformation.html">Background Information</a></li>
+        	<li><a href="typographyDDI.html">Typography</a></li>            
+            <li>Sample Client Branding Pages
+        		<ul>
+                    <li><a href="home-citi.html">Citi</a></li>
+                	<li><a href="home-car.html">Carlisle Interconnect Technologies, Inc.</a></li>
+                    <li><a href="home-dup.html">DuPont</a></li>
+                    <li><a href="home-edj.html">Edward Jones</a></li>
+                    <li><a href="home-gp.html">Georgia Power</a></li>
+                    <li><a href="home-lol.html">Land O'Lakes</a></li>
+                    <li><a href="home-pg.html">Procter &amp; Gamble</a></li>
+                </ul>
+            </li>
+        	<li>Standard Pages
+        		<ul>
+                	<li>Buttons</li>
+                </ul>
+            </li>
+            <li>
+                <a href="homeSetTestingLanguage.html">Testing Set Language</a>
+            </li>
+            <li>
+                <a href="homeReactionSurvey.html">Reaction Survey</a>
+            </li>
+            <li>
+                <a href="exitModal.html">Exit Modal</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+<a target="_privacyStatement" tabindex="10000" href="http://www.ddiworld.com/privacy?id=en">DDI Privacy Statement</a> | &copy; Development Dimensions International, Inc., 1970-2012. <a target="_copyright" tabindex="10000" href="http://www.ddiworld.com/copyright?lang=en">All Rights Reserved</a>.<span class="pull-right">&nbsp;<a data-toggle="modal" href="#techSupport" >Contact Technical Support</a></span>
+      </div>
+    </div>		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+        <script type="text/javascript">
+         window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+        </script>
+        <![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			function show_box(id) {
+			 jQuery('.widget-box.visible').removeClass('visible');
+			 jQuery('#'+id).addClass('visible');
+			}
+		</script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        
+
+	</body>
+</html>
