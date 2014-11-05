@@ -306,100 +306,184 @@
                         </div>
                           </div>
                           <div id="content" class="tab-pane fade">
-            				<div class="span4">
-                                <div class="control-group">
-                                    <label class="control-label" for="inputEmail">
-                                    <span class="required">* </span>From</label>
-                                    <div class="controls">
-                                    <select class="input-large no-margin"  id="selectbox1">
-                                    <option value="talentportal@ddiworld.com" selected="selected">talentportal@ddiworld.com</option>
-                                    <option value="">From Address #2</option>
-                                    <!--<option value="">Trigger 2</option>-->
-                                    </select>
-                                    <br>
-                                    <span class="label-info"> Use only for China.  (Should only display for appropriate 'from' address)</span>
-                                    </div>
+                                    <div class="span4">
+                                        <div class="control-group">
+                                            <label class="control-label" for="emailFrom">
+                                                <!--<span class="required">* </span>-->Language
+                                            </label>
+                                            <div class="controls">
+
+                                                <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                                                    <option value="ManageComme.html">English</option>
+                                                    <option value="commManage-fr.html">French</option>
+                                                    <option value="commManage-sp.html">Spanish</option>
+                                                    <option value="2">German</option>
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputEmail">
+                                                <span class="required">* </span>From</label>
+                                            <div class="controls">
+                                                <select class="input-large no-margin" id="selectbox1">
+                                                    <option value="talentportal@ddiworld.com" selected="selected">talentportal@ddiworld.com</option>
+                                                    <option value="">From Address #2</option>
+                                                    <!--<option value="">Trigger 2</option>-->
+                                                </select>
+                                                <br>
+                                                <span class="label-info"> Use only for China.  (Should only display for appropriate 'from' address)</span>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="control-group ">
+                                            <label class="control-label" for="inputEmail">CC</label>
+                                            <div class="controls">
+                                                <input class="input-large" type="text" id="inputEmail" placeholder="">
+                                                <br><span class="label-info"> Separate each Email address with a comma or semicolon.</span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="emailFrom">
+                                                <span class="required">* </span>Email Name
+                                            </label>
+
+
+                                            <div class="controls">
+                                                <input value="Do Not Progress Admin Template 001" class="input-xlarge" id="emailCC" data-bind="value: cC, disable: isPublished()" type="text">
+
+                                                <span style="display: none;" class="help-inline" data-bind="visible: $root.hasError('fromAddress', 'required')">
+                                <img src="Talent%20Portal%20Administration2_files/error16px.png" alt="error">
+                                From is required.
+                            </span>
+                                                <br><span style="display: none;" class="label-info" data-bind="visible: showChinaMsg()">
+                                      Use only for China.
+                                  </span>
+                                            </div>
+
+                                        </div>
+
+
+
+
+                                        <div class="control-group" data-bind="css: { error: $root.hasError('emailSubject') }">
+                                            <label class=" control-label" for="emailSubject">
+                                                <span class="required">* </span>Subject</label>
+                                            <div class="controls">
+                                                <input value="Participant Update: Not Progressed" class="input-xlarge" id="emailSubject" data-bind="value: subject" type="text">
+                                                <span style="display: none;" class="help-inline" data-bind="visible: $root.hasError('emailSubject', 'required')">
+                                <img src="Talent%20Portal%20Administration2_files/error16px.png" alt="error">
+                                Subject is required.
+                            </span>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                            <div class="k-widget k-upload k-header k-upload-empty">
+                                                <div class="k-dropzone">
+                                                    <div class="k-button k-upload-button">
+                                                        <input autocomplete="off" multiple data-role="upload" name="files" id="files" data-bind="kendoUpload:{localization: {select: 'Attach files'}, async: {Name: 'files', saveUrl: 'upload', removeUrl: 'upload/remove', removeField: 'files'}, multiple: true, select: $root.onSelect, success: $root.onSuccess, error: $root.onError, showFileList: false}" type="file"><span>Attach files</span>
+                                                    </div><em>drop files here to upload</em>
+                                                </div>
+                                            </div>
+                                            <label style="display: none;" class="control-label" data-bind="visible: $root.uploadedFilesCount()">Uploaded files</label>
+
+                                            <ul class="attachmentlist input-xlarge" data-bind="foreach: uploadedFile"></ul>
+                                        </div>
+
+
 
                                     </div>
+                                    <div class="span4">
+                                        <div class="control-group" data-bind="css: { error: $root.hasError('emailBody') }">
 
-                                <!--<div class="control-group">
-                                    <label class="control-label" for="inputEmail">
-                                    <span class="required">* </span>From</label>
-                                    <div class="controls">
-                                    <input name="" type="text" disabled class="input-large" id="inputEmail" value="Email address is predefined" >
-                                    <br><span class="help-inline"><img src="img/error16px.png" alt="error"> "Email Name" is required.</span>
-                                    </div>
-                                </div>-->
+                                            <label class=" control-label" for="emailBody">
+                                                <span class="required">* </span>Body
+                                            </label>
 
-                                <div class="control-group ">
-                                    <label class="control-label" for="inputEmail">CC</label>
-                                    <div class="controls">
-                                    <input class="input-large" type="text" id="inputEmail" placeholder="" >
-                                    <br><span class="label-info"> Separate each Email address with a comma or semicolon.</span>
-                                    </div>
-                                </div>
+                                            <div class="k-content">
+                                                <p>
+                                                    <table style="height: 285px;" class="k-widget k-editor k-header k-editor-widget" role="presentation" cellpadding="0" cellspacing="4">
+                                                        <tbody>
+                                                            <tr role="presentation">
+                                                                <td class="k-editor-toolbar-wrap k-secondary" role="presentation">
+                                                                    <ul data-role="editortoolbar" aria-controls="emailBody" class="k-editor-toolbar" role="toolbar">
+                                                                        <li class="k-tool-group k-button-group" role="presentation"><a href="" role="button" class="k-tool k-group-start" unselectable="on" title="Bold"><span class="k-tool-icon k-bold">Bold</span></a><a href="" role="button" class="k-tool" unselectable="on" title="Italic"><span class="k-tool-icon k-italic">Italic</span></a><a href="" role="button" class="k-tool k-group-end" unselectable="on" title="Underline"><span class="k-tool-icon k-underline">Underline</span></a>
+                                                                        </li>
+                                                                        <li class="k-tool-group k-button-group" role="presentation"><a href="" role="button" class="k-tool k-group-start" unselectable="on" title="Align text left"><span class="k-tool-icon k-justifyLeft">Justify Left</span></a><a href="" role="button" class="k-tool" unselectable="on" title="Center text"><span class="k-tool-icon k-justifyCenter">Justify Center</span></a><a href="" role="button" class="k-tool" unselectable="on" title="Align text right"><span class="k-tool-icon k-justifyRight">Justify Right</span></a><a href="" role="button" class="k-tool k-group-end" unselectable="on" title="Justify"><span class="k-tool-icon k-justifyFull">Justify Full</span></a>
+                                                                        </li>
+                                                                        <li class="k-tool-group" role="presentation"><span class="k-editor-dropdown k-group-start k-group-end"><span aria-busy="false" aria-readonly="false" aria-disabled="false" aria-owns="" tabindex="0" aria-expanded="false" aria-haspopup="true" role="listbox" unselectable="on" class="k-widget k-dropdown k-header k-insertHtml k-editor-widget" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Select Keyword(s)</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span>
+                                                                            </span>
+                                                                            <select style="display: none;" data-role="selectbox" title="Insert HTML" class="k-insertHtml">
+                                                                                <option selected="selected" value="[Recipient First Name]">Recipient First Name</option>
+                                                                                <option value="[Recipient Last Name]">Recipient Last Name</option>
+                                                                                <option value="[Native First Name]">Native First Name</option>
+                                                                                <option value="[Native Last Name]">Native Last Name</option>
+                                                                                <option value="[E-Mail Address]">E-Mail Address</option>
+                                                                                <option value="[Company Name]">Company Name</option>
+                                                                                <option value="[Web Site Address]">Web Site Address</option>
+                                                                                <option value="[Protected Web Site Address]">Protected Web Site Address</option>
+                                                                                <option value="[Header Name]">Header Name</option>
+                                                                                <option value="[Process Name]">Process Name</option>
+                                                                                <option value="[DDI Support Address]">DDI Support Address</option>
+                                                                                <option value="[Assessment Start Time]">Assessment Start Time</option>
+                                                                                <option value="[Assessment End Time]">Assessment End Time</option>
+                                                                                <option value="[Assessment Date]">Assessment Date</option>
+                                                                                <option value="[Orientation Phone Number]">Orientation Phone Number</option>
+                                                                                <option value="[Orientation Access Code]">Orientation Access Code</option>
+                                                                                <option value="[Project Support Name]">Project Support Name</option>
+                                                                                <option value="[Project Support Phone Number]">Project Support Phone Number</option>
+                                                                                <option value="[Project Support Email]">Project Support Email</option>
+                                                                                <option value="[Feedback Date]">Feedback Date</option>
+                                                                                <option value="[Feedback Provider Name]">Feedback Provider Name</option>
+                                                                            </select>
+                                                                            </span>
+                                                                            </span>
+                                                                        </li>
+                                                                        <li class="k-row-break"></li>
+                                                                        <li class="k-tool-group k-button-group" role="presentation"><a href="" role="button" class="k-tool k-group-start" unselectable="on" title="Insert unordered list"><span class="k-tool-icon k-insertUnorderedList">Remove Link</span></a><a href="" role="button" class="k-tool" unselectable="on" title="Insert ordered list"><span class="k-tool-icon k-insertOrderedList">Remove Link</span></a><a href="" role="button" class="k-tool k-group-end" unselectable="on" title="Indent"><span class="k-tool-icon k-indent">Indent</span></a><a style="display: none;" href="" role="button" class="k-tool k-group-end k-state-disabled" unselectable="on" title="Outdent"><span class="k-tool-icon k-outdent">Outdent</span></a>
+                                                                        </li>
+                                                                        <li class="k-tool-group k-button-group" role="presentation"><a href="" role="button" class="k-tool k-group-start" unselectable="on" title="Insert hyperlink"><span class="k-tool-icon k-createLink">Create Link</span></a><a style="display: none;" href="" role="button" class="k-tool k-state-disabled" unselectable="on" title="Remove hyperlink"><span class="k-tool-icon k-unlink">Remove Link</span></a><a href="" role="button" class="k-tool k-group-end" unselectable="on" title="Insert image"><span class="k-tool-icon k-insertImage">Insert Image</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="k-editable-area">
+
+                                                                    Dear Administrator,
+                                                                    <br>
+                                                                    <br>[Recipient First Name] [Recipient Last Name] has not progressed in the following process: [Process Name].
+                                                                    <br>
+                                                                    <br>To view this participant or other participants, go to the Search Users page in the Talent Portal Administration site. To access the site, click the link below. If the link is not enabled, copy and paste it into your browsers address bar.
+                                                                    <br>
+                                                                    <br>URL: [Web Site Address]
+                                                                    <br>
+                                                                    <br>Use your existing user name and password.
+                                                                    <br>
+                                                                    <br>If you need assistance, please contact Technical Support.
+                                                                    <br>
+                                                                    <br>Thank you.
+                                                                    <br>
+                                                                    <br>Do not reply to this message. This e-mail is sent from an unmonitored e-mail account.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </p>
+                                            </div>
+                                            <span style="display: none;" class="help-inline" data-bind="visible: $root.hasError('emailBody', 'required')">
+                            <img src="Talent%20Portal%20Administration2_files/error16px.png" alt="error">
+                            Body is required.
+                        </span>
 
 
-                               <!--<div class="control-group error ">
-                                    <label class="control-label" for="inputEmail">CC</label>
-                                    <div class="controls">
-                                    <input class="input-large" type="text" id="inputEmail" placeholder="" >
-                                    <br><span class="label-info"> Separate each Email address with a comma or semicolon.</span>
-                                    <br><span class="help-inline"><img src="img/error16px.png" alt="error"> Please enter a valid Email address.</span>
-                                    </div>
-                                </div>-->
-                                <div class="control-group">
-                                    <label class="control-label" for="inputEmail"><span class="required">* </span>Subject</label>
-                                    <div class="controls">
-                                    <input class="input-large" type="text" id="inputEmail" placeholder="" >
-                                    <!--<br><span class="help-inline"><img src="img/error16px.png" alt="error"> "Email Name" is required.</span>-->
-                                    </div>
-                                </div>
-
-
-                                <div class="control-group">
-                                    <label class="control-label cursorarrow" for="LibraryVersion">
-                                    Attachment(s)
-                                    </label>
-                                    <div class="controls">
-                                    <div class="fileupload fileupload-new" data-provides="fileupload">
-                                        <div class="input-append">
-                                        <div class="uneditable-input input-large"><span class="fileupload-preview"></span></div>
-                                            <span class="btn btn-file">
-                                            <span class="fileupload-new">...</span>
-                                            <input type="file" /></span>
                                         </div>
                                     </div>
-
                                 </div>
-
-                                    <ul class="attachmentlist input-large">
-                                        <li class="attachments">
-                                        <a href="#">File Name Goes Here</a>
-                                        <span class="pull-right"><a href="#" class="delete"></a></span>
-                                        </li>
-
-
-                                        <li class="attachments">
-                                        <a href="#">File Name Goes Here</a>
-                                        <span class="pull-right"><a href="#" class="delete"></a></span>
-                                        </li>
-                                    </ul>
-
-
-
-
-
-                                </div>
-
-
-
-                        </div>
-                        <div class="span4">
-                        <label class="control-label" for="inputEmail"><span class="required">* </span>Body</label>
-                            <p>KendoUI goes here!  :D</p>
-                        </div>
-                    </div>
 
 
                         </div>
