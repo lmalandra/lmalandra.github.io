@@ -1,0 +1,106 @@
+.btn-small
+{
+    width:85px;
+}
+
+
+.nav-tabs > li, .nav-pills > li {
+  float: left;
+  width:160px;
+}
+
+.title {
+	left:400px;
+}
+
+
+.input-large {
+	width:160px;
+}
+
+.input-xlarge {
+    width: 240px;
+}
+
+.span5 {
+    width: 500px;
+}
+
+
+.span4 {
+    width: 380px;
+}
+
+.btn-primary {
+    background: #bccfe4;
+}
+
+ul.ui-sortable li{
+	display:inline-block;
+	}
+
+/*button footer*/
+.buttonfooteroutter{
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:65px;
+	background-color:#eeeeee;
+	border-top:1px solid #ccc;
+}
+.successmsg{
+	margin-left:15px;
+	color:#8cc63f;
+	font-weight:bold;
+	padding-top:7px;
+}
+.failmsg{
+	margin-left:15px;
+	color:red;
+	font-weight:bold;
+	padding-top:7px;
+}
+.buttondiv{
+	margin-right:15px;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+.privacyfooterbottom{
+	background-color:rgba(238, 238, 238, .75);
+	height:20px;
+	font-size:10px;
+	border-top:1px solid #ccc;
+}
+.buttonspacer{
+	padding-right:5px;
+}
+
+/*select comps*/
+.librarynamewidth{
+	width:190px;
+}
+.librarynamefieldwidth{
+	width:190px;
+}
+.version{
+	margin-left:40px;
+}
+.edit{
+	margin-left:0px;
+	width:150px;
+}
+.cursorarrow{
+	cursor:arrow;
+}
+.leftsidewidth{
+	width:295px;
+	margin-right:20px;
+}
+.rightsidewidth{
+	width:295px;
+}
+.addtable{
+	width:295px;
+	margin-top:16px;
+}

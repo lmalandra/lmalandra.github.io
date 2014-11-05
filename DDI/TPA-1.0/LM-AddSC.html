@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leadership Mirror</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        blockquote {
+            cursor: help
+        }
+        body {
+            padding-top: 20px;
+            padding-bottom: 0px;
+            height: 100%;
+        }
+        /* set the height so $(window).height() is accurate
+		html, body {
+		height: 100%;
+		}
+
+		/* prevent scrolling while during modal */
+        body.modal-open {
+            overflow: hidden;
+        }
+        /* optional: override bootstrap image gallery */
+        .modal-gallery {
+            margin-top: 0 !important;
+        }
+        @media (max-width: 767px) {
+            .modal-gallery {
+                margin-left: 0 !important;
+            }
+            .modal-fullscreen {
+                left: 0 !important;
+                right: 0 !important;
+            }
+        }
+    </style>
+    <link href="css/bootstrap-modified.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/treeview.css" rel="stylesheet" type="text/css" id="skinSheet">
+    <link href="css/customize.css" rel="stylesheet">
+    <link href="css/library.css" rel="stylesheet">
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <script src="js/respond.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                    <a class="brand" href="#">Leadership Mirror</a>
+
+                    <ul class="nav nav-collapse collapse pull-right">
+                        <li>Welcome, Administrator</li>
+                        <li><a href="#"> Exit</a>
+                        </li>
+                    </ul>
+                    <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="ie-message" style="padding:4px 0; background: #ffffcc; color:#000; font-family:Verdana; font-weight:normal; text-transform:none; font-size: 12px; text-align:center;">You are using a version of Internet Explorer which this program no longer supports.  Some features may not work correctly.  Upgrade to a later version of this browser.</div>-->
+
+    <div class="container main-wrapper">
+        <div id="demo" class="row collapse in">
+
+            <div class="span12 masthead">
+                <img src="img/logo.png" />
+                <span class="title"><p>Leadership Mirror</p></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span12">
+                <img src="img/up.gif" class="banner-control" data-toggle="collapse" data-target="#demo" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="span9 offset3">
+                <h1 class="pull-left clientName">Client Name goes here.</h1>
+                <ul class="nav nav-pills pull-right">
+                    <li>
+                        <a href="#">
+                            <img src="img/returntoTPA24.png" /><span class="return-tpa">Return to TPA</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span3">
+                <!--Sidebar content-->
+
+
+
+
+
+                <div class="accordion" id="accordion2">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <!--<a class="accordion-toggle selected" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">-->
+                            <div class="accordion-toggle selected"><a href="LM-home.html">Survey Configuration</a>
+                            </div>
+                        </div>
+                        <!--<div id="collapseOne" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                        <a href="LMSC_SurvConfig.html">Add Survey</a>
+                        </div>-->
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <div class="accordion-toggle"><a href="LM-RS.html">Rating Scales</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <div class="accordion-toggle"><a href="LM-Rel.html">Relationships</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <div class="accordion-toggle"><a href="https://www.qualtrics.com/">Advanced Editing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of accordion -->
+            </div>
+            <!--end of span3 -->
+
+            <div class="span9">
+                <!-- beg of main content -->
+                <div class="maincontent">
+                    <h1>Add/Manage Survey Configuration</h1>
+                    <div id="library-print" class="modal hide fade in" tabindex="-1" data-width="760" data-backdrop="static" style="display: none;">
+                        <div class="modal-header">
+                            <a class="close" data-dismiss="modal">×</a>
+                            <h2>View/Print Competency Library</h2>
+                        </div>
+                        <div class="row">
+                            <div class="span4">
+                                <select style="margin-left: 15px; margin-top: 15px;" id="languageSelect">
+                                    <option value="zh-Hans">Chinese (Simplified)</option>
+                                    <option value="zh-Hant">Chinese (Traditional)</option>
+                                    <option value="cs">Czech</option>
+                                    <option value="en">English</option>
+                                    <option value="fr">French</option>
+                                    <option value="de">German</option>
+                                    <option value="ja">Japanese</option>
+                                    <option value="es-MX">Spanish (Latin America)</option>
+                                    <option value="th">Thai</option>
+                                </select>
+                            </div>
+                            <div class="span4">
+                                <select style="margin-left: 15px; margin-top: 15px; display: none;" id="showPublished">
+                                    <option value="published">Published Version</option>
+                                    <option value="saved">Last Saved Version</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div id="libBody"><strong>1369_Test - 2.0.2</strong>
+                                <br>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td width="250px"><strong>Library Created</strong>
+                                            </td>
+                                            <td width="250px"><strong>Library Saved</strong>
+                                            </td>
+                                            <td width="250px"><strong>Library Published</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Matt Gaia, August 25, 2014</td>
+                                            <td>Matt Gaia, August 25, 2014</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br>
+
+                                <div class="domainTextIcon">D</div>
+                                <div class="domainText"><strong>Interpersonal</strong>
+                                    <br>Interpersonal and communication behaviors that facilitate successful one-on-one and group interactions.</div>
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Compelling Communication</strong>
+                                    <br>Clearly and succinctly conveying information and ideas to individuals and groups; communicating in a focused and compelling way that captures and holds others' attention.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Delivers clear messages</strong>
+                                    <br>Conveys messages logically, simply, succinctly, and at the right pace; does not digress; is in command of the message.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Communicates with impact</strong>
+                                    <br>Captures and holds audience attention; uses forceful and compelling language and tone to stimulate others’ thinking and actions; uses vivid analogies and illustrations to create mental images; uses visual aids when appropriate to enhance impact of the message.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Uses language appropriately</strong>
+                                    <br>Uses correct grammar and punctuation; uses a format and terminology appropriate to the topic and audience.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Ensures understanding</strong>
+                                    <br>Checks audience’s understanding; presents messages in different ways to enhance their understanding.</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">Strong communicators at the executive level convey messages (written and oral) logically, clearly, and succinctly. They use correct grammar, terminology, and non-verbal gestures that are appropriate to the audience and the message. They capture and hold the audience's attention by using forceful and compelling language that stimulates others' thinking and actions. They present the message in multiple ways to ensure that the audience understands key points.</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Compelling Communication Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: CompellingCommunication.ddi2.en.pdf</div>
+                                -->
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Cultivating Networks</strong>
+                                    <br>Initiating and maintaining strategic relationships with stakeholders inside and outside the organization (e.g., customers, peers, cross-functional partners, external vendors, and alliance partners) to advance business goals.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Identifies partnership opportunities</strong>
+                                    <br>Scans the internal and external environment to identify the relationships that should be initiated or improved to achieve business goals.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Reaches out</strong>
+                                    <br>Initiates collaborative relationships with key stakeholders; cultivates a network of those with the knowledge and influence to advance business goals.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Supports partners</strong>
+                                    <br>Offers valuable information and resources to business partners; works together with partners to create win / win outcomes.</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">Senior leaders who are adept at developing strategic relationships build lasting internal and external partnerships. They scan the environment to identify relationships that should be initiated or improved to advance business goals. They build collaborative relationships with key stakeholders by establishing shared goals, sharing resources and information, and creating win-win outcomes.</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Cultivating Networks Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: CultivatingNetworks.ddi2.en.pdf</div>
+                                -->
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Emotional Intelligence</strong>
+                                    <br>Establishing and sustaining trusting relationships by accurately perceiving and interpreting one's own and others' emotions and behavior in the context of the political environment; leveraging insights to effectively manage one's own responses and reactions.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Builds self-insight</strong>
+                                    <br>Demonstrates an awareness of own strengths and development needs as well as the impact of own behavior on others; modifies behavior based on self-awareness to improve impact.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Conveys authenticity</strong>
+                                    <br>Gains other people's trust by demonstrating openness and honesty, behaves consistently, and acts in accordance with moral, ethical, professional, and organizational guidelines.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Navigates politics</strong>
+                                    <br>Actively maintains a broad awareness of the internal and external environment by accurately perceiving organizational, political, and social dynamics; proactively navigates the stakeholder environment to avoid unwanted or unproductive reactions and consequences.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Influences others</strong>
+                                    <br>Creates and executes influence strategies that persuade key stakeholders to take action that will advance shared interests and business goals.</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">Those with exceptional emotional intelligence establish and sustain productive relationships through accurate self-insight, authenticity, navigating politics, and influencing key stakeholders. They accurately perceive and interpret their own and others' emotions and behavior. They leverage their self-insight and perceptiveness to effectively manage their own reactions and improve their impact on others. They gain other people's trust by being open and honest, behaving consistently, and acting in accordance with moral and ethical guidelines and social norms. They expertly manage internal and external politics by actively scanning and then navigating the environment to avoid unwanted reactions while persuading key stakeholders to take action that will advance shared interests.</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Emotional Intelligence Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: EmotionalIntelligence.ddi2.en.pdf</div>
+                                -->
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Emotional Intelligence Essentials</strong>
+                                    <br>Establishing and sustaining trusting relationships by accurately perceiving and interpreting own and others’ emotions and behavior; leveraging insights to effectively manage own responses so that one’s behavior matches ones’ values and delivers intended results.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Builds self-awareness</strong>
+                                    <br>Demonstrates an understanding of own emotional triggers, strengths, and development needs as well as the impact of own behavior on others.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Maintains self-control</strong>
+                                    <br>Modifies behavior based on self-awareness to improve impact and build relationships.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Maintains or enhances self-esteem (to build social bonds)</strong>
+                                    <br>Helps others feel respected and appreciated by sincerely and specifically acknowledging their ideas, contributions, and achievements; offers positive feedback; focuses on facts and intentions to maintain another’s self-esteem when things don’t go well.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Listens and responds with empathy</strong>
+                                    <br>Demonstrates an understanding of the other person’s situation by acknowledging both the facts and the feelings (positive or negative) they are expressing.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Asks for help and encourages involvement (to enhance collaboration)</strong>
+                                    <br>Asks for others’ opinions and ideas to gain their commitment and encourage responsibility; unleashes ideas through questioning.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Shares thoughts, feelings, and rationale (to build trust)</strong>
+                                    <br>Appropriately and honestly discloses feelings and insights to build trust; own ideas supplement &ndash; not replace &ndash; others’ ideas; shares the “why” behind decisions, ideas, or changes.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Provides support without removing responsibility (to build ownership)</strong>
+                                    <br>Offers help while building the other person’s sense of task ownership; resists taking over; boosts confidence that the other person can successfully complete the task.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Facilitates discussions</strong>
+                                    <br>Conducts productive and efficient discussions by clarifying the situation, discussing and developing ideas, and agreeing on next steps (i.e., uses the Interaction Guidelines: Open, Clarify, Develop, Agree, and Close).</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">No associated exemplar</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Emotional Intelligence Essentials Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: EmotionalIntelligenceEssentials.ddi2.en.doc</div>
+                                -->
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Influence</strong>
+                                    <br>Creating and executing influence strategies that persuade key stakeholders to take action that will advance shared interests and business goals.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Formulates influence strategy</strong>
+                                    <br>Devises an influence approach that favorably positions one's own agenda while addressing the shared goals of key decision makers; prepares an influence strategy that leverages supporting factors and breaks through barriers.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Seeks to understand</strong>
+                                    <br>Uses open-ended questions to explore issues and clarify perspectives and goals.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Makes a compelling case</strong>
+                                    <br>Presents logical rationale and recommendations in a manner that clearly links them to critical business priorities.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Gains commitment</strong>
+                                    <br>Adjusts influence strategy based on stakeholder perspectives; leverages shared goals to convince others to take action; handles objections; asks for agreement to next steps.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Demonstrates interpersonal diplomacy</strong>
+                                    <br>Builds trust during the influence process by demonstrating sensitivity to others' needs, maintaining self-esteem, showing empathy, involving others, and offering support.</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">Persuasive leaders use influence strategies that favorably position their own agenda while addressing the shared goals of key decision makers. They ask questions to validate assumptions, explore issues, and clarify stakeholder perspectives. They present a compelling business case with strong rationale that overcomes objections and gains others' commitment to their proposed course of action. They use interpersonal diplomacy to build rapport and trust with stakeholders while moving them toward the desired outcome.</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Influence Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: Influence.ddi2.en.pdf</div>
+                                -->
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Navigating Politics</strong>
+                                    <br>Actively maintaining a broad awareness of the internal and external environment by accurately perceiving organizational, political, and social dynamics; proactively navigating the stakeholder environment to avoid unwanted or unproductive reactions and consequences.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Studies the environment</strong>
+                                    <br>Constantly monitors the organization (inside and out) to stay abreast of political realities (hidden agendas, motives, informal power struggles, etc); assesses the views and positions of stakeholders on key issues.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Anticipates impact</strong>
+                                    <br>Plans actions and initiatives with appropriate consideration of the likely reactions of key stakeholders; appropriately anticipates the political consequences of actions.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Takes measured actions</strong>
+                                    <br>Informally builds support for recommendations and actions by involving appropriate stakeholders; presents ideas, plans, or recommendations in a way that manages stakeholders' reactions.</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">Politically astute leaders know how to work effectively within the organization's culture and influence network to accomplish goals. They actively scan the internal and external environment to understand organizational, political, and social dynamics. They are aware of key stakeholder perspectives and the strategies needed to leverage their support. They anticipate potential reactions to their decisions/actions, informally build support by involving key stakeholders, and adapt their approach to overcome barriers. These leaders take proactive steps to create an environment in which people will be receptive to their ideas. They try to manage others' reactions, whenever possible, to create a favorable outcome.</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Navigating Politics Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: NavigatingPolitics.ddi2.en.pdf</div>
+                                -->
+                                <div class="domainTextIcon">D</div>
+                                <div class="domainText"><strong>Leadership</strong>
+                                    <br>Leadership behaviors that guide others in the successful execution of their assigned responsibilities and help them aspire to and achieve organizational outcomes.</div>
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Coaching and Developing Others</strong>
+                                    <br>Providing feedback, instruction, and development guidance to help others excel in their current or future job responsibilities; planning and supporting the development of individual skills and abilities.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Clarifies performance</strong>
+                                    <br>Seeks information and opinions about an individual's current performance as well as long-term development needs.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Provides timely feedback</strong>
+                                    <br>Gives timely, specific, and appropriate feedback about performance, development needs, and development progress; reinforces efforts and progress.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Conveys performance expectations and implications</strong>
+                                    <br>Communicates high expectations; links performance improvement and skill development to relevant personal and business goals; checks for understanding of and commitment to performance and development goals as well as follow up activities.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Evaluates skill gaps</strong>
+                                    <br>Diagnoses gaps in knowledge, experience, skills, and behavior that underlie current and future performance; continually modifies evaluation based on new information.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Guides development</strong>
+                                    <br>Provides guidance and positive models to help others develop; seeks suggestions for improving performance; collaboratively creates development plans that include activities targeted to specific goals; leverages environmental supports and removes development barriers; advocates for individual to higher levels of management to create development opportunities.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Fosters developmental relationships</strong>
+                                    <br>Helps people feel valued and included in coaching and development discussions by expressing confidence in their ability to excel, maintaining their self-esteem, empathizing, involving them, and disclosing own position.</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">Strong coaches help others develop the skills needed to excel in their current and future jobs. They ask questions to clarify individual performance and long-term development needs. They clearly communicate the performance expected and its personal and business relevance. They diagnose knowledge, experience, skill, and behavior gaps that underlie current performance. They include their direct reports' ideas and suggestions when creating development plans. They help direct reports to excel by providing feedback, ongoing support, and development guidance.</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Coaching and Developing Others Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: CoachingandDevelopingOthers.ddi2.en.pdf</div>
+                                -->
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Empowerment/Delegation</strong>
+                                    <br>Sharing authority and responsibilities with others to move decision making and accountability downward through the organization, enable individuals to stretch their capabilities, and accomplish the business unit's strategic priorities.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Delegates</strong>
+                                    <br>Moves decision making and accountability downward through the organization by appropriately sharing responsibilities with others.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Shares responsibility</strong>
+                                    <br>Delegates important areas of authority and responsibility in a manner that clarifies expectations while expanding the individual's feelings of ownership and accountability; promotes risk taking.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Provides guidance</strong>
+                                    <br>Provides appropriate amount of information, resources, and encouragement to support the individual's and business unit's success without undermining the individual's full ownership of issues.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Follows up</strong>
+                                    <br>Builds follow-up into delegations in order to monitor associate progress and issues.</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">Highly effective leaders empower their direct reports by sharing authority and responsibilities that move accountability downward through the organization. They carefully select individuals to accomplish a task by considering time, skills, experience, and growth opportunities. They offer guidance to help their direct reports succeed without taking away responsibility for action. They "stay on top" of what's happening by asking for employee follow up within a defined timeframe.</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Empowerment/Delegation Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: EmpowermentDelegation.ddi2.en.pdf</div>
+                                -->
+                                <div class="competencyTextIcon">C</div>
+                                <div class="competencyText"><strong>Leading Change</strong>
+                                    <br>Identifying and driving organizational and cultural changes needed to adapt strategically to changing market demands, technology, and internal initiatives; catalyzing new approaches to improve results by transforming organizational culture, systems, or products / services.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Identifies change opportunities</strong>
+                                    <br>Proactively recognizes the need for innovation or improvement and initiates efforts to explore alternative solutions.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Stretches boundaries</strong>
+                                    <br>Encourages others to question established processes and traditional assumptions; seeks and uses input from diverse sources to generate alternative approaches; promotes experimentation by rewarding early adopters and their progress.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Catalyzes change</strong>
+                                    <br>Takes action to improve organizational culture, processes, or products / services; establishes and encourages others to achieve a best practice approach; translates new ideas into concrete action plans.</div>
+                                <div class="kaTextIcon">KA</div>
+                                <div class="kaText"><strong>Removes barriers and resistance</strong>
+                                    <br>Strives to understand and break down cultural barriers to change; explains the benefits of change; demonstrates sensitivity to fears about change; helps individuals overcome resistance to change.</div>
+                                <!--
+                                <div class="exTextIcon">Ex</div>
+                                <div class="NMAtext">Strong change leaders act as catalysts for the organizational and cultural changes needed to adapt to changing market demands, technology, and internal initiatives. They continually search for improvement opportunities, encourage others to question established processes, and then use input from diverse sources to generate new ideas for increasing efficiency, productivity, or customer value. They look for best practices, both within and outside of their organization, and promote experimentation by rewarding early adopters. Additionally, they help others overcome resistance to change by empathizing with their feelings and explaining the personal and organizational benefits of change.</div>
+                                <div class="drTextIcon">DR</div>
+                                <div class="DRTitle"><strong>Leading Change Dev Guide</strong>
+                                </div>
+                                <div class="NMAtext">File: LeadingChange.ddi2.en.pdf</div>
+-->
+                                <br>
+                            </div>
+                        </div>
+                        <div class="modal-footer modalfooteroutter">
+                            <!--end pull left-->
+                            <div class="pull-right buttondivmodal">
+                                <span class="buttonspacer"><a data-bind="click: $root.printPartOfPage" class="btn btn-small" href="#" id="btnPrint">
+                                    <img id="imgPrint" src="img/printer16.png" class="buttonspacersave">&nbsp;Print</a></span>
+
+                            </div>
+                            <!--end modal footer-->
+                        </div>
+                    </div>
+                    <div id="rating-scale" class="modal hide fade in" tabindex="-1" data-width="760" data-backdrop="static" style="display: none;">
+                        <div class="modal-header">
+                            <a class="close" data-dismiss="modal">×</a>
+                            <h2>Current Proficiency</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>This rating scale provides the respondent with the opportunity to rate the current level of proficiency in the item</p>
+                            <p>Using this scale, people rate the perceived skill level of another.</p>
+                            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Point</th>
+                                        <th>Label</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Very Low Level</td>
+                                        <td>Not proficient in this element.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Low Level</td>
+                                        <td>Minimally proficient in this element; has little knowledge, skill, and/or ability in this element and has developed little in this area.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Moderate Level</td>
+                                        <td>Somewhat proficient in this element; has sufficient knowledge, skill, and/or ability in this element and has developed moderately in this area.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>High Level</td>
+                                        <td>Very proficient in this element; has a great deal of knowledge, skill, and/or ability in this element and is well developed in this area</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Very High Level</td>
+                                        <td>Fully proficient in this element; has extensive knowledge, skill, and/or ability in this element and has developed to a high degree in this area.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>N</td>
+                                        <td>Not Applicable</td>
+                                        <td>No opportunity to demonstrate or observe this particular element.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                    </div>
+
+                    <div id="relationship-set" class="modal hide fade in" tabindex="-1" data-width="760" data-backdrop="static" style="display: none;">
+                        <div class="modal-header">
+                            <a class="close" data-dismiss="modal">×</a>
+                            <h2>Standard Relationship Set</h2>
+                        </div>
+                        <div class="modal-body">
+                            <h2>TERMS</h2>
+                            <p><strong>Participant</strong>
+                                <br>The subject of the survey.</p>
+                            <p><strong>Respondent</strong>
+                                <br>The person providing feedback about the participant.</p>
+                            <p><strong>Anonymity Threshold</strong>
+                                <br>The number of responses the participant must receive for this relationship before seeing scores for it on reports. The anonymity threshold is typically set to 3 for all relationships, except for manager and self, which are set to 1.</p>
+                            <p><strong>Recommended Number</strong>
+                                <br>The number of respondents suggested for this relationship. Ensure the number coincides with the anonymity threshold and is reasonable given the actual number of respondents with this relationship in your organization.</p>
+                            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Relationship</th>
+                                        <th>Abbreviation</th>
+                                        <th>Anonymity Threshold</th>
+                                        <th>Recommended Number</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Self</td>
+                                        <td>Self</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>The participant.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manager</td>
+                                        <td>Mgt</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>The person to whom the participant directly reports.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peer</td>
+                                        <td>Peer</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>People, generally at the participant’s organizational level, with whom they work (may include team members).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direct Report</td>
+                                        <td>D R</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>The participant’s subordinates.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Internal Customer</td>
+                                        <td>IC</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>ther associates within the participant’s organization to whom they provide a product or service.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>External Customer</td>
+                                        <td>EC</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>People outside the participant’s organization to whom they provide a product or service.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Other</td>
+                                        <td>Oth</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>Anyone not described by the above categories with whom the participant works (may be internal or external to their organization).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <br>
+                            <br>
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                    </div>
+
+                    <form>
+                        <div class="row">
+                            <div class="span3">
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">
+                                        <span class="required">* </span>Survey Type</label>
+                                    <div class="controls">
+                                        <select class="input-large" id="selectbox1">
+                                            <option value="" selected></option>
+                                            <option value="">Published Survey</option>
+                                            <option value="">Published Survey</option>
+                                            <option value="">Published Survey</option>
+                                            <option value="">Published Survey</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="control-group error">
+                                    <label class="control-label" for="inputEmail">
+                                        <span class="required">* </span>Survey Name</label>
+                                    <div class="controls">
+                                        <input class="input-large" type="text" id="inputEmail" placeholder="" required>
+                                        <br><span class="help-inline"><img src="img/error16px.png" alt="error"> Survey Name is required.</span>
+                                    </div>
+                                </div>
+
+                                <label class="control-label" for="inputPassword">Description</label>
+                                <textarea rows="2" class="input-large"></textarea>
+
+                            </div>
+                            <!-- end of span-->
+
+                            <div class="span3">
+                                <br>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="">Display standard open ended question fields.
+                                </label>
+
+
+                                <textarea rows="3" class="input-large" readonly>Considering the person's total performance and contribution to the organization, what do you think is this person's single greatest strength, and what do you think is the one improvement area that, if met, would have the greatest impact on this person's performance?</textarea>
+
+                                <label class="checkbox">
+                                    <input type="checkbox" value="">Display additional comments
+                                </label>
+                                <br>
+                            </div>
+                            <!-- end of span-->
+
+                            <div class="span2">
+                                <br>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="">Flag as Standard
+                                </label>
+                                <br>
+                                <div class="control-group">
+                                    <label for="inputEmail" class="control-label radio-label">
+                                        Status</label>
+                                    <div class="controls">
+                                        <label class="radio inline">
+                                            <input type="radio" checked="" value="status1" id="statusRadios1" name="statusRadios">Active
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" value="status2" id="statusRadios2" name="statusRadios">Inactive
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- end of span-->
+
+
+                        </div>
+                        <!-- end of row-->
+
+                        <hr>
+                        <div class="row">
+                            <div class="span4">
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <label class="radio inline">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Source Existing
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Create New
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="control-group">
+                                    <label class="control-label radio-label" for="inputEmail">
+                                        <span class="required">* </span>Survey Library</label>
+                                    <div class="controls">
+                                        <label class="radio inline">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Standard Surveys
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Custom Surveys
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">
+                                        <span class="required">* </span>Source</label>
+                                    <div class="controls">
+                                        <select class="input-large" id="selectbox1">
+                                            <option value="" selected></option>
+                                            <option value="">Current Proficiency</option>
+                                            <option value="">Frequency</option>
+                                            <option value="">Required Proficiency</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">
+                                        <span class="required">* </span>Rating Scale</label>
+                                    <div class="controls">
+                                        <select class="input-large" id="selectbox1">
+                                            <option value="" selected></option>
+                                            <option value="">Current Proficiency</option>
+                                            <option value="">Current Proficiency and Past Proficiency</option>
+                                            <option value="">Current Proficiency and Required Proficiency</option>
+                                            <option value="">Frequency</option>
+                                            <option value="">Required Proficiency</option>
+                                            <option value="" disabled>Custom Scale Saved in Survey Config</option>
+                                            <option value="" disabled>Custom Scale Saved in Survey Config</option>
+                                            <option value="" disabled>Custom Scale Saved in Survey Config</option>
+                                            <option value="" disabled>Custom Scale Saved in Survey Config</option>
+                                        </select>
+                                        <div class="preview">
+                                            <a data-toggle="modal" href="#rating-scale" href="#" data-toggle="tooltip" data-placement="top" title="View Rating Scale">
+                                                <img src="img/preview16.png" /><span>View</span>
+                                            </a>
+                                            <!--<a href="LMSC_SurvConfig-RatingsScales.html" target="_blank"><img src="img/preview16.png" /><span>View</span></a>-->
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail">
+                                        <span class="required">* </span>Relationships</label>
+                                    <div class="controls">
+                                        <select class="input-large" id="selectbox1">
+                                            <option value="" selected></option>
+                                            <option value="">Standard Relationships</option>
+                                            <option value="">Custom Relationship Saved in Survey Config</option>
+                                            <option value="">Custom Relationship Saved in Survey Config</option>
+                                            <option value="">Custom Relationship Saved in Survey Config</option>
+                                            <option value="">Custom Relationship Saved in Survey Config</option>
+                                            <option value="">Custom Relationship Saved in Survey Config</option>
+                                        </select>
+                                        <div class="preview">
+                                            <a data-toggle="modal" href="#relationship-set" href="#" data-toggle="tooltip" data-placement="top" title="View Relationship Set">
+                                                <img src="img/preview16.png" /><span>View</span>
+                                            </a>
+                                            <!--<a href="LMSC_SurvConfig-Relationships.html" target="_blank"><img src="img/preview16.png" /><span>View</span></a>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="span4">
+
+                                <div class="control-group">
+                                    <label class="control-label radio-label" for="inputEmail">
+                                        <span class="required">* </span>Competency Library</label>
+                                    <div class="controls">
+                                        <label class="radio inline">
+                                            <input id="standard" type="radio" value="standard" name="optionsRadios1">Standard Libraries
+                                        </label>
+                                        <label class="radio inline">
+                                            <input id="custom" type="radio" value="custom" name="optionsRadios1">Custom Libraries
+                                        </label>
+                                    </div>
+
+
+                                    <div class="controls">
+                                        <select class="input-large" id="selectbox1">
+                                            <option value="" selected>Library A</option>
+                                            <option value="">Library B</option>
+                                            <option value="">Library C</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <span>
+                                <a href="#" id="btnSelectAll">Select all</a> -
+                                <a href="#" id="btnDeselectAll">Deselect all</a>
+                                <!--<a href="#" id="btnToggleSelect">Toggle select</a>-->
+                                    &nbsp;&nbsp;
+                                <label class="checkbox" style="display:inline-block"><input type="checkbox" value="">Display only selected</label>
+                                </span>
+                                <span class="pull-right"><img src="img/printer16.png" />&nbsp;<a data-toggle="modal" href="#library-print" data-toggle="tooltip" data-placement="top">Print</a></span>
+                                <div id="tree3" class="border">
+                                    <ul class="dynatree-container">
+                                        <li class="dynatree-lastsib"><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-lastsib dynatree-exp-el dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                            <img alt="" src="img/tree_library.png"><a class="dynatree-title" href="#">Destination Library</a>
+                                            </span>
+                                            <ul style="">
+                                                <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                    <img alt="" src="img/tree_domain.png"><a class="dynatree-title" href="#">Interpersonal</a>
+                                                    </span>
+                                                    <ul style="">
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Compelling Communication</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Delivers clear messages</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Communicates with impact</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Uses language appropriately</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Ensures understanding</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Cultivating Networks</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Identifies partnership opportunities</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Reaches out</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Supports partners</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Emotional Intelligence</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Builds self-insight</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Conveys authenticity</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Navigates politics</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Influences others</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Emotional Intelligence Essentials</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Builds self-awareness</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Maintains self-control</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Maintains or enhances self-esteem (to build social bonds)</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Listens and responds with empathy</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Asks for help and encourages involvement (to enhance collaboration)</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Shares thoughts, feelings, and rationale (to build trust)</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Provides support without removing responsibility (to build ownership)</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Facilitates discussions</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Influence</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Formulates influence strategy</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Seeks to understand</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Makes a compelling case</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Gains commitment</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Demonstrates interpersonal diplomacy</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="dynatree-lastsib"><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-lastsib dynatree-exp-el dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Navigating Politics</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Studies the environment</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Anticipates impact</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Takes measured actions</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-lastsib dynatree-exp-el dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                    <img alt="" src="img/tree_domain.png"><a class="dynatree-title" href="#">Leadership</a>
+                                                    </span>
+                                                    <ul style="">
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Coaching and Developing Others</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Clarifies performance</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Provides timely feedback</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Conveys performance expectations and implications</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Evaluates skill gaps</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Guides development</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Fosters developmental relationships</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Empowerment/Delegation</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Delegates</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Shares responsibility</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Provides guidance</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Follows up</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Leading Change</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Identifies change opportunities</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Stretches boundaries</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Catalyzes change</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Removes barriers and resistance</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-exp-e dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Leading Teams</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Creates shared purpose</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Promotes team processes</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Celebrates success</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Stays close</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="dynatree-lastsib"><span class="dynatree-node dynatree-expanded dynatree-has-children dynatree-lastsib dynatree-exp-el dynatree-ico-e"><span class="dynatree-expander"></span><span class="dynatree-checkbox"></span>
+                                                            <img alt="" src="img/tree_competency.png"><a class="dynatree-title" href="#">Selling the Vision</a>
+                                                            </span>
+                                                            <ul style="">
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Paints the picture</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Demonstrates benefits</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class=""><span class="dynatree-node dynatree-exp-c dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Inspires passion</a>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="dynatree-lastsib"><span class="dynatree-node dynatree-lastsib dynatree-exp-cl dynatree-ico-c"><span class="dynatree-connector"></span><span class="dynatree-checkbox"></span>
+                                                                    <img alt="" src="img/tree_keyaction.png"><a class="dynatree-title" href="#">Leads through vision and values</a>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <br>
+
+
+
+
+
+                        <br>
+
+
+
+
+                </div>
+                <!-- end of column span -->
+            </div>
+            <!-- end of row -->
+
+        </div>
+
+
+        <!--end of main wrapper -->
+
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+        <br>
+        <div class="navbar navbar-fixed-bottom">
+            <div class="container button-footer">
+                <div class="row">
+                    <div class="span6 offset3">
+                        <!--<span class="successmsg pull-left"><img src="img/field_valid16.png" alt="error">&nbsp;Save Successful.</span>-->
+                        <span class="failmsg pull-left"><img src="img/error16px.png" alt="error">&nbsp;Save unsuccessful. See the error(s) above.</span>
+                    </div>
+                    <div class="span3 pull-right">
+                        <!--<a href="#" class="btn btn-small disabled">Publish</a>-->
+                        <a href="#" class="btn btn-small">
+                            <img src="img/cancel16px.png" />&nbsp;Cancel</a>
+                        <a href="#" class="btn btn-small btn-primary">
+                            <img src="img/save16px.png" />&nbsp;Save</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-inner-bottom">
+                <a href="http://www.ddiworld.com/privacy?id=en" tabindex="10000" target="_privacyStatement">DDI Privacy Statement</a> | &copy; Development Dimensions International, Inc., 1970-2012. <a href="http://www.ddiworld.com/copyright?lang=en" tabindex="10000" target="_copyright">All Rights Reserved</a>.
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!-- Le javascript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-1.8.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jquery.dataTables.js"></script>
+        <script src="js/DT_bootstrap.js"></script>
+        <script src="js/jquery-ui.custom.js" type="text/javascript"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="js/jquery.dynatree.js" type="text/javascript"></script>
+        <!--<script src="js/treeview-data.js" type="text/javascript"></script>-->
+
+        <!-- Modal Responsive Fix -->
+        <script src="js/touchscroll.js"></script>
+        <!-- the magic -->
+        <script>
+            $(function () {
+                $('.modal').modalResponsiveFix({
+                    debug: true
+                })
+                $('.modal').touchScroll();
+            })
+        </script>
+</body>
+
+</html>
