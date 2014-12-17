@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell">
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">EUAL Usage - Proper Handling of Nulls</h4>
+<h5>Numeric Values</h5>
+As stated in the highlighted paragraph under the <strong>Within EUAL</strong> section, the original intent of the EUAL transformation process was to convert null character fields to spaces.   EDW Support has found that this transformation did not occur for some of the fields in EUAL_MAIN.
+<br /><br />
+The EUAL_MAIN view contains 64 character fields.  The table below lists the character fields which have null values or null values and spaces with a count of the number of rows. 
+<br /><br />
+Depending on your inclusion or exclusion criteria please factor in the appropriate test for nulls and/or spaces.
+<table>
+<tbody>
+<tr>
+<th>Field Name</th>
+<th>Number of Null Value Rows</th>
+<th>Columns With Spaces</th>
+</tr>
+
+<tr>
+<td>EACM_MBR_RELS_CD</td>
+<td>199546</td>
+<td>143440</td>
+</tr>
+
+<tr>
+<td>EAC_SRCSY_ASND_CLM_NO</td>
+<td>2</td>
+<td>17</td>
+</tr>
+
+<tr>
+<td>SBMG_PLN_ID</td>
+<td>2079724</td>
+<td>2806800</td>
+</tr>
+
+
+<tr>
+<td>REIMM_PLN_ID</td>
+<td>1657946</td>
+<td>3285460</td>
+</tr>
+
+<tr>
+<td>EACAG_SSN_NO</td>
+<td>4</td>
+<td>13627</td>
+</tr>
+
+<tr>
+<td>MBR_EAG_CD</td>
+<td>162</td>
+<td>7423</td>
+</tr>
+
+<tr>
+<td>EACM_FST_NM</td>
+<td>11</td>
+<td>9671</td>
+</tr>
+
+
+<tr>
+<td>EACAG_CHL_LA_NM</td>
+<td>849930</td>
+<td>539981</td>
+</tr>
+
+<tr>
+<td>EACLRFT_CD</td>
+<td>1009979</td>
+<td>5221862</td>
+</tr>
+
+<tr>
+<td>EACAG_CHL_FST_NM</td>
+<td>864997</td>
+<td>556005</td>
+</tr>
+
+<tr>
+<td>EACCL_PYLN_CD</td>
+<td>79832586</td>
+<td>460563640</td>
+</tr>
+
+<tr>
+<td>EACAG_UNQ_MBR_ID</td>
+<td>20597293</td>
+<td>103438123</td>
+</tr>
+
+<tr>
+<td>EACPS_CD</td>
+<td>35</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>GP_NO</td>
+<td>2946573</td>
+<td>568671</td>
+</tr>
+
+
+<tr>
+<td>EACT_CD</td>
+<td>265250</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>ACKP_CD</td>
+<td>21267181</td>
+<td>128061643</td>
+</tr>
+
+<tr>
+<td>ACKBU_CD</td>
+<td>21267181</td>
+<td>128061643</td>
+</tr>
+
+<tr>
+<td>ACKRC_CD</td>
+<td>21267181</td>
+<td>128061643</td>
+</tr>
+
+<tr>
+<td>ACKIC_CD</td>
+<td>21267181</td>
+<td>128066885</td>
+</tr>
+
+<tr>
+<td>ACKR_CD</td>
+<td>21267181</td>
+<td>128068517</td>
+</tr>
+
+
+
+<tr>
+<td>EACAR_CD</td>
+<td>373782933</td>
+<td>258431171</td>
+</tr>
+
+<tr>
+<td>EA_GP_NO_8</td>
+<td>310964</td>
+<td>3073931</td>
+</tr>
+
+
+<tr>
+<td>EACLPT_CD</td>
+<td>70208443</td>
+<td>59203896</td>
+</tr>
+
+<tr>
+<td>EACM_LA_NM</td>
+<td>53817</td>
+<td>45071</td>
+</tr>
+
+</tbody>
+</table><br /> 
+
+<strong>In order to simplify the amount of manipulation required in selection criteria and to assist in formatting output, character fields in the EUAL that are null from the source have been converted to spaces.</strong>  However, since it cannot be assumed that the end user will always want to treat a null numeric value as zero or non-zero, numeric nulls received from the source are maintained as null values in the EUAL.
+<br /><br />
+As is always the case with fields potentially containing a null value, the end user needs to use caution and always consider how to deal with nulls.  The following SQL examples show how nulls can change the expected results of a query:
+
+<blockquote>select count(*) from ceav000a.EUAL_MAIN<br />
+where EAMEE_BSN_CONT_LD_DT = '2007-09-02'<br />
+Count(*)<br />
+4,085,460  - <strong>This is the total number of EUAL claim lines loaded on 09-02-2007.</strong>
+</blockquote>
+
+<blockquote>
+select count(*) from ceav000a.EUAL_MAIN<br />
+where EAMEE_BSN_CONT_LD_DT = '2007-09-02'<br />
+and DED_AT = 0<br />
+Count(*)<br />
+20,185  - <strong>This is the subset of claim lines where the deductible amount is zero.</strong>
+</blockquote>
+
+<blockquote>
+select count(*) from ceav000a.EUAL_MAIN<br />
+where EAMEE_BSN_CONT_LD_DT = '2007-09-02'<br />
+and DED_AT <> 0<br />
+Count(*)<br />
+149,423 - <strong>This is the subset of claim lines where the deductible amount is NOT zero.</strong>
+</blockquote>
+
+It might be expected that the sum of the zero and non zero subsets above would equal the total number of claim lines loaded for the day.  However, this sum is nearly 4 million rows short of the total in the first query above.  This is due to the fact that neither the “= 0” or “<> 0” tests consider the rows in EUAL with the Deductible amount is null.  The difference can be seen in the below query (where the Deductible amount is specifically tested for null):
+<blockquote>
+select count(*) from ceav000a.EUAL_MAIN<br />
+where EAMEE_BSN_CONT_LD_DT = '2007-09-02'<br />
+and DED_AT is null<br />
+Count(*)<br />
+3,915,852
+</blockquote>
+Following are two examples of how to account for nulls in a query.  The recommended approach is dependent on the business need and the expectation of how null deductible amounts are to be treated, either as zeros or as non zeros:
+
+<blockquote>
+Treating nulls as zero – use the Zeroifnull function - Zeroifnull(DED_AT)<br />
+select count(*) from ceav000a.EUAL_MAIN<br />
+where eamee_bsn_cont_ld_dt = '2007-09-02'<br />
+and zeroifnull(DED_AT) = 0<br />
+Count(*)<br />
+3,936,037  - <strong>This is the null total (3,915,852) plus the zero total (20,185).</strong>
+</blockquote>
+
+<blockquote>
+Treating nulls as non-zero – use the "IS NULL" additional test - WHERE (DED_AT IS NULL OR DED_AT <> 0)<br />
+select count(*) from ceav000a.EUAL_MAIN<br />
+where eamee_bsn_cont_ld_dt = '2007-09-02'<br />
+and (DED_AT IS NULL OR DED_AT <> 0)<br />
+Count(*)<br />
+4,065,275  - <strong>This is the null total (3,915,852) plus the non-zero total (149,423).</strong>
+</blockquote>
+<h5>Character Values</h5>
+The original intent of the EUAL transformation process was to convert null character fields to spaces.  EDW Support has found that this transformation did not occur in many of the character fields in EUAL.  For all character fields in the EUAL, it is best to assume that the field can either be spaces or missing.  
+<br /><br />
+If you are going to use characters fields in your where clause for selection criteria, it is best to test the field to see if you have both missing and/or null values.  Here is a sample of a test you can perform:
+<blockquote>
+select eacldr_clml_rvsl_sta<br />
+            ,count(*)<br />
+from  CEAV000a. eual_pharmacy<br />
+group by 1<br />
+order by 1
+</blockquote>
+The results show there are missing and null values:
+<table class="small">
+<tr>
+<th>EACLDR_CLML_RVSL_STA</th>
+<th>Count(*)</th>
+</tr>
+<tr>
+<td>?</td>
+<td>37,664,482</td>
+</tr>
+<tr>
+<td></td>
+<td>80,733,059</td>
+</tr>
+<tr>
+<td>0</td>
+<td>4,802,714</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1,502,999</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10,295</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>124,713,549</strong></td>
+</tr>
+
+</table>
+
+
+<br /><br />
+Depending on your inclusion or exclusion criteria you should factor in the appropriate edits in your where statement as in the samples below:
+<blockquote>
+WHERE (EACLDR_CLML_RVSL_STA IS NULL<br /> 
+OR EACLDR_CLML_RVSL_STA IN(‘ ‘,0,1,2,3))
+</blockquote>
+
+<h5>When joining EUAL to other sources</h5>
+Since null character fields in the EUAL have been converted to spaces, performing joins to other data sources may introduce nulls in character fields.  This needs to be considered, and may create an issue in one of two ways:  1) the character field is null on the joined source or 2) if joined via a LEFT OUTER JOIN, a non-match on the join criteria due to nulls can result in a row of nulls for the joined source.  One method for handling nulls in a character field is to convert the null to a space using a CASE statement, as shown in the example below:
+<blockquote>
+CASE<br />
+&nbsp;&nbsp;&nbsp;&nbsp;WHEN ACKP_CD IS NULL<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THEN ‘ ‘<br />
+&nbsp;&nbsp;&nbsp;&nbsp;ELSE<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACKP_CD<br />
+END  
+</blockquote>
+<br /><br />
+<h5>Financial Equations</h5>
+All amount fields that comprise the Claim Financial Equation are included in the EUAL.    The financial equation is defined as all dollar fields used by each system claims source to determine payment information.  There are financial equations for the following:
+<blockquote>
+OSCAR Processed Claims<br />
+MEDCO Drug Claims<br />
+Complementary Claims<br />
+(DME has yet to be defined)
+</blockquote>
+For a description of the EUAL Financial Equation, click the Financial Equation link in the EUAL section of the EDW Website
+<br /><br />
+<span class="prevPage"><a href="EUAL-SQL.htm"><<< Return to EUAL Usage - SQL Samples</a></span><span class="nextPage"><a href="EUAL-Technical.htm">Continue to EUAL Technical Information >>></a></span>
+</div>
+	
+
+ 
+ 
+		
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+</div>				
+</body>
+</html>
+
+
+
+

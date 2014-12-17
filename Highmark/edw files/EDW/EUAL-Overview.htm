@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell">
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">EUAL - General Overview</h4>
+An End User Access Layer (EUAL) has been developed for the Enterprise Data Warehouse
+(EDW) in order to provide simplified data structures and enhanced query performance. This
+access layer contains a small number of flat (denormalized) tables, which include the most
+commonly used data elements from the EDW. The EUAL eliminates the need to write complex
+SQL in order to access the data to meet business reporting and analytical requirements.
+<br /><br />
+The EDW End User Access Layer is populated with the Financial Repository of Enterprise Data
+(FRED) data, and enhanced with additional clinical and claim related data elements from the
+EDW. While the EDW is loaded with claim data daily, the EDW End User Access Layer is
+refreshed once a week, as part of the weekly FRED load process.
+<br /><br />
+This <a href="images/EualProcessing.jpg">diagram</a> depicts the high-level EDW Environment and Claim Data components.
+<br /><br />
+
+<h5>What's In The EUAL?</h5>
+The EUAL contains all data considered critical to reporting on Claims.  Data elements related to the Claim and Claim lines such as Claim Type, Claim Status, Service dates, Product, Plan Code, etc. are in the EUAL.  Also Claim Financial data such as Charges, Approved to Pay Amount, Units and Alteration Values; Clinical data such as Diagnosis Codes, Medical Procedure and Revenue Codes; and general data about the Claim Provider including IDs for the Billing and Performing providers, and Specialty Code, Name & Address for the Billing provider.
+Data is housed in the EUAL for the following Claims:
+<ul>
+<li>All claims billed through Highmark Claims Billing (i.e. medical claims, Highmark branded (Davis) vision claims)</li>
+<li>Highmark, Plan Partner and Mountain State claims</li> 
+<li>Agent Plan (non-ICIS ACK) claims</li>
+<li>Inpatient, Outpatient, Professional, Major Medical and Drug claims for all products</li>
+<li>Capitation Payments, Claim Adjustments (including Drug Rebates) and Cost Rate Adjustments</li>
+<li>Adjudicated claims.  Although the EDW also houses data related to the Submission and Disbursement lifecycles of a claim, the EUAL contains claim data for the Adjudicated lifecycle only</li>
+<li>Original, Adjusted and Voided claim lines</li>
+<li>Accepted Claims only.  Encounters and Zero-paid claims are considered Accepted even though there is no Highmark liability, and these ARE included in the EUAL</li>
+</ul>
+<br />
+<h5>What's Not In The EUAL?</h5>
+The following Claims and Claim-related information is NOT included in the EUAL:
+<ul>
+<li>UCCI dental claims</li>
+<li>Submission and Disbursement lifecycle claim data</li>
+<li>Claim lines with a line disposition that is not Original, Adjusted or Voided</li>
+<li>Rejected Claims</li>
+<li>History Adjustments</li>
+<li>Claims where the Disbursement cycle is not in synch with the Adjudication cycle</li>
+<li>Check Reissues</li>
+<li>Member and Provider supporting subject areas.  While selected information regarding member/subscriber and provider that is related to the claim is included, the complete ERS and CPR Supporting Subject Area data is not in EUAL</li>
+<li>Daily updates.  Because EUAL is loaded from FRED which is updated weekly, the data in the EUAL could be up to one week old, depending on the day of the week a query or report is executed.</li>
+</ul>
+<br />
+* Refer to the <a href="EUAL-Technical.htm">Technical Information / EUAL Load Process</a> section for the SQL exclusion criteria used in the extract from EDW of claims to be loaded in EUAL.
+<br /><br />
+<h5>Claim History</h5>
+The EUAL contains claims from January 01, 2005 to current.  It is loaded on weekly basis on Sundays and will contain the previous week’s data – Sunday through Saturday.
+
+<span class="nextPage"><a href="EUAL-Tables.htm">Continue to EUAL Tables >>></a></span>
+</div>
+	
+
+ 
+ 
+				
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+</div>		
+</body>
+</html>
+
+
+
+

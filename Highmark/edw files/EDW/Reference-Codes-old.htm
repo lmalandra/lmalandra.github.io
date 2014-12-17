@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell">
+
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">Reference Code Table Resources</h4>
+<h5>Reference Code Table Reports</h5>
+To view reports of the populated reference code tables (RCT) in the EDW just goto the <a href="MC-RCT-Reports.htm">RCT Reports</a> page where you will be able to access links to reports for every populated RCT as well as the RCT names and the EDW table/column combinations that use the codes.
+<br /><br />
+<strong>Updated July 2008</strong>
+<br />
+The EDW 03 (CEAC03A) code table called EA_CD_CLM_PROC_LOCAL has become a partial replacement for the DB2 code table called DB2PROD.SYS_PROCEDURE_ROOT. This DB2 table is being eliminated by Legacy Mod in the July 2008 release. What I mean by a partial replacement is that the DB2 version had a good number of data elements per a procedure code. Our EDW 03 replacement table will house all the procedure codes, a national BCBS code (can be the same or different), and a short subscriber payable description. You would need to interface with Legacy Mod to get additional procedure code data.
+<br /><br />
+The table CEAC03A.EA_CD_CLM_PROC_LOCAL is now fully populated in production.
+
+    <br /><br />
+<h5>Reference Code Table Technical Infomation</h5>
+Select the link below to see the current matrix for joining reference code tables to codefied EDW target table columns.  Questions about reference code tables can be emailed to <a href="mailto:James.Snitger@Highmark.com">James.Snitger@Highmark.com</a>.
+<br /><br />
+<a href="MC-RCT-Technical.htm">EDW Target Tables to RCT Mapping</a>
+<br /><br />
+
+<h5>Populating the Reference Code Tables</h5>
+Automated processes are currently being developed.  The goals of this project are to:
+
+<ul>
+<li>Determine the best single source for code values</li>
+<li>Build the minimum number of processes that can automate the population and maintenace of the most current RCT data</li>
+<li>Build a process for monitoring the quality of the RCT data</li>
+</ul>
+
+Each method employs database tables to control the process.  With this design we will be able to change how the data is loaded simply by changing the information in these control tables - no programming changes are required.  Here are the methods being developed:
+<br /><br />
+<table>
+<tbody>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td width="25%">Corporate Repository</td>
+<td>There are two main corporate repositories at Highmark.&nbsp; One is owned by the Business Information Management (BIM) and the other is the Pittsburgh Corporate Code Table system. &nbsp;This process will allow us to map specific code values to our reference code tables and check each night for changes.<br /><br />
+One of the great features of this method is that any business area can work with BIM to create their own set of source data on the corporate repository.&nbsp; Any changes to the data in the repository will be picked up by the EDW process the same evening.
+<br /><br />
+Development of the process is scheduled to be completed by October 2005.
+</td>
+</tr>
+
+<tr>
+<td>Corporate Database</td>
+<td>This process will allow the loading of data directly from DB2 and Oracle corporate databases.&nbsp; &nbsp;The refreshing of this data can be set to any frequency to accommodate the update schedule for each source.</td>
+</tr>
+
+<tr>
+<td>Text files</td>
+<td>In this case, any text file can be used to load new RCT data. &nbsp;</td>
+</tr>
+</tbody>
+</table> 
+
+</div>
+
+
+
+
+</div>	
+
+ 
+ 
+		
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+		
+</body>
+</html>
+
+
+
+

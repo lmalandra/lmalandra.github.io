@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Template Header -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EUAL Usage - SQL Sample</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+	  
+
+</head>
+<body>
+<h5 class="description">SQL Sample</h5>
+Drug claims loaded in the first 5 months of 2007 for a particular contract holder
+(selecting a few EUAL columns):
+<blockquote>select EAMEE_ID, EACL_NO, EACT_CD,EACAG_CHL_SCRM_ID, GL_AT, REIMM_PLN_ID, SVCE_DT<br />
+from ceav000a.EUAL_MAIN<br />
+where<br />
+EACAG_CHL_SCRM_ID = '#########' and EACT_CD = 'DR'<br />
+and EAMEE_BSN_CONT_LD_DT between '2007-01-01' and '2007-05-31'<br />
+order by 1,2
+</blockquote>
+
+<table>
+  <tr>
+  <td>EAMEE_ID</td>
+   <td>
+   EACL_NO
+   </td>
+   <td>
+   EACT_CD
+   </td>
+   <td>
+   EACAG_CHL_SCRM_ID
+   </td>
+   <td>
+   GL_AT
+   </td>
+   <td>
+   REIMM_PLN_ID
+   </td>
+   <td>
+   SVCE_DT
+   </td>
+  </tr>
+ <tr>
+  <td>
+  
+  1026562505
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  114.38
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  12/21/2006
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+  1041115418
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  45.71
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  01/04/2007
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+  1071533851
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  119.08
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  02/02/2007
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+  1072507442
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  45.71
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  02/02/2007
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+  1112066193
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  45.71
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  03/12/2007
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+  1126281179
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  119.08
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  04/05/2007
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+  1143057276
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  45.71
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  04/10/2007
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+  1198982639
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  45.71
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  05/10/2007
+  </td>
+ </tr>
+ <tr>
+  <td>
+  
+  1199347990
+  </td>
+  <td>
+  
+  1
+  </td>
+  <td>
+  
+  DR
+  </td>
+  <td>
+  
+  ######### 
+  </td>
+  <td>
+  
+  119.08
+  </td>
+  <td>
+  
+  363
+  </td>
+  <td>
+  
+  05/10/2007
+  </td>
+ </tr>
+</table>
+
+<p class="close"><a href="javascript:window.close();">Close</a></p>
+</body>
+</html>

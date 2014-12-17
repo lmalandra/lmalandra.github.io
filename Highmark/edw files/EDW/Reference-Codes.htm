@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+<script type="text/javascript" src="http://yui.yahooapis.com/2.2.2/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.2.2/build/animation/animation-min.js"></script> 
+<script type="text/javascript" src="scripts/yuidomcollapse.js"></script> 
+<script type="text/javascript" src="scripts/yuidomcollapse-css.js"></script>
+<script type="text/javascript" src="scripts/yuidomcollapse-fancy.js"></script> 
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell" style="left: 0px; top: 0px">
+			<!-- Begin Page Content -->
+
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">Reference Code Table Resources</h4>
+<h5 class="trigger">What are Reference Code Tables <span>(Click to view)</span></h5> 
+<div>
+Reference Code Tables (RCT) contains the definitions of EDW/EUAL field values or codes.  The RCT’s will give you description for a system value.  The reference code tables reside on the Teradata database called CEAV03a.  When creating reports for a customer it is always best to include the descriptions for such codes in addition to or rather than the code.
+<table class="noborder">
+<tr>
+<td class="noborder">&nbsp;</td>
+<td class="noborder">System Value</td>
+<td class="noborder">Description</td>
+</tr>
+<tr>
+<td class="noborder">Example:  ACK Product Code</td>
+<td class="noborder">"SECBLU" =</td>
+<td class="noborder">SecurityBlue</td>
+</tr>
+</table>
+<br /><br />
+<strong>Query in Teradata SQL Assistant</strong>
+<br /><br />	
+<img alt="Teradata SQL Assistant" src="images/reference-codes-01.gif" />			
+<br /><br />
+Most code type fields on the EUAL have a corresponding Reference Code Table.  You can find a reference on the EUAL Data Dictionary that will start with the verbiage "Reference Code Table (RCT)" - click <a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/EUAL/EUAL-DataDictionary.xls">Data Dictionary / HIW Crosswalk</a>.
+</div>
+<br />
+<h5 class="trigger">How Do I Get Access to the Reference Code Table? <span>(Click to view)</span></h5><div>
+If you are not sure you have access to the Reference Code Tables, first run this basic query in Teradata SQL Assistant before filling out the SARA form.   If the query runs, then you have access.  If it does not then you need to request access.  Access to these tables is included with medical experience tables access.  
+<br /><br />
+<blockquote><strong>SELECT *</strong></blockquote>
+<blockquote><strong>FROM CEAV03A.EA_CD_ACKP</strong></blockquote>
+<br /><br />
+End Users who have access to the EUAL or any EDW roles , will automatically receive access to the CEAV03A Reference Code Tables.  
+</div>
+<br />
+<h5 class="trigger">How Can I View the Reference Code Tables? <span>(Click to view)</span></h5>
+<div>
+In order to view values for a particular reference code, you can execute a query like the following in your tool of choice:  
+<blockquote><strong>SELECT *</strong></blockquote>
+<blockquote><strong>FROM CEAV03A.EA_CD_ACKP</strong></blockquote>
+</div>
+<br />
+<h5 class="trigger">How Can I Bring the Reference Code Tables into my program? <span>(Click to view)</span></h5>
+<div>
+You should add the RCT into your SQL program as a left outer join.  This should be done in the event there is data missing from the RCT as you do not want any of your base data to be omitted.
+<br /><br />
+When pulling the RCT into your programs you need to be careful that you do not end up with a one to many join.  Many of the tables have all definitions on them -- even old ones.  If you need the most current definition or a definition for the date of service you are processing in your query then you need look at the time stamp field.  Each reference code table has a unique name for this time stamp field and it generally follows the form of the lookup column id followed by _rcd_mnt_ts.  You may also want to look at the start and stop dates depending on your dates of service.
+<br /><br />
+One way to eliminate the duplicates is to retrieve the most current description for the lookup value in the RCT.  This can be done by selecting only the rows with a NULL maintenance timestamp, for example (eacdrg_rcd_mnt_ts is null).
+
+Example:  You are asked, "How much did group 'So & So' spend for Erythromycin in 2007 and what kind was prescribed?"
+<br /><br />
+You can bring in the RCT tables to assist you in answering these questions:
+<br /> <br /> 
+<textarea id="TextArea1" cols="70" rows="32">SELECT  PHARM.EACDDTC_CD AS  DEF_THER_CLS_CD
+               ,PHARM.EACDCTC_CD AS COMP_THER_CLS_CD
+               ,DRCLS.EA_DS AS  DRUG_CLASS_DEF
+               ,PHARM.EACDND_CD AS NDC_CD
+               ,NDC.EACDND_DS AS NDC_DEF
+               ,COUNT(DISTINCT(MAIN.EACM_WHS_UNQ_MBR_ID||MAIN.MBR_EAG_CD||MAIN.EACM_BIR_DT||
+                             MAIN.EACM_FST_NM)) AS PATIENT_CNT
+               ,COUNT(DISTINCT(MAIN.EAC_SRCSY_ASND_CLM_NO)) AS CLM_CNT
+               ,SUM(MAIN.SBMD_CG_AT)  AS SUBMIT_AMT                                          
+               ,SUM(MAIN.EACL_PRV_ALCRG_AT) AS ALLOW_AMT  
+               ,SUM(MAIN.GL_AT) AS PAID_AMT 
+  
+FROM CEAV000A.EUAL_MAIN MAIN INNER JOIN CEAV000A.EUAL_PHARMACY PHARM 
+                 ON MAIN.EAMEE_ID = PHARM.EAMEE_ID
+                AND MAIN.LINE_BLIND_KEY = PHARM.LINE_BLIND_KEY
+      
+           LEFT OUTER JOIN CEAV03A.EA_CD_DRUG_DEFIN_THER_CLS DRCLS 
+                  ON  PHARM.EACDDTC_CD= DRCLS.EACDDTC_CD
+                  AND DRCLS.EA_RCD_MNT_TS IS NULL
+              
+           LEFT OUTER JOIN CEAV03A.EA_CD_DRUG_NDC NDC
+                  ON PHARM.EACDND_CD = NDC.EACDND_CD
+
+ WHERE MAIN.ICRD_DT BETWEEN '2007-01-01' AND '2007-12-31'
+  AND MAIN.EAMEE_BSN_CONT_LD_DT BETWEEN '2007-01-01' AND '2008-03-31'
+  AND MAIN.GP_NO = 'XXXXXXXXX'
+  AND DRCLS.EA_DS = 'ERYTHROMYCINS'
+  GROUP BY 1,2,3,4,5
+  ORDER BY 10 DESC
+</textarea>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<a href="Reference-Codes-Reports.htm">Reference Code Table Reports</a><br />
+This page provides links to reports for every populated Reference Code Table as well as the RCT names and the EDW table/column combinations that use the codes.
+<br /><br />
+<strong>Updated July 2008</strong>
+<br />
+The EDW 03 (CEAC03A) code table called EA_CD_CLM_PROC_LOCAL has become a partial replacement for the DB2 code table called DB2PROD.SYS_PROCEDURE_ROOT. This DB2 table is being eliminated by Legacy Mod in the July 2008 release. What I mean by a partial replacement is that the DB2 version had a good number of data elements per a procedure code. Our EDW 03 replacement table will house all the procedure codes, a national BCBS code (can be the same or different), and a short subscriber payable description. You would need to interface with Legacy Mod to get additional procedure code data.
+<br /><br />
+The table CEAC03A.EA_CD_CLM_PROC_LOCAL is now fully populated in production.
+   <br /><br />
+<a href="Reference-Codes-Technical.htm">EDW Target Tables to RCT Mapping</a>
+<br />
+This page shows the current matrix for joining reference code tables to codefied EDW target table columns.
+<br /><br />
+<h5>Data Model Reports - current with the July 18, 2008 release</h5>
+These documents contain names, descriptions, and other information for the tables and fields in the EDW.&nbsp; The PDF version is best for printing any of the data dictionaries and the Excel version (where available) is best if you want to search, sort or filter the information.
+<br /><br />
+
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+
+<tr>
+<td width="40%"><strong>PDF version</strong></td>
+<td><strong>Excel version</strong>&nbsp;</td>
+</tr>
+
+<tr>
+<td><a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/ReferenceCodes/DMR-CEAC03-rct.pdf">Reference codes</a> </td>
+<td><a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/ReferenceCodes/CEAC03.xls">*Reference codes</a></td>
+</tr>
+</table>
+<br /><br />
+<h5>Methods used to populate the Reference Code Tables</h5>
+<strong>Corporate Repository</strong><br />
+There are two main corporate repositories at Highmark.  One is owned by the Business Information Management (BIM) and the other is the Pittsburgh Corporate Code Table system.  This process allows us to map specific code values to our reference code tables and check each night for changes.<br /><br />
+One of the great features of this method is that any business area can work with BIM to create their own set of source data on the corporate repository.  Any changes to the data in the repository will be picked up by the EDW process the same evening.
+<br /><br />
+<strong>Corporate Database</strong><br />
+This process will allow the loading of data directly from DB2 and Oracle corporate databases.  The refreshing of this data can be set to any frequency to accommodate the update schedule for each source.<br /><br />
+<strong>Text Files</strong><br />
+Any text file can be used to load new RCT data.
+
+
+
+
+
+ 	</div>	
+
+ 
+ 
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+		</div>		
+		
+</body>
+</html>
+
+
+
+

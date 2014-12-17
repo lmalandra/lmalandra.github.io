@@ -1,0 +1,45 @@
+
+.hide{
+	position:absolute;
+	top:-20000px;
+	overflow:hidden;
+	zoom:1;
+}
+.parent{
+	border:0px solid #ccc;
+	border-color:#fff #999 #ccc #999;
+	border-left:none;
+	border-right:none;
+	background:url(gfx.jpg) top left repeat-x #fff;
+	background-position:0 -350px;
+}
+
+#download h2.open,#download h2.trigger{
+	background-position:64% -501px;
+	padding-top:30px;
+	padding-bottom:40px;
+	border:none;
+	color:#fff;
+	text-align:center;
+}
+#download h2.open a,#download h2.trigger a{
+	color:#000;
+	letter-spacing:0px;
+}
+#download ul{
+	margin-top:-30px;
+}
+.open{
+	border:0px solid #ccc;
+	border-color:#fff #999 #ccc #999;
+	border-left:none;
+	border-right:none;
+	background-position:0 -150px;
+}
+.parent a, .open a{
+	display:block;
+	padding:0 .2em;
+	color:#000;
+	letter-spacing:-1px;
+	text-decoration:none;
+}

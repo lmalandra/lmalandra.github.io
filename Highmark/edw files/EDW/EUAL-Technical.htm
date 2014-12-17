@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell">
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">EUAL Technical Information</h4>
+<h5>EUAL Load Process</h5>
+The following technical specifications (in bold) define in SQL the criteria used in the weekly extract from EDW of claims that are ready for Billing, and therefore populated in FRED.  These claims will eventually be housed in EUAL.
+
+<blockquote>
+Exclude all lifecycles except the adjudicated life cycle.  <strong>(EAMEET_CD <> ‘ADJ’)</strong><br />
+Exclude records if the line disposition is not an original claim, adjustment or void. <strong>(EA_CLM_LINE.EACLPS_CD <> 'A' and EA_CLM_LINE.EACLPS_CD <> 'V' and EA_CLM_LINE.EACLPS_CD <> 'J')</strong><br />
+Exclude Rejected Claims. <strong>(EA_CLM_LINE.EACACRR_CD = 'R' and EA_CLM_LINE.EACL_ACS_FEE_AT= 0)   OR   (EA_CLM_CORE.EACFS_CD = 'R' and EA_CLM_LINE.EACLPS_CD = 'A' and EA_CLM_LINE.EACL_APVD_PYM_AT <> 0)</strong><br />
+Exclude History Adjustments.  <strong>(EA_CLM_ADJUST.EACAJT_CD = 'B‘)</strong><br />
+Exclude Claims where the Disbursement cycle is not in synch with the Adjudication cycle.  <strong>((EA_CLM_ADJUST.EACAJT_CD in (' ','A','C') or EA_CLM_ADJUST.EACAJT_CD is null) and EA_CLM_PAYMNT.EACPY_CHK_DT < '2006-08-07‘) (Monday of the week we are loading)</strong><br />
+Exclude Check Reissues.   <strong>(EA_CLM_PAYMNT.EACPY_RIS_IN = 'Y' and (EA_CLM_ADJUST.EACAJT_CD like any (' ', 'A','C') or EA_CLM_ADJUST.EACAJT_CD is null))</strong>
+</blockquote>
+<br />
+<h5>Role Based Security</h5>
+The EUAL is a Teradata database and therefore will utilize the Highmark’s corporately sanctioned Role-based security.  Individual Teradata View databases and Teradata Roles are setup to provide access to the EUAL end user access views, with each view database providing access to a specific end user security profile (for example, Highmark data only, no employee, no PHI).  The end user security profiles will provide access to the same combinations of data as those defined for the EDW base table access.  For more information on EDW End User Security, please refer to the <a href="How-EDW.htm">How do I access the EDW?</a> section.
+<br /><br />
+<h5>Data Restrictions</h5>
+The EUAL contains Protected Health Information (PHI).  As with all EDW data access, Views will be provided which use column level security to remove all elements defined as PHI for Highmark.  Users who do not require access to PHI data in order to perform their job function will be granted access to non-PHI Roles & View databases.
+<br /><br />
+<h5>Security View Databases</h5>
+The initial release of EUAL includes End User security for the security profiles required by the Catapult team only.  These security profiles available are (1) All business data access (Highmark, Plan Partner and Mountain State) including PHI, and (2) Highmark and Plan Partner data only (excluding Mountain State) with PHI.<br /><br />  
+The following Teradata Roles and Databases provide this access.
+<ol>
+<li>All Highmark business (including Plan Partner and Mountain State) with PHI<br />
+Role: EDW_ALL_ACCESS_EUAL_PHI<br />
+Database: CEAV500A </li>
+<li></li>
+<li>Highmark and Plan Partner only (no Mountain State) with PHI<br />
+Role: EDW_HM_PP_ME_PHI<br />
+Database: CEAV000A </li>
+</ol>
+In addition, many EUAL users may require access to the EDW Reference Code Tables.  These tables reside in database CEAV03A, which is included within many of the Teradata access roles, and is also available for selection separately via Role EDW_REFERENCE_CODE.
+<br /><br />
+<h5>Security Access Requests</h5>
+End Users requiring access to the EUAL or any EDW roles and databases will need to complete the <a href="http://apps.highmark.com/SRSWEB/">SARA – Security Access Request</a> form.  Access to all EDW databases is available in the "Reporting and Query Applications" section of SARA. 
+<br /><br />
+<span class="prevPage"><a href="EUAL-Nulls.htm"><<< Return to EUAL Usage - Proper Handling of Nulls</a></span><span class="nextPage"><a href="EUAL.htm">Continue to EUAL Main Page >>></a></span>
+</div>
+	
+
+ 
+ 
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+		</div>		
+		
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Template Header -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>EUAL Usage - SQL Sample</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+
+</head>
+<body>
+<h5 class="description">GENERAL STARTER QUERY FOR MEDICAL CLAIMS</h5>
+<blockquote>
+PROC SQL;<br />
+  %isecureConnect(Dbms=Teradata);<br />
+  CREATE TABLE PROF.EUAL_DATA AS<br />
+  SELECT * FROM CONNECTION TO TERADATA<br />
+  (SELECT DISTINCT <br />
+
+/*MEMBER DATA*/<br />
+ <br />
+        MAIN.EACM_WHS_UNQ_MBR_ID			 <br />
+       ,MAIN.EACM_CALCD_AGE_CT 					  <br />
+       ,MAIN.MBR_EAG_CD								   <br />
+       ,MAIN.EACAG_UNQ_MBR_ID	 <br />
+       ,MAIN.EACM_MBR_RELS_CD	 <br />
+       ,MAIN.EACAG_SSN_NO<br />
+       ,MAIN.EACM_PIN_ID	   <br />                                      
+       ,MAIN.EACAG_CHL_SCRM_ID <br />
+       ,MAIN.EACM_BIR_DT <br />
+       ,MAIN.EACM_LA_NM||', '||TRIM(EACM_FST_NM) <br />
+<br />
+/*DATES FIELDS*/<br />
+<br />
+       ,MAIN.EACL_SVCE_END_DT             	                    	 <br />
+       ,MAIN.EACL_SVCE_BGN_DT<br />                                    	  
+       ,MAIN.EAC_ADMM_DT 		<br />							          
+       ,MAIN.EAC_DCG_DT  			<br />					              
+       ,MAIN.EAC_STM_CVRD_FR_DT           <br />                            
+       ,MAIN.EAC_STM_CVRD_TO_DT                 <br />                      
+       ,MAIN.ICRD_DT                          		<br />		          
+       ,MAIN.EAMEE_BSN_CONT_LD_DT<br />                                             
+       ,MAIN.EAC_FNLN_DT <br />
+       ,MAIN.SVCE_DT <br />
+ <br />
+
+/*BILLING PROVIDER DATA*/<br />
+<br />
+,PROV.BILG_LCL_PLN_PRV_ID<br />
+    ,PROV.BILG_EAPS_CD	<br />					 
+       ,PROV.PRV_NM <br />
+       ,PROV.EAPT_CD <br />
+       ,PROV.PRV_AD_MAIN_ZIP_CD						  <br />
+       ,PROV.PRV_ADL_TX_1 <br />
+       ,PROV.PRV_ADL_TX_2 <br />
+       ,PROV.PRV_AD_CY_NM <br />
+       ,PROV.PRV_EAST_CD <br />
+<br />
+/*PERFORMING PROVIDER INFORMATION*/<br />
+<br />
+       ,PROV.PERFG_LCL_PLN_PRV_ID <br />
+<br />
+/*UNIQUE RECORD ID*/<br />
+<br />
+       ,MAIN.EAMEE_ID					  	  <br />
+       ,MAIN.LINE_BLIND_KEY		  				  <br />
+       ,MAIN.EACL_NO						            <br />  
+       ,MAIN.EAC_SRCSY_ASND_CLM_NO		              <br />
+<br />
+/*DIAGNOSIS INFORMATION*/<br />
+<br />
+       ,DIAG.PRI_DIAG_CD				<br />
+       ,DIAG.DIAG_CD_001  		   	 <br />
+       ,DIAG.DIAG_CD_002			 <br />
+       ,DIAG.DIAG_CD_003			<br />
+       ,DIAG.DIAG_CD_004			 <br />
+       ,DIAG.DIAG_CD_005			 <br />
+       ,DIAG.DIAG_CD_006			 <br />
+       ,DIAG.DIAG_CD_007			 <br />
+       ,DIAG.DIAG_CD_008			 <br />
+       ,DIAG.DIAG_CD_009			 <br />
+       ,DIAG.DIAG_CD_010			 <br />
+       ,DIAG.DIAG_CD_011			       <br />
+       ,DIAG.DIAG_CD_012<br />			 
+       ,DIAG.DIAG_CD_013	<br />		 
+       ,DIAG.DIAG_CD_014		<br />	 
+       ,DIAG.DIAG_CD_015			 <br />
+       ,DIAG.DIAG_CD_016			 <br />
+       ,DIAG.DIAG_CD_017			 <br />
+       ,DIAG.DIAG_CD_018			 <br />
+       ,DIAG.DIAG_CD_019			 <br />
+       ,DIAG.DIAG_CD_020			 <br />
+       ,DIAG.DIAG_CD_021			 <br />
+       ,DIAG.DIAG_CD_022			 <br />
+       ,DIAG.DIAG_CD_023			 <br />
+       ,DIAG.DIAG_CD_024			 <br />
+       ,DIAG.DIAG_CD_025			 <br />
+       ,DIAG.DIAG_CD_026			 <br />
+       ,DIAG.ADM_DIAG_CD <br />
+<br />
+/*DOLLAR AMOUNTS*/<br />
+<br />
+       ,MAIN.SBMD_CG_AT  							 <br />
+       ,MAIN.EACL_PRV_ALCRG_AT					   <br />
+       ,MAIN.APVD_PYM_AT						<br />
+       ,MAIN.GL_AT <br />
+       ,MAIN.ACS_FEE_AT <br />
+       ,MAIN.DED_AT <br />
+       ,MAIN.COP_AT <br />
+       ,MAIN.COIN_AT <br />
+       ,MAIN.EACL_CMPLM_BENY_COIN_AT <br />
+       ,MAIN.EACL_CMPLM_MCDR_DEDPD_AT <br />
+       ,MAIN.EACL_CMPLM_MCDR_PSY_CTB_PD_AT <br />
+       ,MAIN. EACL_CMPLM_SPC_GRP_ADJM_AT <br />
+<br />
+
+
+/*HCPCS, CPT, REVENUE AND ICDP PROC CODE INFORMATION*/<br />
+<br />
+      ,PROC.EA_NATL_HCPCS_CD			      		<br />
+      ,PROC.EACP_LN_CD <br />
+      ,PROC.EACLPM_PRI_CD  	<br />						 
+      ,PROC.EACRV_CD			<br />				 
+      ,PROC.EACP_OTH_CLM_CD_001	/*THERE ARE 24 – HERE ARE THE FIRST SIX*/	<br />
+      ,PROC.EACP_OTH_CLM_CD_002					 <br />
+      ,PROC.EACP_OTH_CLM_CD_003 <br />
+      ,PROC.EACP_OTH_CLM_CD_004		<br />				 
+      ,PROC.EACP_OTH_CLM_CD_005	<br />
+      ,PROC.EACP_OTH_CLM_CD_006		<br />				 
+<br />
+/*NUMBER OF SERVICES*/<br />
+<br />
+       ,MAIN.STD_SVCE_UNTS_CT <br />
+<br />
+/*PLACE OF SERVICE EDIT*/<br />
+<br />
+       ,MAIN.EACNSPS_CD <br />
+       ,MAIN.EACLPOS_CD<br />
+							<br />			 
+/*CLAIM LINE INFORMATION*/<br />
+<br />
+         ,MAIN.EACBC_CD <br />
+         ,MAIN.EACLPS_CD <br />
+         ,MAIN.EACSS_CD <br />
+         ,MAIN.EACEPIC_CD <br />
+         ,MAIN.EAC_SCCF_NO <br />
+         ,MAIN.EACLRJT_CD <br />
+         ,MAIN.EACRRC_CD <br />
+         ,MAIN.EACACRR_CD_LINE <br />
+         ,MAIN.EACLPT_CD <br />
+         ,MAIN.EAUO_CD <br />
+         ,MAIN.EACL_NO <br />
+<br />
+/*GROUP INFORMATION*/<br />
+<br />
+         ,MAIN. EA_GP_NO	<br />
+								 <br />
+/*ENROLLMENT SOURCE INFORMATION*/<br />
+<br />
+         ,MAIN.EAES_CD <br />
+         ,MAIN.REIMM_PLN_ID <br />
+         ,MAIN.SBMG_PLN_ID <br />
+         <br />
+/*CLINICAL INFORMATION*/<br />
+<br />
+        ,CLIN.CMN_EACMDC_CD <br />
+        ,CLIN.CMN_EACDRD_CD <br />
+        ,CLIN. CMN_EACDRG_VSN_NO <br />
+<br />
+/*PRODUCT INFORMATION*/<br />
+<br />
+         ,MAIN.EAPL_CD <br />
+         ,MAIN.ACKP_CD <br />
+         ,MAIN.ACKR_CD <br />
+         ,MAIN.ACKRC_CD		<br />					 
+         ,MAIN.EACPT_CD <br />
+         ,PROD.PSPRT_ND_LVL4_CD<br /> 
+<br />
+
+/*  PLEASE NOTE:  CEAV000A IS HIGHMARK ONLY WHILE CEAV500A INCLUDES MT. STATE DATA AS WELL */	
+	<br />	
+FROM CEAV000a.eual_MAIN MAIN INNER JOIN CEAV000A.EUAL_MEDICAL_CD PROC<br />
+       	ON MAIN.EAMEE_ID = PROC.EAMEE_ID<br />
+       	AND MAIN.LINE_BLIND_KEY = PROC.LINE_BLIND_KEY<br />
+<br />
+            INNER JOIN CEAV000a.eual_PROVIDER PROV<br />
+                 ON MAIN.EAMEE_ID = PROV.EAMEE_ID<br />
+	 AND MAIN.LINE_BLIND_KEY = PROV.LINE_BLIND_KEY<br />
+<br />
+              INNER JOIN CEAV000a.eual_DIAG DIAG<br />
+    	  ON MAIN.EAMEE_ID = DIAG.EAMEE_ID<br />
+	  AND MAIN.LINE_BLIND_KEY = DIAG.LINE_BLIND_KEY<br />
+<br />
+             INNER JOIN CEAV000A.EUAL_CLINICAL CLIN<br />
+                  ON MAIN.EAMEE_ID = CLIN.EAMEE_ID<br />
+	  AND MAIN.LINE_BLIND_KEY = CLIN.LINE_BLIND_KEY<br />
+<br />
+              LEFT OUTER JOIN CEAV03A.PSPRT PROD<br />
+	   ON MAIN.ACKP_CD = PROD.PSPRT_LF_VAL_CD<br />
+<br />
+/*WHERE CRITERIA DEFINE THE CONDITIONS THAT SPECIFY WHAT INFORMATION WILL BE EXTRACTED FOR YOUR REPORT*/<br />
+WHERE MAIN.ICRD_DT BETWEEN &STARTDT AND &ENDDT  				<br />
+<br />
+     /*ENTER THE START DATE & END DATE IN THIS FORMAT 'YYYY-MM-DD' */<br />
+     AND MAIN.EAMEE_BSN_CONT_LD_DT BETWEEN (DATE1) AND  (DATE2)<br />
+<br />
+     /*ENTER CLAIM CATEGORY CODE (INPATIENT, OUTPATIENT, PROFESSIONAL, MAJOR MEDICAL*/<br />
+     AND MAIN.EACT_CD IN('I','O','P','MM')  						     <br />
+<br />
+     /*ENTER ENROLLMENT SOURCE CODE AND ACCOUNTING CONTROL KEY REGION CODE (THE CODE BELOW PULLS THE CENTRAL AND WESTERN REGIONS) */<br />
+     AND (MAIN.EAES_CD IN('363','378') OR MAIN.ACKR_CD IN('PA03','PA99','PA05'))<br />
+<br />
+     /*ENTER THE CLAIM SOURCE SPECIFIC CODE (OSP is for OSCAR DATA)*/<br />
+     AND MAIN.EACSS_CD = 'OSP'<br />
+     <br />
+      /*ENTER THE CLAIM LINE PROCESS TYPE CODE (OSCAR SPECIFIC FIELDS ARE INCLUDED IN THIS EXAMPLE)*/<br />			              		 
+     AND MAIN.EACLPT_CD IN('2','3')								   <br />
+<br />
+     /*ENTER THE ACK CODE  (SECURITY BLUE, ETC)*/<br />
+     AND MAIN.ACKP_CD IN ('SECBLU','SECBSN')		<br />	 
+<br />
+);    <br />          
+
+<br />
+DISCONNECT FROM TERADATA;<br />
+<br />
+
+QUIT;
+
+</blockquote>
+
+
+
+<p class="close"><a href="javascript:window.close();">Close</a></p>
+</body>
+</html>

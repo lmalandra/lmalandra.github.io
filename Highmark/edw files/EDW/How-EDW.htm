@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Enterprise Data Warehouse</title>
+
+    <link rel="Stylesheet" href="styles/main.css" type="text/css" />
+
+
+
+    <script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+
+    <script type="text/javascript" language="JavaScript">
+        <!-- Begin
+        function popUp(URL) {
+            day = new Date();
+            id = day.getTime();
+            eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+        }
+         // End -->
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <!-- Begin HeaderTable -->
+    <div id="headerCell">
+        <div id="highwireCell">
+            <a href="#" target="_top">
+                <img src="images/highmarkLogo.png" alt="Highwire home" border="0" />
+            </a>
+        </div>
+        <div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a>
+        </div>
+    </div>
+    <!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div id="layoutTable">
+        <div id="navigationCell">
+        <!-- Start Navigation -->
+        <div id="navigation">
+
+
+            <a href="#">Home</a>
+            <br>
+            <a href="#">What is in the EDW?</a>
+            <br>
+            <a href="#">How do I access the EDW?</a>
+            <br>
+            <a href="#">End User Access Layer</a>
+            <br>
+            <a href="#">Medical Claims Experience</a>
+            <br>
+            <a href="#">UCCI Dental Experience</a>
+            <br>
+            <a href="#">Clinical Member Reporting Repository - MRR</a>
+            <br>
+            <a href="#">Reference Codes</a>
+            <br>
+            <a href="#">Supporting Subject Areas</a>
+            <br>
+            <a href="#">Special Purpose Subject Areas</a>
+            <br>
+            <a href="#">Data Quality</a>
+            <br>
+            <a href="#">Release and Migration Information</a>
+            <br>
+            <a href="#">Support Process</a>
+            <br>
+            <a href="#">Training and Resource Material</a>
+            <br>
+
+
+
+        </div>
+        <!-- End Navigation -->
+
+    </div>
+        <div id="rightcol">
+            <div id="printCell">
+                <div id="printPage">
+                    <a href="javascript:popPfWin();">
+                        <img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a>
+                </div>
+            </div>
+
+            <div id="quickLinksCell">
+                <script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+            </div>
+            <div id="usefulLinksCell">
+                <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+            </div>
+        </div>
+
+
+        <!-- Begin Page Content -->
+
+
+        <div id="contentCell">
+            <!-- Begin Page Content -->
+            <!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+            <h4 class="pageHeader">How do I access the EDW?</h4>
+
+            <div id="Content">
+                <h5>Security Access Request Application</h5>
+                Before you are able to utilize the EDW, you must request access by submitting a SARA form. SARA (Security Access Request Application) was developed with the goal of providing ease of use for the requestor. The initial entry screens allow you to submit a LID or Application ID for which you are requesting access, or you can request access for multiple LIDs by cost center or job title.
+                <br />
+                <br />Click <a href="http://apps.highmark.com/SRSWEB">here</a> to access SARA.
+                <br />
+                <br />For your convenience, we have provided a specific set of instructions for each major EDW subject area.
+                <br />
+                <ul>
+                    <li><a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/AccessingTheEDW/SARA-Instructions-EUAL.pdf">End User Access Layer</a>
+                    </li>
+                    <li><a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/AccessingTheEDW/SARA-Instructions-Dental.pdf">UCCI Dental Experience</a>
+                    </li>
+                    <li><a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/AccessingTheEDW/SARA-Instructions-MRR.pdf">Clinical Member Reporting Repository</a>
+                    </li>
+                    <li><a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/AccessingTheEDW/SARA-Instructions.pdf">All Other EDW Subject Areas</a>
+                    </li>
+                </ul>
+                Questions regarding the overall SARA entry screens or applications for which you are trying to request access should be sent to the <a href="mailto:SARAinquiry@highmark.com?subject=Help">SARAinquiry</a> mailbox.
+                <br />
+                <br />
+                <h5>Security Overview Diagram</h5>
+                The <a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/AccessingTheEDW/SecurityOverviewDiagram.jpg">Security Overview Diagram</a> provides an overview of the EDW design. The high-level process is to extract Source Data, move it to an EDW Staging area to perform transformations such as assigning DRG code, and then load the EDW Base database. The data is then available for access by End Users and Business applications.
+                <br />
+                <br />The security components and corresponding control points in the EDW MESA design are identified as follows:
+
+                <ul>
+                    <li>End User security</li>
+
+                    <li>Third Party Tool security</li>
+
+                    <li>Downstream Application security</li>
+
+                    <li>MESA ISG Support Area security</li>
+                </ul>
+                <br />
+                <h5>PHI Fields</h5>
+                This <a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/AccessingTheEDW/edw_phi_fields.pdf">document</a> lists the fields of the EDW that are classified as PHI.
+                <br />
+                <br />
+                <h5>Sample Queries</h5>
+                This <a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/AccessingTheEDW/edw_end_user_sample_queries.pdf">document</a> provides a number of sample queries useful for end users.
+                <br />
+                <br />
+                <h5>Data Access View Reports</h5>
+                This <a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/edw_md_rpt_view_access.pdf">report</a> provides detailed information on the views available in the EDW.  For definitions and background information on the use of views and roles, see the Security Overview document above.
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        <!-- End Page Content -->
+
+
+        <div id="footer">
+
+
+            <script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+

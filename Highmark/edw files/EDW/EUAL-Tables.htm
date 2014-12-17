@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell">
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">EUAL Tables</h4>
+<a href="EUAL-Tables-Claim.htm">Claim Tables</a><br />
+The EUAL table rows on the following page are all at the Claim Line level.  The key that should be used to join the Claim related tables within EUAL is the Medical Expense Event ID from the EDW (EAMEE_ID) and the Claim Line Number blind key from EDW (on all EUAL Claim related tables this is the LINE_BLIND_KEY).  The "blind key" Claim Line value (LINE_BLIND_KEY) is the recommended criteria when joining EUAL tables, in order for maximum query efficiency.  However, there is also a column on each EUAL table that houses the actual Claim Line number value, which is EACL_NO.<br />
+*See Appendix-B for a detailed EUAL Data Dictionary, listing all columns available in the EUAL Claim tables. 
+<br /><br />
+<a href="EUAL-Tables-Other.htm">Other EUAL Tables</a><br />
+Unlike the Claim Tables, these EUAL table rows are not at the Claim Line level, and therefore cannot be joined with other EUAL tables.
+<br /><br />
+<span class="prevPage"><a href="EUAL-Overview.htm"><<< Return to EUAL - General Overview</a></span><span class="nextPage"><a href="EUAL-Tables-Claim.htm">Continue to EUAL Tables - Claim >>></a></span>
+
+</div>
+	
+
+ 
+ 
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+		</div>		
+		
+</body>
+</html>
+
+
+
+

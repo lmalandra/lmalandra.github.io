@@ -1,0 +1,842 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell">
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">Query by Product, Region or Business Unit using Accounting Control Key</h4>
+<h5>Accounting Control Key (ACK)</h5>
+The ACK section provides end users with a basic understanding of the components that comprise
+the ACK, and how the ACK columns available in the EUAL can be utilized to identify claims for
+Highmark’s Product offerings and/or claims for various Market Segments (Western, Central).
+<br /><br />
+The EUAL has ACK populated for Highmark Western Region, Highmark Central Region,
+Highmark Plan Partnership, Highmark Subsidiaries Keystone Health Plan West (Western
+Managed Care), Highmark Health Insurance Co. (Medicare Advantage Freedom Blue West
+Virginia), and Highmark Senior Services (Medicare Part D PA and WV statewide) and Mountain
+State Blue Cross of West Virginia.
+<br /><br />
+Note; ACK fields are not populated for the following business; agent plan business where
+Highmark jointly underwrites traditional and comprehensive coverage with Independence Blue
+Cross and Blue Cross of NEPA, ITS Blue Card Host and the Federal Employee Program (FEP)
+for both Highmark and Mt. State.
+<br /><br />
+The ACK code is derived by the ACK Common Module, and all components of ACK are housed
+in the EUAL_MAIN TABLE. The ACK code components consist of Business Unit, Region Code,
+Product, Rating Category and Income Control. Following is a description of each component of
+the ACK:
+<br /><br />
+<table>
+<tr>
+<th width="20%">EUAL NAME</th>
+<th width="20%">LOGICAL NAME</th>
+<th width="30%">DESCRIPTION</th>
+<th width="30%">SAMPLES</th>
+</tr>
+<tr>
+<td>ACKBU_CD</td>
+<td>ACK Business Unit</td>
+<td>Code used to identify an independent legal entity.</td>
+<td>HMARK Highmark Inc.<br />
+KHPW Keystone Health Plan West Inc.<br />
+WVA Mountain State Blue<br />
+Cross Blue Shield</td>
+</tr>
+<tr>
+<td>ACKR_CD</td>
+<td>ACK Region</td>
+<td>Code used to identify the marketing region of a group. For Highmark, it would typically be a Blue Cross or Blue Shield Plan Area region in Pennsylvania, such as western or central. For Plan Partners, the Region identifies the specific plan.</td>
+<td>PA03 Hmark Western PA<br />
+WV Mountain State<br />
+FL01 Plan Partner BCBS of Florida<br />
+WI01 Plan Partner BCBS United of Wisconsin</td>
+</tr>
+<tr>
+<td>ACKP_CD</td>
+<td>ACK Product</td>
+<td>Code used to identify a unique set of attributes associated with a Benefit Structure that are priced and marketed to a particular market segment.</td>
+<td>BLCHMO BlueCHIP HMO<br />
+BLCHPH BlueCHIP Hospital<br />
+BLCHPM BlueCHIP Medical</td>
+</tr>
+<tr>
+<td>ACKRC_CD</td>
+<td>ACK Rating Category</td>
+<td>Code used to identify the pricing mechanism or risk arrangement associated with a group's  transactions.</td>
+<td>ASO Administrative Services Only<br />
+PRO Prospective</td>
+</tr>
+<tr>
+<td>ACKIC_CD</td>
+<td>ACK Income Control</td>
+<td>Identifies how a group would be classified based on the BCBSA definitions of Regional and National business, and the Highmark internally defined Consumer Segment Group (CSG).</td>
+<td>IND Indiv<br />
+NTG Nat Grp</td>
+</tr>
+</table>
+<h5>Using ACK to identify Market Segments</h5>
+The market segment refers to the geographical area in which Highmark Inc. and its subsidiaries
+and its affiliate Mt. State BCBS of West Virginia operate as health insurance carriers.
+<br /><br />
+The ACK Business Unit identifies the various legal entities/companies that Highmark Inc. and Mt.
+State conduct business as within the various markets. The ACK Region Code identifies the
+geographical areas in which these business units conduct business. Refer to Market Segment
+Matrix for a cross-reference of ACK Business Unit and Region Code to Market Segment.
+<br /><br />
+<strong>Market Segments Matrix:</strong><br />
+The following ICIS ACK Defines Highmark Inc. and its subsidiaries. See next section for
+Mountain State Blue Cross Blue Shield.
+<table>
+<tr>
+<th width="20%">MARKET SEGMENT</th>
+<th width="20%">PRODUCT TYPE</th>
+<th width="20%">ACK BUS UNIT</th>
+<th width="20%">ACK REGION</th>
+<th width="20%">COMMENTS</th>
+</tr>
+<tr>
+<td rowspan="3">Western Region</td>
+<td>Traditional and Managed Care</td>
+<td>HMARK</td>
+<td>PA03<br />
+PA99</td>
+<td>PA99-USX Group</td>
+</tr>
+<tr>
+<td>Medicare Part D</td>
+<td>HSR</td>
+<td>RGP3</td>
+<td>MEDCO Source Only</td>
+</tr>
+<tr>
+<td>Managed Care-HMO</td>
+<td>KHPW</td>
+<td>PA03</td>
+<td>Fee for services claims processed in OSCAR.</td>
+</tr>
+<tr>
+<td>Plan Partner</td>
+<td>Traditional and Managed Care</td>
+<td>HMARK</td>
+<td>AZ01, FL01
+OR01,PN01<br />
+UR01,WI01</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2">Central Region</td>
+<td>Traditional and Managed Care</td>
+<td>HMARK</td>
+<td>PA05</td>
+<td></td>
+</tr>
+<tr>
+<td>Medicare Part D</td>
+<td>HSR</td>
+<td>RGP5</td>
+<td></td>
+</tr>
+<tr>
+<td rowspan="2">West Virginia</td>
+<td>Managed Care Freedom Blue</td>
+<td>HHIC</td>
+<td>WV01</td>
+<td>This is not Mt. State Business and is not covered by the WV security.</td>
+</tr>
+<tr>
+<td>Medicare Part D</td>
+<td>HSR</td>
+<td>RGWV</td>
+<td></td>
+</tr>
+</table>
+<br /><br />
+<table>
+<tr>
+<th width="20%">MARKET SEGMENT</th>
+<th width="20%">PRODUCT TYPE</th>
+<th width="20%">ACK BUS UNIT</th>
+<th width="20%">ACK REGION</th>
+<th width="20%">COMMENTS</th>
+</tr>
+<tr>
+<td>Mt. State</td>
+<td>Traditional and Managed Care</td>
+<td>WVA</td>
+<td>WV</td>
+<td>Separate security view</td>
+</tr>
+</table>
+<br /><br />
+The ACK Business Unit and Region Code can be used to identify claims for specific market
+segments. For example, ACK Region can be used to isolate Western Region claims by applying the following where criteria:
+<blockquote>
+Where ACKR_CD in ( ‘PA03’,’PA99’,’RGP3’)
+</blockquote>
+This would return all claim utilization for members enrolled with Highmark, but please note it would also include HMO members enrolled with Keystone Health Plan West (KHPW) and Medicare Part D members enrolled with High Senior Resources (HSR).
+<br /><br />
+If KHPW claims are not wanted, the business unit would be used in the where criteria as follows: 
+<blockquote>
+Where ACKR_CD in ( ‘PA03’,’PA99’,’RGP3’)<br />
+And ACKBU_CD <> ‘KHPW’
+</blockquote>
+<h5>Using ACK to identify Products</h5>
+The first three levels of the Product Hierarchy Table are provided below.
+<table>
+<tr>
+<th width="25%">PSPRT_ND_LVL2_CD<br />(Product Type)</th>
+<th width="25%">PSPRT_ND_LVL3_CD<br />(Product Category)</th>
+<th width="25%">PSPRT_ND_LVL4_CD<br />(Product Offering)</th>
+<th width="25%">LVL4_CD Description</th>
+</tr>
+<tr>
+<td rowspan="12">MGDCARE (Managed Care)</td>
+<td rowspan="4">HMO</td>
+<td>HMOCOMM</td>
+<td>HMO Commercial</td>
+</tr>
+<tr>
+<td>HMOINDV</td>
+<td>HMO Individual</td>
+</tr>
+<tr>
+<td>HMOSECBL</td>
+<td>Security Blue</td>
+</tr>
+<tr>
+<td>HMOSPEC</td>
+<td>Special Programs HMO</td>
+</tr>
+<tr>
+<td rowspan="2">PPO</td>
+<td>PPOMC</td>
+<td>PPO Managed Care</td>
+</tr>
+<tr>
+<td>PPODRG</td>
+<td>PPO Drug</td>
+</tr>
+<tr>
+<td rowspan="3">POS</td>
+<td>POSMC</td>
+<td>POS Managed Care</td>
+</tr>
+<tr>
+<td>POSDRG</td>
+<td>POS Drug</td>
+</tr>
+<tr>
+<td>NONUNDR2</td>
+<td>POS ITS Blue Card Host</td>
+</tr>
+<tr>
+<td>MEDIGAPP(Medi-Gap PP0)</td>
+<td>MGPPPO</td>
+<td>Freedom Blue</td>
+</tr>
+<tr>
+<td>SPCPRGMC(Special Programs)</td>
+<td>SPCPRGMC1</td>
+<td>Special Programs PPO</td>
+</tr>
+<tr>
+<td>SUPPLEMC(Supplemental)</td>
+<td>VISIONMC</td>
+<td>Vision Managed Care</td>
+</tr>
+<tr>
+<td rowspan="15">TRAD (Traditional)</td>
+<td rowspan="2">COMPTR(Comprehensive)</td>
+<td>COMPDRG</td>
+<td>Comprehensive Drug</td>
+</tr>
+<tr>
+<td>COMPRHTR</td>
+<td>Comprehensive Medical</td>
+</tr>
+<tr>
+<td rowspan="3">INDMNTY(Indemnity)</td>
+<td>BASHOSTR</td>
+<td>Traditional Indemnity Hospital</td>
+</tr>
+<tr>
+<td>BASMEDTR</td>
+<td>Traditional Indemnity Medical</td>
+</tr>
+<tr>
+<td>MAJMEDTR</td>
+<td>Traditional Maj Med</td>
+</tr>
+<tr>
+<td rowspan="4">MDGPHMTR(Medi-Gap Trad)</td>
+<td>MEDGPDRG</td>
+<td>Medigap Drug</td>
+</tr>
+<tr>
+<td>MDGPFFS1</td>
+<td>Medigap Fee for Service</td>
+</tr>
+<tr>
+<td>MEDGPHTR</td>
+<td>Medigap Hospital</td>
+</tr>
+<tr>
+<td>MEDGPMTR</td>
+<td>Medigap Medical</td>
+</tr>
+<tr>
+<td rowspan="2">SPCARETR(Special Care)</td>
+<td>SCRHOSTR</td>
+<td>Special Care Hospital</td>
+</tr>
+<tr>
+<td>SCRMEDTR</td>
+<td>Special Care Medical</td>
+</tr>
+<tr>
+<td rowspan="2">SPCPRGTR(Special Programs)</td>
+<td>SPCHOSTR</td>
+<td>Special Programs Hospital</td>
+</tr>
+<tr>
+<td>SPCMEDTR</td>
+<td>Special Programs Medical</td>
+</tr>  
+<tr>
+<td rowspan="2">SUPPLETR(Supplemental)</td>
+<td>DRUGTR</td>
+<td>Trad Drug</td>
+</tr>
+<tr>
+<td>VISIONTR</td>
+<td>Vision Trad</td>
+</tr>
+<tr>
+<td>PARTD1(Medicare Part D)</td>
+<td>PARTD2 (Medicare Part D)</td>
+<td>PARTD3</td>
+<td>Medicare Part D</td>
+</tr>
+</table>
+NOTE: The matrix is for Highmark inc. and its subsidiaries, refer to the detail matrix below for the EUAL ACK Products that roll-up into each product offering.    
+<br /><br />
+<strong>SQL EXAMPLES UTILIZING PRODUCT HIERARCHY TABLE:</strong><br /><br />
+<strong>The following example extracts all HMO product offerings for the Pa Western Region:</strong><br />
+<blockquote>
+SELECT EUAL_MAIN.*<br />
+<br />
+FROM ceav000a.EUAL_MAIN AS MAIN<br />
+JOIN ceav03a.PSPRT PSPROD<br />
+ON MAIN.ACKP_CD = PSPROD.PSPRT_LF_VAL_CD<br />
+<br />
+WHERE MEXCED_LD_CYC_DT BETWEEN '2008-01-01' AND '2008-01-31'<br />
+And ACKR_CD in ( 'PA03','PA99','RGP3')<br />
+And PSPRT_ND_LVL3_CD = 'HMO' 
+</blockquote>
+<br />
+<strong>The following example extracts all HMO product offerings excluding SECURITY BLUE for the Pa Western Region:</strong>
+<blockquote>
+SELECT EUAL_MAIN.*<br />
+<br />
+FROM ceav000a.EUAL_MAIN AS MAIN<br />
+JOIN ceav03a.PSPRT PSPROD<br />
+ON MAIN.ACKP_CD = PSPROD.PSPRT_LF_VAL_CD<br />
+<br />
+WHERE MEXCED_LD_CYC_DT BETWEEN '2008-01-01' AND '2008-01-31'<br />
+And ACKR_CD in ('PA03','PA99','RGP3')<br />
+And (PSPRT_ND_LVL3_CD = 'HMO'<br />
+And PSPRT_ND_LVL4_CD <> 'HMOSECBL')
+</blockquote>
+<br />   
+<strong>The following example extracts all PPO product offerings for the Pa Central Region:</strong>
+<blockquote>
+SELECT EUAL_MAIN.*<br />
+<br />
+FROM ceav000a.EUAL_MAIN AS MAIN<br />
+JOIN ceav03a.PSPRT PSPROD<br />
+ON MAIN.ACKP_CD = PSPROD.PSPRT_LF_VAL_CD<br />
+<br />
+WHERE MEXCED_LD_CYC_DT BETWEEN '2008-01-01' AND '2008-01-31'<br />
+And ACKR_CD = 'PA05'<br />
+And PSPRT_ND_LVL3_CD = 'PPO' 
+</blockquote>
+Note 1: There is a small percentage (less than 0.2%) of Western and Central claims that do not have an ACK Product Code or ACK Region Code. For most analyses, this should not be an issue. However, for individual who are interested in pulling all possible claims for Western and Central business, additional fields can be queried, such as the Enrollment Source Code (EAES_CD) and the Reimbursement Plan Identifier (REIMM_PLN_ID).
+<br /><br />
+<strong>CEAV03A.PSPRT (Product Hierarchy) TABLE WITH EUAL_MAIN ACKP_CD VALUE</strong>
+<table>
+<tr>
+<th width="20%">PSPRT_ND_LV<br />L2_CD(Desc)</th>
+<th width="20%">PSPRT_ND_LV<br />L3_CD(Desc)</th>
+<th width="20%">PSPRT_ND_LV<br />L4_CD(Desc)</th>
+<th width="20%">PSPRT_LF_<br />VAL_CD</th>
+<th width="20%">Logical Product Desc</th>
+</tr>
+<tr>
+<td rowspan="51">MGDCARE (Managed Care)</td>
+<td rowspan="11">HMO</td>
+<td rowspan="3">HMOCOMM (HMO Community)</td>
+<td>CBHMO</td>
+<td>Community Blue HMO</td>
+</tr>
+<tr>
+<td>FBGHMO</td>
+<td>FEP Health Benefit Group</td>
+</tr>
+<tr>
+<td>HMO</td>
+<td>HMO</td>
+</tr>
+<tr>
+<td rowspan="2">HMOINDV (HMO Individual)</td>
+<td>IHMOGI</td>
+<td>Individual Blue Guaran. Issue</td>
+</tr>
+<tr>
+<td>IHMOMU</td>
+<td>Individual Blue Med. Under.</td>
+</tr>
+<tr>
+<td rowspan="2">HMOSECBL(Security Blue)</td>
+<td>SECBLU</td>
+<td>SecurityBlue</td>
+</tr>
+<tr>
+<td>SECBSN</td>
+<td>Security Blue Special Needs Pl</td>
+</tr>
+<tr>
+<td rowspan="4">HMOSPEC( Special Programs HMO)</td>
+<td>BLCHAO</td>
+<td>ABC HMO KHPW</td>
+</tr>
+<tr>
+<td>BLCHMO</td>
+<td>BlueCHIP HMO</td>
+</tr>
+<tr>
+<td>CFKHMO</td>
+<td>Caring For Kids</td>
+</tr>
+<tr>
+<td>KFKHMO</td>
+<td>KeystoneBlue For Kids</td>
+</tr>
+<tr>
+<td rowspan="24">PPO</td>
+<td rowspan="15">PPOMC(PPO Managed Care)</td>
+<td>BHPPO</td>
+<td>Basic Hospital PPO</td>
+</tr>
+<tr>
+<td>BLUACT</td>
+<td>Blue Account Medical</td>
+</tr>              
+<tr>
+<td>CMPPPO</td>
+<td>Comprehensive PPO</td>
+</tr>
+<tr>
+<td>EPOBLU</td>
+<td>Exclusive Provider Org Local</td>
+</tr>
+<tr>
+<td>EPOCMP</td>
+<td>Exclusive Prov Org Blue Card</td>
+</tr>
+<tr>
+<td>HDHPGI</td>
+<td>Individual PPO Guarantee Issue</td>
+</tr>
+<tr>
+<td>HDHPMU</td>
+<td>Individual PPO Med Underwrittn</td>
+</tr>
+<tr>
+<td>HDHPPO</td>
+<td>Group PPO High Ded Health Plan</td>
+</tr>
+<tr>
+<td>PPOBLU</td>
+<td>Comprehensive PPO Blue</td>
+</tr>
+<tr>
+<td>PPOCBD</td>
+<td>Community Blue Direct PPO</td>
+</tr>
+<tr>
+<td>PPODB</td>
+<td>Direct Blue PPO</td>
+</tr>
+<tr>
+<td>PPOIGI</td>
+<td>Com Blue Ind PPO Garantee Issd</td>
+</tr>
+<tr>
+<td>PPOIMU</td>
+<td>DB Ind PPO Medical Underwritte</td>
+</tr>
+<tr>
+<td>PREFBL</td>
+<td>PreferredBlue</td>
+</tr>
+<tr>
+<td>PRFBLE</td>
+<td>PreferredBlue PPO BlueChoice</td>
+</tr>
+<tr>
+<td rowspan="9">PPODRG(PPO Drug)</td>
+<td>DGEPBL</td>
+<td>Drug Cov Excl Prov Org Local</td>
+</tr>
+<tr>
+<td>DGEPOC</td>
+<td>Drug Cov Excl Prov Org BlueCrd</td>
+</tr>
+<tr>
+<td>DRGACT</td>
+<td>Blue Account Drug</td>
+</tr>
+<tr>
+<td>DRGBLE</td>
+<td>Comprehensive PPOBlueDrugeChce</td>
+</tr>
+<tr>
+<td>DRGBLU</td>
+<td>Comprehensive PPOBlue DRUG</td>
+</tr>
+<tr>
+<td>DRGCBD</td>
+<td>Freestdng Drug-Comm Blue Dir</td>
+</tr>
+<tr>
+<td>DRGDB</td>
+<td>DirectBlue Freestanding Drug</td>
+</tr>
+<tr>
+<td>DRGPBL</td>
+<td>Preferred Blue Drug</td>
+</tr>
+<tr>
+<td>DRGPPO</td>
+<td>PPO Drug</td>
+</tr>
+<tr>
+<td rowspan="5">POS</td>
+<td rowspan="2">POSMC(POS Managed Care)</td>
+<td>POSCB</td>
+<td>Community Blue POS</td>
+</tr>
+<tr>
+<td>POSI</td>
+<td>POS I</td>
+</tr>
+<tr>
+<td rowspan="2">POSDRG(POS Drug)</td>
+<td>DRGCB</td>
+<td>Community Blue Drug</td>
+</tr>
+<tr>
+<td>DRGPSI</td>
+<td>POSI Drug</td>
+</tr>
+<tr>
+<td>NONUNDR2(POS ITS Blue Card Host)</td>
+<td>POSHST</td>
+<td>Point of Service Blue CardHost</td>
+</tr>
+<tr>
+<td>MEDIGAPP(Medi-GapPP0)</td>
+<td>MGPPPO(Freedom Blue)</td>
+<td>SNRPPO</td>
+<td>FreedomBlue Senior PPO</td>
+</tr>
+<tr>
+<td rowspan="2">SPCPRGMC(Special Programs)</td>
+<td rowspan="2">SPCPRGMC1(Special Programs PPO)</td>
+<td>BLCHAP</td>
+<td>Adult Basic PPO</td>
+</tr>
+<tr>
+<td>BLCHPO</td>
+<td>Blue CHIP PPO</td>
+</tr>
+<tr>
+<td rowspan="8">SUPPLEMC(Supplemental)</td>
+<td rowspan="8">VISIONMC(Vision Managed Care)</td>
+<td>OPTCHC</td>
+<td>OptiChoice</td>
+</tr>
+<tr>
+<td>OPTCHG</td>
+<td>OptiChoice Gold</td>
+</tr>
+<tr>
+<td>OPTCHV</td>
+<td>Voluntary Optichoice</td>
+</tr>
+<tr>
+<td>VISFND</td>
+<td>Vision Funded</td>
+</tr>
+<tr>
+<td>VISVOL</td>
+<td>Vision Voluntary</td>
+</tr>
+<tr>
+<td>VSRDRM</td>
+<td>Vision Rider - M. C.</td>
+</tr>
+<tr>
+<td>VSRDRP</td>
+<td>Vision Rider for Senior PPO</td>
+</tr>
+<tr>
+<td>VUEFLX</td>
+<td>Vue Flex</td>
+</tr>
+<tr>
+<td rowspan="30">TRAD (Traditional)</td>
+<td rowspan="4">COMPTR(Comprehensive)</td>
+<td>COMPDRG(Comprehensive Drug)</td>
+<td>DRGCMP</td>
+<td>Freestanding Comprehensive Drug</td>
+</tr>
+<tr>
+<td rowspan="3">COMPRHTR(Comprehensive Medical)</td>
+<td>CMPIGI</td>
+<td>Comp Individ Guarantee Issue</td>
+</tr>
+<tr>
+<td>CMPIMU</td>
+<td>Individ Comp Med Under Bus</td>
+</tr>
+<tr>
+<td>COMP</td>
+<td>Comprehensive</td>
+</tr>
+<tr>
+<td rowspan="3">INDMNTY(Indemnity)</td>
+<td>BASHOSTR(Traditional Indemnity Hospital)</td>
+<td>BLCROS</td>
+<td>Blue Cross</td>
+</tr>
+<tr>
+<td>BASMEDTR(Traditional Indemnity Medical)</td>
+<td>BLSHLD</td>
+<td>Blue Shield</td>
+</tr>
+<tr>
+<td>MAJMEDTR(Traditional Maj Med)</td>
+<td>TRADMM</td>
+<td>Major Medical - Trad</td>
+</tr>
+<tr>
+<td rowspan="12">MDGPHMTR(Medi-Gap Trad)</td>
+<td>MEDGPDRG(Medigap Drug)</td>
+<td>DRGS65</td>
+<td>Freestanding Drug Signature 65</td>
+</tr>
+<tr>
+<td>MDGPFFS1(Medigap Fee for Service)</td>
+<td>SNRFFS</td>
+<td>Senior Markets Fee For Service</td>
+</tr>
+<tr>
+<td rowspan="5">MEDGPHTR(Medigap Hospital)</td>
+<td>65PLSH</td>
+<td>65 Plus Hospital</td>
+</tr>
+<tr>
+<td>65SPCH</td>
+<td>65 Special Hospital</td>
+</tr>   
+<tr>
+<td>MGPBLH</td>
+<td>MedigapBlue Hospital</td>
+</tr>
+<tr>
+<td>SEC65H</td>
+<td>Security 65 Hospital</td>
+</tr> 
+<tr>
+<td>SIG65H</td>
+<td>Signature 65 Hospital</td>
+</tr> 
+<tr>
+<td rowspan="5">MEDGPMTR(Medigap Medical)</td>
+<td>65SPCM</td>
+<td>65 Special Medical</td>
+</tr>
+<tr>
+<td>MGPBLM</td>
+<td>MedigapBlue Medical</td>
+</tr>   
+<tr>
+<td>SEC65M</td>
+<td>Security 65 Medical</td>
+</tr>
+<tr>
+<td>SG65MM</td>
+<td>Signature 65 Major Medical</td>
+</tr> 
+<tr>
+<td>SIG65M</td>
+<td>Signature 65 Medical</td>
+</tr>   
+<tr>
+<td rowspan="2">SPCARETR(Special Care)</td>
+<td>SCRHOSTR - Special Care Hospital</td>
+<td>SPCCRH</td>
+<td>Special Care Hospital</td>
+</tr>
+<tr>
+<td>SCRMEDTR - Special Care Medical</td>
+<td>SPCCRM</td>
+<td>Special Care Medical</td>
+</tr>  
+<tr>
+<td rowspan="5">SPCPRGTR(Special Programs)</td>
+<td rowspan="2">SPCHOSTR - Special Programs Hospital</td>
+<td>BLCHAH</td>
+<td>ABC Institutional</td>
+</tr>
+<tr>
+<td>BLCHPH</td>
+<td>BlueCHIP Hospital</td>
+</tr>
+<tr>     
+<td rowspan="3">SPCMEDTR - Special Programs Medical</td>
+<td>BLCHAM</td>
+<td>ABC Medical/Surgical</td>
+</tr>
+<tr>
+<td>BLCHPM</td>
+<td>BlueCHIP Medical</td>
+</tr>     
+<tr>
+<td>CRPRGM</td> 
+<td>Caring Program Medical</td>
+</tr>
+ <tr>
+<td rowspan="4">SUPPLETR(Supplemental)</td>
+<td>DRUGTR - Trad Drug</td>
+<td>DRUGTD</td>
+<td>Drug - Trad</td>
+</tr>
+<tr>
+<td rowspan="3">VISIONTR – Vision Trad</td>
+<td>BLCHPV</td>
+<td>BlueCHIP Vision</td>
+</tr>
+<tr>
+<td>CRPRGV</td>
+<td>Caring Program Vision</td>
+</tr>
+<tr>
+<td>VSINDM</td>
+<td>Vision Indemnity</td>
+</tr> 
+<tr>
+<td>PARTD1(Medicare Part D)</td>
+<td>PARTD2 (Medicare Part D)</td>
+<td>PARTD3 - Medicare Part D</td>
+<td>DRGPTD</td>
+<td>Drug Medicare Advantage Part D</td>
+</tr>
+</table>
+ 
+<span class="prevPage"><a href="EUAL-Join.htm"><<< Return to EUAL Usage - Join Criteria</a></span><span class="nextPage"><a href="EUAL-SQL.htm">Continue to EUAL Usage - SQL Samples >>></a></span>
+
+</div>
+	
+
+ 
+ 
+			
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+</div>			
+</body>
+</html>
+
+
+
+

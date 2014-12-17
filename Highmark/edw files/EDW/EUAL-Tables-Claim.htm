@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell">
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">EUAL Tables - Claim</h4>
+Following are high level descriptions of the EUAL Claim Tables.  For detailed definitions of each field in these tables, please refer to the <a href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/EUAL/EUAL-DataDictionary.xls">EUAL Data Dictionary</a>.
+<br /><br />
+<h5><a class="eualTables" name="EUAL_MAIN">Claim Detail Table (EUAL_MAIN)</a></h5>
+EUAL_MAIN is the primary Claim Detail table in EUAL.  All records are at the claim line level, regardless of the claim type.  Data elements related to the Claim header level are available on each Claim Line row for reporting purposes.
+<br /><br />
+The EUAL_MAIN table houses all Claim related information including the contract holder information and financial values.  The unique key to the EUAL_MAIN table is the Medical Expense Event ID (EAMEE_ID) and the Claim Line Number blind key (LINE_BLIND_KEY).  Other EUAL features within this table which help to simplify usage include:
+<ul>
+<li>Disposition logic has been applied to all counts and amounts, so that the correct signed positive and negative values exist for Original, Adjusted and Void (A, J, and V) line dispositions.</li>
+<li>Header-level Claim counts and amounts can be summed across all lines of the claim, because the values are not duplicated.  For example, Day Count on an Inpatient claim is stored on only the first line of the claim, not repeated on each claim line.  Other claim lines will have a zero in the Day Count column.</li>
+<li>Character fields that contained nulls on EDW have been converted to spaces.</li>
+<li>All amount fields that comprise the Claim financial equation are included.  For a description of the EUAL Financial Equation, click <a  href="http://highwire.highmark.com/sites/iwov/support-files/hwt015/EDW/EUAL/Financial-Equation.xls">here</a>.</li>
+</ul>
+<br />
+<h5><a class="eualTables" name="EUAL_CLINICAL">Clinical Table (EUAL_CLINICAL)</a></h5>
+The EUAL Clinical table includes certain clinical information about a specific patient as it relates to a specific Claim/Claim Line.  These codes include such fields as Diagnosis Related Group (DRG), Observation Stay, Admission Source and Discharge Status.<br /><br />
+Two DRG fields are included in the Clinical Table.  CMN_EACDRG_CD is a DRG Code assigned by the EDW for every Inpatient Facility Claim.  CMN_EACDRG_VSN_NO is the CMS DRG Grouper Version used to derive the DRG and is also found within the Clinical Table.<br /><br />
+The EACPV_DRG_CD is the DRG used to price an inpatient facility claim by Highmark, if a DRG was used to price an inpatient facility claim.  The EACPV_MTH_VSN_ID is the CMS DRG Grouper Version used to derive this specific DRG if a DRG was used to price the claim.  Otherwise, another reimbursement version code or zeroes will be found within this field.<br /><br />
+While the DRG codes are only populated for inpatient facility claims, the Major Diagnostic Category code (CMN_EACMDC_CD) is for inpatient, outpatient and professional claims within the EUAL Clinical Table.<br /><br />
+The Observation Stay Flag (EAC_OBSV_STY_CORR_CT) is only populated for the first line of a facility (inpatient or outpatient) claim.<br /><br /> 
+The Clinical table has a corresponding row for each Claim/Claim Line row found in the EUAL_MAIN table. The unique key to the EUAL_CLINICAL table is the Medical Expense Event ID (EAMEE_ID) and the Claim Line Number blind key (LINE_BLIND_KEY).
+<br /><br />
+<h5><a class="eualTables" name="EUAL_DIAG">Diagnosis Table (EUAL_DIAG)</a></h5>
+The EUAL Diagnosis table contains Medical Diagnosis codes for a Claim.  There is one Diagnosis row per claim line, which includes all relevant diagnosis codes.  The Primary and Admitting diagnosis codes are each housed in an individual field, along with 26 occurrences of Diagnosis codes in the remaining columns (DIAG_CODE_001 thru DIAG_CODE_026).  Although the diagnosis codes for Inpatient and Outpatient claims are at the claim level, the EUAL has pushed the codes to the line level, therefore the Diagnosis codes for Facility claims will be repeated on each line.
+<br /><br />
+The Diagnosis table has a corresponding row for each Claim/Claim Line row found in the EUAL_MAIN table.  The unique key to the EUAL_DIAG table is the Medical Expense Event ID (EAMEE_ID) and the Claim Line Number blind key (LINE_BLIND_KEY).  A row will exist on EUAL_DIAG even if there are no relevant diagnosis codes for that Claim Line (for example, Drug claims).  This design allows end users to merge the Diagnosis Code table with the Claim Detail Table using an Inner Join, without risking loss of data in the query results.<br /><br />
+<em><strong>Data Samples:</strong></em><br />
+The following links are data samples which display the first 3 occurrences of Diagnosis Codes for each type of claim, to further describe the EUAL Diagnosis table content.<br /><br />
+<a href="javascript:popUp('EUAL-Tables-Facility-Inpatient.htm')">Inpatient Facility Claims</a> – all Diagnosis codes are the same on each line of the Inpatient claim.<br /><br />
+<a href="javascript:popUp('EUAL-Tables-Facility-Outpatient.htm')">Outpatient Facility Claims</a> – the only difference between Outpatient and Inpatient claims is the Admitting Diagnosis field, which is not always populated for Outpatient claims.<br /><br />
+<a href="javascript:popUp('EUAL-Tables-Professional.htm')">Professional Claims</a> - Unlike Facility claims, Diagnosis codes for Professional claims are at the claim line level in the source system, and therefore can differ for each line of a claim.  Professional claims will not have an Admitting diagnosis.<br /><br />
+Drug Claims - Diagnosis Codes do not exist for a drug claim; however the EUAL has included 
+drug lines on the Diagnosis table so that an inner join can always be used.  All 
+Diagnosis values are blank for Drug claims.
+<br /><br />
+<h5><a class="eualTables" name="EUAL_IP_CASE">Inpatient Case Table (EUAL_IP_CASE)</a></h5>
+This view facilitates the counting of Inpatient admissions by developing cases based on admission dates at the member level.  An admission is initiated with an inpatient claim. The combination of a unique member (case_eacm_whs_unq_mbr_id) and an admission date define a case. An active case (case_stus_in = A) has the provider allowed charge greater than 0. An inactive case (case_stus_in = I) has the provider allowed charge equal to or less than 0.  Professional claims with a service date between the case admission date and discharge date will be part of the case, and will have the same case id fields (case_eacm_she_unq_mbr_id, case_eac_admm_dt). 
+<br /><br />
+<h5><a class="eualTables" name="EUAL_MEDICAL">Medical Code Table (EUAL_MEDICAL_CD)</a></h5>
+The EUAL Medical Code table contains a variety of codes and medical information relevant to
+the Claim and the Claim Line. There is one Medical Code row per claim line on the EUAL. In
+the Medical Code table, there are columns which relate to the claim header level and other
+columns which relate to the claim line. For example, there is one Claim Line Procedure code
+and one corresponding Claim Line Procedure code format code to identify the format of the
+Procedure code value as ICD9 or HCPCS. In addition, the Claim level Principal procedure
+code and 24 occurrences of ‘other’ Procedure code columns are also accessible on each
+claim line row.
+<br /><br />
+The EUAL load has accounted for the differences in whether medical information is applicable
+at the claim or claim line level, depending on the type of claim. Therefore, on an Inpatient claim
+the claim procedure code values will be repeated on each claim line, and the line level
+procedure codes will be blank. For Outpatient and Professional claims, the line procedure
+codes will contain the relevant values related to each claim line, and the Claim level procedure
+codes will be blank.
+<br /><br />
+In addition to the Procedure codes, the Primary procedure modifier code and 6 occurrences of
+the secondary procedure modifier codes are stored on each Claim Line row. Other medical
+codes such as Revenue code, Anesthesia Modifier and Anesthesia Unit counts, and Line
+National procedure code are also available on the Medical Code table.<br /> 
+The Medical Code table has a corresponding row for each Claim/Claim Line row found in the
+EUAL_MAIN table. The unique key to the EUAL_MEDICAL_CD table is the Medical Expense
+Event ID (EAMEE_ID) and the Claim Line Number blind key (LINE_BLIND_KEY).  This design allows end users to merge the Medical Codes table with the Claim Detail Table using an Inner Join, without risking loss of data in the query results.
+<br /><br />
+
+<em><strong>Data Samples:</strong></em><br />
+<a href="javascript:popUp('EUAL-Tables-Medical-Inpatient.htm')">Inpatient Claims</a>
+<br /><br />
+<a href="javascript:popUp('EUAL-Tables-Medical-Outpatient.htm')">Outpatient Claims</a>
+<br /><br />
+<a href="javascript:popUp('EUAL-Tables-Medical-Professional.htm')">Professional Claims</a>
+<br /><br />
+
+
+
+
+<h5><a class="eualTables" name="EUAL_NON_IP_CASE">Non Inpatient Case Table (EUAL_NON_IP_CASE)</a></h5>
+This view facilitates the counting of Non Inpatient cases by developing cases based on unique member, date of service and performing/billing provider.
+<br /><br />
+<h5><a class="eualTables" name="EUAL_PROVIDER">Provider Table (EUAL_PROVIDER)</a></h5>
+The EUAL Provider table includes information about all Providers related to a Claim. There are a number of Identifying codes for the various provider types (Performing, Billing, Attending, Referring, etc). For each Provider type, EUAL houses multiple ID codes such as Tax code,NPI, etc. The Billing Local Plan Provider ID (BILG_LCL_PLN_PRV_ID) contains the Blue Shield ID when the provider is local, and a BlueCross or BlueShield ID from a plan other than Highmark when the claim is an OSCAR ITS format. Additional Provider data elements for the Billing Local Plan Provider are included on the claim line level Provider row, such as name and address, specialty, region, etc.
+<br /><br />
+The EUAL load and extract process has gathered the provider IDs and supporting information
+from the EDW, taking into consideration the claim vs. line level data depending on the claim
+type. In addition, supplemental provider data has been added from the Corporate Provider
+Repository (CPR).
+<br /><br />
+The Provider table has a corresponding row for each Claim/Claim Line row found in the EUAL_MAIN table. The unique key to the EUAL_PROVIDER table is the Medical Expense Event ID (EAMEE_ID) and the Claim Line Number blind key (LINE_BLIND_KEY).
+<br /><br />
+<h5><a class="eualTables" name="EUAL_PHARMACY">Pharmacy Table (EUAL_PHARMACY)</a></h5>
+The EUAL Pharmacy table includes information about all pharmacy drug claims/lines.  This table is actually a logical view which joins the pharmacy drug claims from EUAL_MAIN (currently sourced from Medco and identified by EUAL_MAIN.EACT_CD = “DR”) with the full complement of columns from the EDW drug line table (EA_CLML_DRUG).<br /><br />
+The EUAL_PHARMACY table has a corresponding row for every pharmacy drug claim, and unlike the other EUAL claim related tables, an inner join to the EUAL_PHARMACY table will yield only pharmacy drug claims.  This design was chosen for a number of reasons:
+<ul>
+<li>Pharmacy drug claims are unique in the data elements and population of those elements as compared to professional and facility claims.  For example, NDC codes and Brand/Generic information pertain only to pharmacy drug claims, just as diagnosis and procedure codes do not exist for these claims.</li>
+<li>Typically, analysis and reporting are performed on pharmacy drug claims separately from all other types of claims.  This may be driven by the fact that the data is different from other types of claims as mentioned above, but also is quite often driven by the business need.</li>
+<li>Due to the structure and usage reasons mentioned above, the most efficient and expedient integration of drug data into the EUAL is to perform an inner join in a view between the EUAL_MAIN pharmacy drug claims and their corresponding claim line data from the EDW EA_CLML_DRUG table.</li>
+</ul>
+For the majority of business analysis needs, the recommended approach to using the EUAL Pharmacy drug table is to perform an inner join using the EUAL_MAIN and EUAL_PHARMACY key fields Medical Expense Event ID (EAMEE_ID) and the Claim Line
+Number blind key (LINE_BLIND_KEY).  This will result in only pharmacy drug claims/lines to be returned.  This inner join approach can also be used to access the provider data for pharmacy drug claim lines on the EUAL_PROVIDER table.<br /><br />
+<!--
+<h5><a class="eualTables" name="EUAL_MEDSURG_DRUG">Medical/Surgical Drug Table (EUAL_MEDSURG_DRUG)</a></h5>
+The EUAL Medical/Surgical table includes drug information about all Inpatient, Outpatient, Professional, and Major Medical claim lines.  This table is actually a logical view which joins the non-pharmacy claims from EUAL_MAIN with the select complement of columns from the EDW drug line table (EA_CLML_DRUG).  The complement (or subset) of columns from the drug line includes only those 32 columns which are mapped from OSCAR, currently the only Medical/Surgical claims source which also maps a drug component in EDW. The APPENDIX B Data Dictionary lists the EUAL Med/Surg columns available for use in this view.
+<br /><br />
+The EUAL_MEDSURG_DRUG table has a corresponding row for every non-pharmacy claim, and unlike the other EUAL claim related tables, an inner join to the EUAL_MEDSURG_DRUG table will yield only non-pharmacy claims (no Medco drug claims).  Further, there are only a limited number of Medical/Surgical claims that have a drug line component, so for the majority of rows returned by this view, the entire row of drug related data (32 columns) will be null.  
+<br /><br />
+For the majority of business analysis needs, the recommended approach to using the EUAL Medical/Surgical drug table is to perform an inner join using the EUAL_MAIN and EUAL_MEDSURG_DRUG key fields Medical Expense Event ID (EAMEE_ID) and the Claim Line Number blind key (LINE_BLIND_KEY).  This will result in only non-pharmacy  claims/lines to be returned along with the 32 mapped drug related columns if a drug component exists for the line.  A very common use of this data is for the drug information sometimes sent in on Medical/Surgical claims for J-code (injectible) drug procedures performed in a professional/facility setting.
+-->
+<br /><br />
+<span class="prevPage"><a href="EUAL-Tables.htm"><<< Return to EUAL Tables</a></span><span class="nextPage"><a href="EUAL-Tables-Other.htm">Continue to EUAL Tables - Other >>></a></span>
+
+
+</div>
+	
+
+ 
+ 
+			
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+</div>			
+</body>
+</html>
+
+
+
+

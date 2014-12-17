@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+}
+#leftcol {
+  float: left;
+  width: 200px;
+  border: #000 1px solid;
+}
+#main {
+  margin: 0px;
+}
+#centercol {
+  border: #f00 1px solid;
+  margin: 0 210px 0 210px;
+}
+#rightcol {
+  float: right;
+  width: 200px;
+  border: #000 1px solid;
+}
+#footer {
+  text-align: center;
+  border: #fc0 1px solid;
+}
+#footerbr { clear: both; } 

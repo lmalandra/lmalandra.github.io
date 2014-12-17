@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Enterprise Data Warehouse</title>
+
+<link rel="Stylesheet" href="styles/main.css" type="text/css" />
+	
+	
+    
+	<script type="text/javascript" language="JavaScript" src="scripts/printer-friendly.js"></script>
+	
+<script type="text/javascript" language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=400,left = 200,top = 200');");
+}
+// End -->
+</script>
+
+
+</head>
+<body>
+
+
+<!-- Begin HeaderTable -->
+<div id="headerCell">
+<div id="highwireCell"><a href="http://highwire.highmark.com/" target="_top"><img src="http://highwire.highmark.com/images/core/logo.gif" alt="Highwire home" border="0" /></a></div>
+<div id="siteNameCell"><a href="index.html">Enterprise Data Warehouse</a></div>
+</div>
+<!-- End HeaderTable -->
+
+
+
+
+
+
+
+
+
+
+		<div id="navigationCell">
+			<!-- Start Navigation -->	
+			<div id="navigation">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/navagation.js"></script>
+
+
+				
+			</div>
+			<!-- End Navigation -->	
+		
+</div>
+
+<div id="layoutTable"> 
+<div id="rightcol">	
+<div id="printCell">
+			<div id="printPage"><a href="javascript:popPfWin();"><img name="PrinterFriendly" alt="Printer Friendly" src="images/print.gif" />Printer-Friendly Page</a></div>
+	</div>
+	
+	 		<div id="quickLinksCell">
+ 		<script type="text/javascript" language="JavaScript" src="scripts/quicklinks.js"></script>
+    	</div>
+        <div id="usefulLinksCell">
+        <script type="text/javascript" language="JavaScript" src="scripts/usefullinks.js"></script>
+		</div>
+</div>
+
+
+			<!-- Begin Page Content -->
+			
+
+<div id="contentCell">
+<!--WITHIN THE H4 TAG, PLACE THE NAME OF THE PAGE-->
+<h4 class="pageHeader">EUAL Join Criteria</h4>
+Since the EUAL_MAIN table is at the Claim Line level, the most commonly used Claim header related columns are present on each line.  This design provides the foundation for more straightforward queries, and simpler grouping functions because all data is at the same level (the Claim Line level).
+<br /><br />
+Supporting information about the Claim is also stored at the Claim Line level in the other EUAL tables (EUAL_DIAG, EUAL_MEDICAL_CD, etc).  So, while a join is required to retrieve this additional data, the only data elements required to join are Medical Expense Event ID and Claim Line ID.  In addition, there is no need for the end user to know whether the clinical information came from the source system at the Claim level or the Claim Line level, since the clinical subject area data is all stored at the Claim Line level in EUAL.
+<br /><br />
+The primary EAMEE_ID key is maintained from EDW for every row in EUAL.  The Line number “blind key” is also preserved from EDW.  The blind key Line number column is LINE_BLIND_KEY in all Claim related tables.  These primary key values are used for joining tables within the EUAL, as well as joining back to EDW Core and Line tables if required.
+<br /><br />
+The following join SQL details how to join the EUAL Main table to the support Claim Line data tables:  
+
+<blockquote>
+<strong>Inner join the EUAL_MAIN to EUAL_DIAG:</strong><br />
+EUAL_MAIN.EAMEE_ID = EUAL_DIAG.EAMEE_ID AND<br />
+EUAL_MAIN.LINE_BLIND_KEY = EUAL_DIAG.LINE_BLIND_KEY
+</blockquote>
+<blockquote>
+<strong>Inner join the EUAL_MAIN to EUAL_MEDICAL_CD:</strong><br />
+EUAL_MAIN.EAMEE_ID = EUAL_MEDICAL_CD.EAMEE_ID AND<br />
+EUAL_MAIN.LINE_BLIND_KEY = EUAL_ MEDICAL_CD.LINE_BLIND_KEY
+</blockquote>
+<blockquote><strong>Inner join the EUAL_MAIN to EUAL_PROVIDER:</strong><br />
+EUAL_MAIN.EAMEE_ID = EUAL_PROVIDER.EAMEE_ID AND<br />
+EUAL_MAIN.LINE_BLIND_KEY = EUAL_PROVIDER.LINE_BLIND_KEY
+</blockquote>
+<br /><br />
+<span class="prevPage"><a href="EUAL-Tables-Other.htm"><<< Return to EUAL Tables - Other</a></span><span class="nextPage"><a href="EUAL-ACK.htm">Continue to Query by Product, Region or Business Unit using Accounting Control Key >>></a></span>
+
+</div>
+	
+
+ 
+ 
+			
+			 
+			<!-- End Page Content -->	
+		
+	
+				<div id="footer">
+
+
+<script type="text/javascript" language="JavaScript" src="scripts/footer.js"></script>
+				
+				</div>
+</div>			
+</body>
+</html>
+
+
+
+
